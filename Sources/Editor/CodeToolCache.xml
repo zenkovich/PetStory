@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<files>
+	<file path="C:\work\PetStory\Platforms\Windows\..\..\Sources\Editor/Test.h">
+		<date year="2020" month="1" day="5" hour="12" minute="11" second="5" />
+		<globalNamespace name="" fullname="">
+			<sections />
+			<typedefs />
+			<usings />
+		</globalNamespace>
+	</file>
+</files>
+<parentProjects>
+	<project path="C:\work\PetStory\Platforms\Windows\..\..\o2\Framework\Sources\o2\CodeToolCache.xml" />
+	<project path="C:\work\PetStory\Platforms\Windows\..\..\o2\Editor\Sources\CodeToolCache.xml" />
+	<project path="C:\work\PetStory\o2\Editor\Platforms\Windows\..\..\..\Framework\Sources\o2\CodeToolCache.xml" />
+</parentProjects>

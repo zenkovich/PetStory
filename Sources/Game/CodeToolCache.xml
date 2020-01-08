@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<files>
+	<file path="C:\work\PetStory\Platforms\Windows\..\..\Sources\Game/TestApplication.h">
+		<date year="2020" month="1" day="6" hour="13" minute="29" second="51" />
+		<globalNamespace name="" fullname="">
+			<sections>
+				<section name="TestApplication" fullname="TestApplication" isClass="true" isMeta="false" templates="" protection="0" attributeCommentDef="" attributeShortDef="">
+					<sections />
+					<typedefs />
+					<usings />
+					<baseClasses>
+						<class name="Application" protection="0" />
+					</baseClasses>
+				</section>
+			</sections>
+			<typedefs />
+			<usings>
+				<typedef name="o2" />
+			</usings>
+		</globalNamespace>
+	</file>
+</files>
+<parentProjects>
+	<project path="C:\work\PetStory\Platforms\Windows\..\..\o2\Framework\Sources\o2\CodeToolCache.xml" />
+</parentProjects>
