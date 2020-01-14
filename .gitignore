@@ -24,3 +24,5 @@
 /Platforms/Windows/App.vcxproj.user
 /Platforms/Windows/DataTree.xml
 /Platforms/Windows/EditorApp.vcxproj.user
+/AssetsTree.xml
+/Platforms/Windows/BuiltAssets.xml
