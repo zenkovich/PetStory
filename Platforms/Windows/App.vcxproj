@@ -162,7 +162,7 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;PLATFORM_WINDOWS;DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>false</ConformanceMode>
-      <AdditionalIncludeDirectories>$(ProjectDir)..\..\o2\Framework;$(ProjectDir)..\..\o2\Framework\3rdPartyLibs\FreeType\include;$(ProjectDir)..\..\o2\Framework\Sources;$(ProjectDir)..\..\Sources\Game;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\o2\Framework;$(ProjectDir)..\..\o2\Framework\3rdPartyLibs\FreeType\include;$(ProjectDir)..\..\o2\Framework\Sources;$(ProjectDir)..\..\Sources\Game;$(ProjectDir)..\..\o2\Framework\3rdPartyLibs;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <SDLCheck>true</SDLCheck>
@@ -181,7 +181,7 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;PLATFORM_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>false</ConformanceMode>
-      <AdditionalIncludeDirectories>$(ProjectDir)..\..\o2\Framework;$(ProjectDir)..\..\o2\Framework\3rdPartyLibs\FreeType\include;$(ProjectDir)..\..\o2\Framework\Sources;$(ProjectDir)..\..\Sources\Game;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\o2\Framework;$(ProjectDir)..\..\o2\Framework\3rdPartyLibs\FreeType\include;$(ProjectDir)..\..\o2\Framework\Sources;$(ProjectDir)..\..\Sources\Game;$(ProjectDir)..\..\o2\Framework\3rdPartyLibs;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <SDLCheck>true</SDLCheck>
@@ -219,7 +219,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;PLATFORM_WINDOWS;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>false</ConformanceMode>
-      <AdditionalIncludeDirectories>$(ProjectDir)..\..\o2\Framework;$(ProjectDir)..\..\o2\Framework\3rdPartyLibs\FreeType\include;$(ProjectDir)..\..\o2\Framework\Sources;$(ProjectDir)..\..\Sources\Game;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\o2\Framework;$(ProjectDir)..\..\o2\Framework\3rdPartyLibs\FreeType\include;$(ProjectDir)..\..\o2\Framework\Sources;$(ProjectDir)..\..\Sources\Game;$(ProjectDir)..\..\o2\Framework\3rdPartyLibs;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <SDLCheck>false</SDLCheck>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
