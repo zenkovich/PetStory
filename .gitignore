@@ -29,3 +29,6 @@
 /Platforms/Windows/GameEditorLib.vcxproj.user
 /Platforms/Windows/GameLib.vcxproj.user
 /.vs
+/Platforms/Windows/PetStory.sln.DotSettings.user
+/Sources/Editor/CodeToolCache.xml
+/Sources/Game/CodeToolCache.xml
