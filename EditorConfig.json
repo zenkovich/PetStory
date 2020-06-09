@@ -1,0 +1,105 @@
+{
+    "mWindowSize": {
+        "x": 1936,
+        "y": 1035
+    },
+    "mWindowPosition": {
+        "x": -8,
+        "y": -8
+    },
+    "mMaximized": true,
+    "mLayout": {
+        "mainDock": {
+            "anchors": {
+                "left": 0.0,
+                "bottom": 0.0,
+                "right": 1.0,
+                "top": 1.0
+            },
+            "windows": [],
+            "active": "",
+            "childs": [
+                {
+                    "anchors": {
+                        "left": 0.0,
+                        "bottom": 0.0,
+                        "right": 0.7177085280418396,
+                        "top": 1.0
+                    },
+                    "windows": [],
+                    "active": "",
+                    "childs": [
+                        {
+                            "anchors": {
+                                "left": 0.0,
+                                "bottom": 0.4647679626941681,
+                                "right": 1.0,
+                                "top": 1.0
+                            },
+                            "windows": [],
+                            "active": "",
+                            "childs": [
+                                {
+                                    "anchors": {
+                                        "left": 0.20000000298023225,
+                                        "bottom": 0.0,
+                                        "right": 1.0,
+                                        "top": 1.0
+                                    },
+                                    "windows": [
+                                        "scene window"
+                                    ],
+                                    "active": "",
+                                    "childs": []
+                                },
+                                {
+                                    "anchors": {
+                                        "left": 0.0,
+                                        "bottom": 0.0,
+                                        "right": 0.20000000298023225,
+                                        "top": 1.0
+                                    },
+                                    "windows": [
+                                        "tree window"
+                                    ],
+                                    "active": "",
+                                    "childs": []
+                                }
+                            ]
+                        },
+                        {
+                            "anchors": {
+                                "left": 0.0,
+                                "bottom": 0.0,
+                                "right": 1.0,
+                                "top": 0.4647679626941681
+                            },
+                            "windows": [
+                                "log window",
+                                "assets window",
+                                "animation window"
+                            ],
+                            "active": "animation window",
+                            "childs": []
+                        }
+                    ]
+                },
+                {
+                    "anchors": {
+                        "left": 0.7177085280418396,
+                        "bottom": 0.0,
+                        "right": 1.0,
+                        "top": 1.0
+                    },
+                    "windows": [
+                        "properties window",
+                        "game window"
+                    ],
+                    "active": "properties window",
+                    "childs": []
+                }
+            ]
+        },
+        "windows": []
+    }
+}
