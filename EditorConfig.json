@@ -7,7 +7,6 @@
         "x": -8,
         "y": -8
     },
-    "mMaximized": true,
     "mLayout": {
         "mainDock": {
             "anchors": {
@@ -16,54 +15,44 @@
                 "right": 1.0,
                 "top": 1.0
             },
-            "windows": [],
-            "active": "",
             "childs": [
                 {
                     "anchors": {
                         "left": 0.0,
                         "bottom": 0.0,
-                        "right": 0.7177085280418396,
+                        "right": 0.6635417342185974,
                         "top": 1.0
                     },
-                    "windows": [],
-                    "active": "",
                     "childs": [
                         {
                             "anchors": {
                                 "left": 0.0,
-                                "bottom": 0.4647679626941681,
+                                "bottom": 0.3381856083869934,
                                 "right": 1.0,
                                 "top": 1.0
                             },
-                            "windows": [],
-                            "active": "",
                             "childs": [
                                 {
                                     "anchors": {
-                                        "left": 0.20000000298023225,
+                                        "left": 0.23470890522003175,
                                         "bottom": 0.0,
                                         "right": 1.0,
                                         "top": 1.0
                                     },
                                     "windows": [
                                         "scene window"
-                                    ],
-                                    "active": "",
-                                    "childs": []
+                                    ]
                                 },
                                 {
                                     "anchors": {
                                         "left": 0.0,
                                         "bottom": 0.0,
-                                        "right": 0.20000000298023225,
+                                        "right": 0.23470890522003175,
                                         "top": 1.0
                                     },
                                     "windows": [
                                         "tree window"
-                                    ],
-                                    "active": "",
-                                    "childs": []
+                                    ]
                                 }
                             ]
                         },
@@ -72,21 +61,20 @@
                                 "left": 0.0,
                                 "bottom": 0.0,
                                 "right": 1.0,
-                                "top": 0.4647679626941681
+                                "top": 0.3381856083869934
                             },
                             "windows": [
                                 "log window",
                                 "assets window",
                                 "animation window"
                             ],
-                            "active": "animation window",
-                            "childs": []
+                            "active": "assets window"
                         }
                     ]
                 },
                 {
                     "anchors": {
-                        "left": 0.7177085280418396,
+                        "left": 0.6635417342185974,
                         "bottom": 0.0,
                         "right": 1.0,
                         "top": 1.0
@@ -95,11 +83,9 @@
                         "properties window",
                         "game window"
                     ],
-                    "active": "properties window",
-                    "childs": []
+                    "active": "properties window"
                 }
             ]
-        },
-        "windows": []
+        }
     }
 }

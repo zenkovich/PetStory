@@ -1,7 +1,3 @@
 {
-    "animation": {
-        "mTracks": [],
-        "mDuration": 0.0,
-        "mLoop": "None"
-    }
+    "animation": null
 }
