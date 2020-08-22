@@ -20,21 +20,21 @@
                     "anchors": {
                         "left": 0.0,
                         "bottom": 0.0,
-                        "right": 0.6635417342185974,
+                        "right": 0.6937500238418579,
                         "top": 1.0
                     },
                     "childs": [
                         {
                             "anchors": {
                                 "left": 0.0,
-                                "bottom": 0.3381856083869934,
+                                "bottom": 0.39725738763809206,
                                 "right": 1.0,
                                 "top": 1.0
                             },
                             "childs": [
                                 {
                                     "anchors": {
-                                        "left": 0.23470890522003175,
+                                        "left": 0.2983715236186981,
                                         "bottom": 0.0,
                                         "right": 1.0,
                                         "top": 1.0
@@ -47,7 +47,7 @@
                                     "anchors": {
                                         "left": 0.0,
                                         "bottom": 0.0,
-                                        "right": 0.23470890522003175,
+                                        "right": 0.2983715236186981,
                                         "top": 1.0
                                     },
                                     "windows": [
@@ -61,12 +61,12 @@
                                 "left": 0.0,
                                 "bottom": 0.0,
                                 "right": 1.0,
-                                "top": 0.3381856083869934
+                                "top": 0.39725738763809206
                             },
                             "windows": [
-                                "log window",
+                                "animation window",
                                 "assets window",
-                                "animation window"
+                                "log window"
                             ],
                             "active": "assets window"
                         }
@@ -74,7 +74,7 @@
                 },
                 {
                     "anchors": {
-                        "left": 0.6635417342185974,
+                        "left": 0.6937500238418579,
                         "bottom": 0.0,
                         "right": 1.0,
                         "top": 1.0
@@ -83,7 +83,7 @@
                         "properties window",
                         "game window"
                     ],
-                    "active": "properties window"
+                    "active": "game window"
                 }
             ]
         }
