@@ -1,0 +1,1458 @@
+{
+    "Layers": [
+        {
+            "mName": "Default"
+        }
+    ],
+    "DefaultLayer": "Default",
+    "Tags": [
+        {
+            "mName": "Tag_#1"
+        },
+        {
+            "mName": "Tag_#2"
+        },
+        {
+            "mName": "Tag_#3"
+        },
+        {
+            "mName": "Tag_#4"
+        },
+        {
+            "mName": "Tag_#5"
+        },
+        {
+            "mName": "Tag_#6"
+        },
+        {
+            "mName": "Tag_#7"
+        },
+        {
+            "mName": "Tag_#8"
+        },
+        {
+            "mName": "Tag_#9"
+        },
+        {
+            "mName": "Tag_#10"
+        }
+    ],
+    "Actors": [
+        {
+            "Type": "o2::CameraActor",
+            "Value": {
+                "Id": 17799051847008967418,
+                "Name": "Camera",
+                "Transform": {
+                    "position": {
+                        "x": -291.66973876953127,
+                        "y": -406.287109375
+                    },
+                    "size": {
+                        "x": 2118.017578125,
+                        "y": 3843.4658203125
+                    },
+                    "pivot": {
+                        "x": 0.3770674765110016,
+                        "y": 0.4221075773239136
+                    }
+                },
+                "LayerName": "Default",
+                "mType": "FreeSize"
+            }
+        },
+        {
+            "Type": "o2::Actor",
+            "Value": {
+                "Id": 3891292112852132604,
+                "Name": "Back",
+                "Transform": {
+                    "position": {
+                        "x": -44.5,
+                        "y": -93.5
+                    },
+                    "size": {
+                        "x": 2160.0,
+                        "y": 3840.0
+                    },
+                    "pivot": {
+                        "x": 0.5,
+                        "y": 0.5
+                    }
+                },
+                "LayerName": "Default",
+                "Children": [
+                    {
+                        "Type": "o2::Actor",
+                        "Data": {
+                            "Id": 17720170357467648080,
+                            "Name": "Dog legs",
+                            "Transform": {
+                                "position": {
+                                    "x": 67.405517578125,
+                                    "y": 1422.6063232421876
+                                },
+                                "size": {
+                                    "x": 462.0,
+                                    "y": 91.0
+                                },
+                                "pivot": {
+                                    "x": 0.5,
+                                    "y": 0.5
+                                }
+                            },
+                            "LayerName": "Default",
+                            "Components": [
+                                {
+                                    "Data": {
+                                        "mId": 5558240067141698109,
+                                        "mPosition": {
+                                            "x": 22.905517578125,
+                                            "y": 1329.1063232421876
+                                        },
+                                        "mSize": {
+                                            "x": 462.0,
+                                            "y": 91.0
+                                        },
+                                        "mScale": {
+                                            "x": 1.0,
+                                            "y": 1.0
+                                        },
+                                        "mPivot": {
+                                            "x": 0.5,
+                                            "y": 0.5
+                                        },
+                                        "mEnabled": true,
+                                        "mImageAsset": {
+                                            "id": "1f7362ec17773a893e6e55892ad27561",
+                                            "path": "Game field/Dog legs.png"
+                                        }
+                                    },
+                                    "Type": "o2::ImageComponent"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "Type": "o2::Actor",
+                        "Data": {
+                            "Id": 13708271569241037566,
+                            "Name": "game_field",
+                            "Transform": {
+                                "position": {
+                                    "x": 32.72979736328125,
+                                    "y": -222.5615234375
+                                },
+                                "size": {
+                                    "x": 2016.0,
+                                    "y": 2751.0
+                                },
+                                "pivot": {
+                                    "x": 0.5,
+                                    "y": 0.5
+                                }
+                            },
+                            "LayerName": "Default",
+                            "Components": [
+                                {
+                                    "Data": {
+                                        "mId": 6642312547245760861,
+                                        "mPosition": {
+                                            "x": -11.77020263671875,
+                                            "y": -316.0615234375
+                                        },
+                                        "mSize": {
+                                            "x": 2016.0,
+                                            "y": 2751.0
+                                        },
+                                        "mScale": {
+                                            "x": 1.0,
+                                            "y": 1.0
+                                        },
+                                        "mPivot": {
+                                            "x": 0.5,
+                                            "y": 0.5
+                                        },
+                                        "mEnabled": true,
+                                        "mImageAsset": {
+                                            "id": "726128c92f792d7b03445ed14da5472a",
+                                            "path": "Game field/game_field.png"
+                                        }
+                                    },
+                                    "Type": "o2::ImageComponent"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "Type": "o2::Actor",
+                        "Data": {
+                            "Id": 853407548876620294,
+                            "Name": "Dog",
+                            "Transform": {
+                                "position": {
+                                    "x": 85.09716796875,
+                                    "y": 1662.665771484375
+                                },
+                                "size": {
+                                    "x": 342.0,
+                                    "y": 495.0
+                                },
+                                "pivot": {
+                                    "x": 0.5,
+                                    "y": 0.5
+                                }
+                            },
+                            "LayerName": "Default",
+                            "Components": [
+                                {
+                                    "Data": {
+                                        "mId": 12476144044108395391,
+                                        "mPosition": {
+                                            "x": 40.59716796875,
+                                            "y": 1569.165771484375
+                                        },
+                                        "mSize": {
+                                            "x": 342.0,
+                                            "y": 495.0
+                                        },
+                                        "mScale": {
+                                            "x": 1.0,
+                                            "y": 1.0
+                                        },
+                                        "mPivot": {
+                                            "x": 0.5,
+                                            "y": 0.5
+                                        },
+                                        "mEnabled": true,
+                                        "mImageAsset": {
+                                            "id": "025b5c1663d50f9d056d3ea753245254",
+                                            "path": "Game field/Dog.png"
+                                        }
+                                    },
+                                    "Type": "o2::ImageComponent"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "Type": "o2::Actor",
+                        "Data": {
+                            "Id": 13970797348233936060,
+                            "Name": "Cloth",
+                            "Transform": {
+                                "position": {
+                                    "x": 45.8216552734375,
+                                    "y": 1328.823486328125
+                                },
+                                "size": {
+                                    "x": 778.0,
+                                    "y": 231.0
+                                },
+                                "pivot": {
+                                    "x": 0.5,
+                                    "y": 0.5
+                                }
+                            },
+                            "LayerName": "Default",
+                            "Components": [
+                                {
+                                    "Data": {
+                                        "mId": 10220112214310251316,
+                                        "mPosition": {
+                                            "x": 1.3216552734375,
+                                            "y": 1235.323486328125
+                                        },
+                                        "mSize": {
+                                            "x": 778.0,
+                                            "y": 231.0
+                                        },
+                                        "mScale": {
+                                            "x": 1.0,
+                                            "y": 1.0
+                                        },
+                                        "mPivot": {
+                                            "x": 0.5,
+                                            "y": 0.5
+                                        },
+                                        "mEnabled": true,
+                                        "mImageAsset": {
+                                            "id": "75274353683d2baf1a4905923dca24f0",
+                                            "path": "Game field/Cloth.png"
+                                        }
+                                    },
+                                    "Type": "o2::ImageComponent"
+                                }
+                            ]
+                        }
+                    }
+                ],
+                "Components": [
+                    {
+                        "Data": {
+                            "mId": 7635384123171780482,
+                            "mPosition": {
+                                "x": -44.5,
+                                "y": -93.5
+                            },
+                            "mSize": {
+                                "x": 2160.0,
+                                "y": 3840.0
+                            },
+                            "mScale": {
+                                "x": 1.0,
+                                "y": 1.0
+                            },
+                            "mPivot": {
+                                "x": 0.5,
+                                "y": 0.5
+                            },
+                            "mEnabled": true,
+                            "mImageAsset": {
+                                "id": "2ceb437b033072b6266133a13c8704d7",
+                                "path": "Game field/Back.png"
+                            }
+                        },
+                        "Type": "o2::ImageComponent"
+                    }
+                ]
+            }
+        },
+        {
+            "Type": "o2::RigidBody",
+            "Value": {
+                "Id": 16451476158533157844,
+                "Name": "Rigid Body",
+                "Transform": {
+                    "position": {
+                        "x": -1025.0245361328126,
+                        "y": -1610.2833251953126
+                    },
+                    "size": {
+                        "x": 532.4228515625,
+                        "y": 143.6141815185547
+                    },
+                    "pivot": {
+                        "x": 0.5,
+                        "y": 0.5
+                    },
+                    "angle": 5.439303398132324,
+                    "shear": -5.312423922987364e-7
+                },
+                "LayerName": "Default",
+                "Components": [
+                    {
+                        "Data": {
+                            "mId": 12853921115478937165,
+                            "mLayer": "Default",
+                            "mSize": {
+                                "x": 532.4228515625,
+                                "y": 143.6141815185547
+                            }
+                        },
+                        "Type": "o2::BoxCollider"
+                    }
+                ],
+                "mBodyType": "Static"
+            }
+        },
+        {
+            "Type": "o2::RigidBody",
+            "Value": {
+                "Id": 4401985106532767324,
+                "Name": "Rigid Body",
+                "Transform": {
+                    "position": {
+                        "x": 1054.158203125,
+                        "y": -352.0218505859375
+                    },
+                    "size": {
+                        "x": 220.4119873046875,
+                        "y": 2829.70458984375
+                    },
+                    "pivot": {
+                        "x": 0.5,
+                        "y": 0.5
+                    }
+                },
+                "LayerName": "Default",
+                "Components": [
+                    {
+                        "Data": {
+                            "mId": 7020557961155295077,
+                            "mLayer": "Default",
+                            "mSize": {
+                                "x": 220.4119873046875,
+                                "y": 2829.70458984375
+                            }
+                        },
+                        "Type": "o2::BoxCollider"
+                    }
+                ],
+                "mBodyType": "Static"
+            }
+        },
+        {
+            "Type": "o2::RigidBody",
+            "Value": {
+                "Id": 5300974282594846907,
+                "Name": "Rigid Body",
+                "Transform": {
+                    "position": {
+                        "x": -1123.223388671875,
+                        "y": -352.0218505859375
+                    },
+                    "size": {
+                        "x": 220.4119873046875,
+                        "y": 2829.70458984375
+                    },
+                    "pivot": {
+                        "x": 0.5,
+                        "y": 0.5
+                    }
+                },
+                "LayerName": "Default",
+                "Components": [
+                    {
+                        "Data": {
+                            "mId": 13844708100513202524,
+                            "mLayer": "Default",
+                            "mSize": {
+                                "x": 220.4119873046875,
+                                "y": 2829.70458984375
+                            }
+                        },
+                        "Type": "o2::BoxCollider"
+                    }
+                ],
+                "mBodyType": "Static"
+            }
+        },
+        {
+            "Type": "o2::RigidBody",
+            "Value": {
+                "Id": 5883385660043522357,
+                "Name": "Rigid Body",
+                "Transform": {
+                    "position": {
+                        "x": -94.31555938720703,
+                        "y": -1689.28662109375
+                    },
+                    "size": {
+                        "x": 2278.22509765625,
+                        "y": 155.17539978027345
+                    },
+                    "pivot": {
+                        "x": 0.5,
+                        "y": 0.5
+                    }
+                },
+                "LayerName": "Default",
+                "Components": [
+                    {
+                        "Data": {
+                            "mId": 1980620852319492765,
+                            "mLayer": "Default",
+                            "mSize": {
+                                "x": 2278.22509765625,
+                                "y": 155.17539978027345
+                            }
+                        },
+                        "Type": "o2::BoxCollider"
+                    }
+                ],
+                "mBodyType": "Static"
+            }
+        },
+        {
+            "Type": "o2::RigidBody",
+            "Value": {
+                "Id": 14870582052140013607,
+                "Name": "Rigid Body",
+                "Transform": {
+                    "position": {
+                        "x": 940.4483642578125,
+                        "y": -1637.259521484375
+                    },
+                    "size": {
+                        "x": 532.4228515625,
+                        "y": 143.61412048339845
+                    },
+                    "pivot": {
+                        "x": 0.5,
+                        "y": 0.5
+                    },
+                    "angle": 0.7039942145347595,
+                    "shear": -4.781184088642476e-7
+                },
+                "LayerName": "Default",
+                "Components": [
+                    {
+                        "Data": {
+                            "mId": 4649657854709466594,
+                            "mLayer": "Default",
+                            "mSize": {
+                                "x": 532.4228515625,
+                                "y": 143.61412048339845
+                            }
+                        },
+                        "Type": "o2::BoxCollider"
+                    }
+                ],
+                "mBodyType": "Static"
+            }
+        },
+        {
+            "Type": "o2::RigidBody",
+            "Value": {
+                "Id": 8277505366114244081,
+                "Name": "Rigid Body",
+                "Transform": {
+                    "position": {
+                        "x": 751.7481079101563,
+                        "y": 914.135986328125
+                    },
+                    "size": {
+                        "x": 209.99996948242188,
+                        "y": 209.99996948242188
+                    },
+                    "pivot": {
+                        "x": 0.5,
+                        "y": 0.5
+                    }
+                },
+                "LayerName": "Default",
+                "Components": [
+                    {
+                        "Data": {
+                            "mId": 3428239851123261105,
+                            "mLayer": "Default",
+                            "mRadius": 104.99998474121094
+                        },
+                        "Type": "o2::CircleCollider"
+                    },
+                    {
+                        "Data": {
+                            "mId": 17657392881915154698,
+                            "mPosition": {
+                                "x": 751.7481079101563,
+                                "y": 914.135986328125
+                            },
+                            "mSize": {
+                                "x": 209.99996948242188,
+                                "y": 209.99996948242188
+                            },
+                            "mScale": {
+                                "x": 1.0,
+                                "y": 1.0
+                            },
+                            "mPivot": {
+                                "x": 0.5,
+                                "y": 0.5
+                            },
+                            "mEnabled": true,
+                            "mImageAsset": {
+                                "id": "791972b27a442c2e114b6b7269aa5087",
+                                "path": "Game field/Objects/Main/blue.png"
+                            },
+                            "mMode": "FixedAspect"
+                        },
+                        "Type": "o2::ImageComponent"
+                    }
+                ]
+            }
+        },
+        {
+            "Type": "o2::RigidBody",
+            "Value": {
+                "Id": 7615533662333401673,
+                "Name": "Rigid Body",
+                "Transform": {
+                    "position": {
+                        "x": -808.75732421875,
+                        "y": 1139.9326171875
+                    },
+                    "size": {
+                        "x": 209.99998474121095,
+                        "y": 209.99998474121095
+                    },
+                    "pivot": {
+                        "x": 0.5,
+                        "y": 0.5
+                    }
+                },
+                "LayerName": "Default",
+                "Components": [
+                    {
+                        "Data": {
+                            "mId": 5339223226694251762,
+                            "mLayer": "Default",
+                            "mRadius": 104.99999237060547
+                        },
+                        "Type": "o2::CircleCollider"
+                    },
+                    {
+                        "Data": {
+                            "mId": 2796863260782681837,
+                            "mPosition": {
+                                "x": -808.75732421875,
+                                "y": 1139.9326171875
+                            },
+                            "mSize": {
+                                "x": 209.99998474121095,
+                                "y": 209.99998474121095
+                            },
+                            "mScale": {
+                                "x": 1.0,
+                                "y": 1.0
+                            },
+                            "mPivot": {
+                                "x": 0.5,
+                                "y": 0.5
+                            },
+                            "mEnabled": true,
+                            "mImageAsset": {
+                                "id": "791972b27a442c2e114b6b7269aa5087",
+                                "path": "Game field/Objects/Main/blue.png"
+                            },
+                            "mMode": "FixedAspect"
+                        },
+                        "Type": "o2::ImageComponent"
+                    }
+                ]
+            }
+        },
+        {
+            "Type": "o2::RigidBody",
+            "Value": {
+                "Id": 5198612060053717056,
+                "Name": "Rigid Body",
+                "Transform": {
+                    "position": {
+                        "x": -623.1024169921875,
+                        "y": 954.2778930664063
+                    },
+                    "size": {
+                        "x": 210.0,
+                        "y": 210.0
+                    },
+                    "pivot": {
+                        "x": 0.5,
+                        "y": 0.5
+                    }
+                },
+                "LayerName": "Default",
+                "Components": [
+                    {
+                        "Data": {
+                            "mId": 15915482450421690020,
+                            "mLayer": "Default",
+                            "mRadius": 105.0
+                        },
+                        "Type": "o2::CircleCollider"
+                    },
+                    {
+                        "Data": {
+                            "mId": 2024626773617416117,
+                            "mPosition": {
+                                "x": -623.1024169921875,
+                                "y": 954.2778930664063
+                            },
+                            "mSize": {
+                                "x": 210.0,
+                                "y": 210.0
+                            },
+                            "mScale": {
+                                "x": 1.0,
+                                "y": 1.0
+                            },
+                            "mPivot": {
+                                "x": 0.5,
+                                "y": 0.5
+                            },
+                            "mEnabled": true,
+                            "mImageAsset": {
+                                "id": "791972b27a442c2e114b6b7269aa5087",
+                                "path": "Game field/Objects/Main/blue.png"
+                            },
+                            "mMode": "FixedAspect"
+                        },
+                        "Type": "o2::ImageComponent"
+                    }
+                ]
+            }
+        },
+        {
+            "Type": "o2::RigidBody",
+            "Value": {
+                "Id": 4387398602325699552,
+                "Name": "Rigid Body",
+                "Transform": {
+                    "position": {
+                        "x": -397.30572509765627,
+                        "y": 1139.9326171875
+                    },
+                    "size": {
+                        "x": 209.99998474121095,
+                        "y": 209.99998474121095
+                    },
+                    "pivot": {
+                        "x": 0.5,
+                        "y": 0.5
+                    }
+                },
+                "LayerName": "Default",
+                "Components": [
+                    {
+                        "Data": {
+                            "mId": 10575716301567812347,
+                            "mLayer": "Default",
+                            "mRadius": 104.99999237060547
+                        },
+                        "Type": "o2::CircleCollider"
+                    },
+                    {
+                        "Data": {
+                            "mId": 11426499053276950933,
+                            "mPosition": {
+                                "x": -397.30572509765627,
+                                "y": 1139.9326171875
+                            },
+                            "mSize": {
+                                "x": 209.99998474121095,
+                                "y": 209.99998474121095
+                            },
+                            "mScale": {
+                                "x": 1.0,
+                                "y": 1.0
+                            },
+                            "mPivot": {
+                                "x": 0.5,
+                                "y": 0.5
+                            },
+                            "mEnabled": true,
+                            "mImageAsset": {
+                                "id": "791972b27a442c2e114b6b7269aa5087",
+                                "path": "Game field/Objects/Main/blue.png"
+                            },
+                            "mMode": "FixedAspect"
+                        },
+                        "Type": "o2::ImageComponent"
+                    }
+                ]
+            }
+        },
+        {
+            "Type": "o2::RigidBody",
+            "Value": {
+                "Id": 13794249435327047305,
+                "Name": "Rigid Body",
+                "Transform": {
+                    "position": {
+                        "x": -161.47369384765626,
+                        "y": 944.2424926757813
+                    },
+                    "size": {
+                        "x": 210.0,
+                        "y": 210.0
+                    },
+                    "pivot": {
+                        "x": 0.5,
+                        "y": 0.5
+                    }
+                },
+                "LayerName": "Default",
+                "Components": [
+                    {
+                        "Data": {
+                            "mId": 2328925929631306468,
+                            "mLayer": "Default",
+                            "mRadius": 105.0
+                        },
+                        "Type": "o2::CircleCollider"
+                    },
+                    {
+                        "Data": {
+                            "mId": 11745778342737962836,
+                            "mPosition": {
+                                "x": -161.47369384765626,
+                                "y": 944.2424926757813
+                            },
+                            "mSize": {
+                                "x": 210.0,
+                                "y": 210.0
+                            },
+                            "mScale": {
+                                "x": 1.0,
+                                "y": 1.0
+                            },
+                            "mPivot": {
+                                "x": 0.5,
+                                "y": 0.5
+                            },
+                            "mEnabled": true,
+                            "mImageAsset": {
+                                "id": "791972b27a442c2e114b6b7269aa5087",
+                                "path": "Game field/Objects/Main/blue.png"
+                            },
+                            "mMode": "FixedAspect"
+                        },
+                        "Type": "o2::ImageComponent"
+                    }
+                ]
+            }
+        },
+        {
+            "Type": "o2::RigidBody",
+            "Value": {
+                "Id": 7345090011475439710,
+                "Name": "Rigid Body",
+                "Transform": {
+                    "position": {
+                        "x": 59.305171966552737,
+                        "y": 1139.9326171875
+                    },
+                    "size": {
+                        "x": 209.99998474121095,
+                        "y": 209.99998474121095
+                    },
+                    "pivot": {
+                        "x": 0.5,
+                        "y": 0.5
+                    }
+                },
+                "LayerName": "Default",
+                "Components": [
+                    {
+                        "Data": {
+                            "mId": 8760969741329667298,
+                            "mLayer": "Default",
+                            "mRadius": 104.99999237060547
+                        },
+                        "Type": "o2::CircleCollider"
+                    },
+                    {
+                        "Data": {
+                            "mId": 16493620456410967986,
+                            "mPosition": {
+                                "x": 59.305171966552737,
+                                "y": 1139.9326171875
+                            },
+                            "mSize": {
+                                "x": 209.99998474121095,
+                                "y": 209.99998474121095
+                            },
+                            "mScale": {
+                                "x": 1.0,
+                                "y": 1.0
+                            },
+                            "mPivot": {
+                                "x": 0.5,
+                                "y": 0.5
+                            },
+                            "mEnabled": true,
+                            "mImageAsset": {
+                                "id": "791972b27a442c2e114b6b7269aa5087",
+                                "path": "Game field/Objects/Main/blue.png"
+                            },
+                            "mMode": "FixedAspect"
+                        },
+                        "Type": "o2::ImageComponent"
+                    }
+                ]
+            }
+        },
+        {
+            "Type": "o2::RigidBody",
+            "Value": {
+                "Id": 10232334169611292999,
+                "Name": "Rigid Body",
+                "Transform": {
+                    "position": {
+                        "x": 265.03094482421877,
+                        "y": 929.189208984375
+                    },
+                    "size": {
+                        "x": 209.99996948242188,
+                        "y": 209.99996948242188
+                    },
+                    "pivot": {
+                        "x": 0.5,
+                        "y": 0.5
+                    }
+                },
+                "LayerName": "Default",
+                "Components": [
+                    {
+                        "Data": {
+                            "mId": 10624591777730315997,
+                            "mLayer": "Default",
+                            "mRadius": 104.99998474121094
+                        },
+                        "Type": "o2::CircleCollider"
+                    },
+                    {
+                        "Data": {
+                            "mId": 2659918392290811440,
+                            "mPosition": {
+                                "x": 265.03094482421877,
+                                "y": 929.189208984375
+                            },
+                            "mSize": {
+                                "x": 209.99996948242188,
+                                "y": 209.99996948242188
+                            },
+                            "mScale": {
+                                "x": 1.0,
+                                "y": 1.0
+                            },
+                            "mPivot": {
+                                "x": 0.5,
+                                "y": 0.5
+                            },
+                            "mEnabled": true,
+                            "mImageAsset": {
+                                "id": "791972b27a442c2e114b6b7269aa5087",
+                                "path": "Game field/Objects/Main/blue.png"
+                            },
+                            "mMode": "FixedAspect"
+                        },
+                        "Type": "o2::ImageComponent"
+                    }
+                ]
+            }
+        },
+        {
+            "Type": "o2::RigidBody",
+            "Value": {
+                "Id": 9781959312168564626,
+                "Name": "Rigid Body",
+                "Transform": {
+                    "position": {
+                        "x": -845.6494750976563,
+                        "y": 916.2269287109375
+                    },
+                    "size": {
+                        "x": 209.99996948242188,
+                        "y": 209.99996948242188
+                    },
+                    "pivot": {
+                        "x": 0.5,
+                        "y": 0.5
+                    }
+                },
+                "LayerName": "Default",
+                "Components": [
+                    {
+                        "Data": {
+                            "mId": 17103880191907239461,
+                            "mLayer": "Default",
+                            "mRadius": 104.99998474121094
+                        },
+                        "Type": "o2::CircleCollider"
+                    },
+                    {
+                        "Data": {
+                            "mId": 3872872254309372284,
+                            "mPosition": {
+                                "x": -845.6494750976563,
+                                "y": 916.2269287109375
+                            },
+                            "mSize": {
+                                "x": 209.99996948242188,
+                                "y": 209.99996948242188
+                            },
+                            "mScale": {
+                                "x": 1.0,
+                                "y": 1.0
+                            },
+                            "mPivot": {
+                                "x": 0.5,
+                                "y": 0.5
+                            },
+                            "mEnabled": true,
+                            "mImageAsset": {
+                                "id": "2f7c14f05ee57aa8231c5e5d274e745c",
+                                "path": "Game field/Objects/Main/green.png"
+                            }
+                        },
+                        "Type": "o2::ImageComponent"
+                    }
+                ]
+            }
+        },
+        {
+            "Type": "o2::RigidBody",
+            "Value": {
+                "Id": 17472855494244345951,
+                "Name": "Rigid Body",
+                "Transform": {
+                    "position": {
+                        "x": 510.8984069824219,
+                        "y": 1134.9149169921876
+                    },
+                    "size": {
+                        "x": 209.99996948242188,
+                        "y": 209.99996948242188
+                    },
+                    "pivot": {
+                        "x": 0.5,
+                        "y": 0.5
+                    }
+                },
+                "LayerName": "Default",
+                "Components": [
+                    {
+                        "Data": {
+                            "mId": 8040206067767685081,
+                            "mLayer": "Default",
+                            "mRadius": 104.99998474121094
+                        },
+                        "Type": "o2::CircleCollider"
+                    },
+                    {
+                        "Data": {
+                            "mId": 4818440008576425379,
+                            "mPosition": {
+                                "x": 510.8984375,
+                                "y": 1134.9149169921876
+                            },
+                            "mSize": {
+                                "x": 209.99996948242188,
+                                "y": 209.99996948242188
+                            },
+                            "mScale": {
+                                "x": 1.0,
+                                "y": 1.0
+                            },
+                            "mPivot": {
+                                "x": 0.5,
+                                "y": 0.5
+                            },
+                            "mEnabled": true,
+                            "mImageAsset": {
+                                "id": "791972b27a442c2e114b6b7269aa5087",
+                                "path": "Game field/Objects/Main/blue.png"
+                            },
+                            "mMode": "FixedAspect"
+                        },
+                        "Type": "o2::ImageComponent"
+                    }
+                ]
+            }
+        },
+        {
+            "Type": "o2::RigidBody",
+            "Value": {
+                "Id": 4885283053980926131,
+                "Name": "Rigid Body",
+                "Transform": {
+                    "position": {
+                        "x": 302.4615478515625,
+                        "y": 1155.4168701171876
+                    },
+                    "size": {
+                        "x": 209.99996948242188,
+                        "y": 209.99996948242188
+                    },
+                    "pivot": {
+                        "x": 0.5,
+                        "y": 0.5
+                    }
+                },
+                "LayerName": "Default",
+                "Components": [
+                    {
+                        "Data": {
+                            "mId": 6317274235749536152,
+                            "mLayer": "Default",
+                            "mRadius": 104.99998474121094
+                        },
+                        "Type": "o2::CircleCollider"
+                    },
+                    {
+                        "Data": {
+                            "mId": 9065014601408221314,
+                            "mPosition": {
+                                "x": 302.4615478515625,
+                                "y": 1155.4168701171876
+                            },
+                            "mSize": {
+                                "x": 209.99996948242188,
+                                "y": 209.99996948242188
+                            },
+                            "mScale": {
+                                "x": 1.0,
+                                "y": 1.0
+                            },
+                            "mPivot": {
+                                "x": 0.5,
+                                "y": 0.5
+                            },
+                            "mEnabled": true,
+                            "mImageAsset": {
+                                "id": "2f7c14f05ee57aa8231c5e5d274e745c",
+                                "path": "Game field/Objects/Main/green.png"
+                            }
+                        },
+                        "Type": "o2::ImageComponent"
+                    }
+                ]
+            }
+        },
+        {
+            "Type": "o2::RigidBody",
+            "Value": {
+                "Id": 587885415348655864,
+                "Name": "Rigid Body",
+                "Transform": {
+                    "position": {
+                        "x": 500.64739990234377,
+                        "y": 929.89501953125
+                    },
+                    "size": {
+                        "x": 209.99996948242188,
+                        "y": 209.99996948242188
+                    },
+                    "pivot": {
+                        "x": 0.5,
+                        "y": 0.5
+                    }
+                },
+                "LayerName": "Default",
+                "Components": [
+                    {
+                        "Data": {
+                            "mId": 4310893477585784987,
+                            "mLayer": "Default",
+                            "mRadius": 104.99998474121094
+                        },
+                        "Type": "o2::CircleCollider"
+                    },
+                    {
+                        "Data": {
+                            "mId": 9064929320359822809,
+                            "mPosition": {
+                                "x": 500.64739990234377,
+                                "y": 929.89501953125
+                            },
+                            "mSize": {
+                                "x": 209.99996948242188,
+                                "y": 209.99996948242188
+                            },
+                            "mScale": {
+                                "x": 1.0,
+                                "y": 1.0
+                            },
+                            "mPivot": {
+                                "x": 0.5,
+                                "y": 0.5
+                            },
+                            "mEnabled": true,
+                            "mImageAsset": {
+                                "id": "2f7c14f05ee57aa8231c5e5d274e745c",
+                                "path": "Game field/Objects/Main/green.png"
+                            }
+                        },
+                        "Type": "o2::ImageComponent"
+                    }
+                ]
+            }
+        },
+        {
+            "Type": "o2::RigidBody",
+            "Value": {
+                "Id": 4237034306969767030,
+                "Name": "Rigid Body",
+                "Transform": {
+                    "position": {
+                        "x": 767.1731567382813,
+                        "y": 1141.7489013671876
+                    },
+                    "size": {
+                        "x": 209.99996948242188,
+                        "y": 209.99996948242188
+                    },
+                    "pivot": {
+                        "x": 0.5,
+                        "y": 0.5
+                    }
+                },
+                "LayerName": "Default",
+                "Components": [
+                    {
+                        "Data": {
+                            "mId": 12674264874742520633,
+                            "mLayer": "Default",
+                            "mRadius": 104.99998474121094
+                        },
+                        "Type": "o2::CircleCollider"
+                    },
+                    {
+                        "Data": {
+                            "mId": 676641108342362844,
+                            "mPosition": {
+                                "x": 767.1731567382813,
+                                "y": 1141.7489013671876
+                            },
+                            "mSize": {
+                                "x": 209.99996948242188,
+                                "y": 209.99996948242188
+                            },
+                            "mScale": {
+                                "x": 1.0,
+                                "y": 1.0
+                            },
+                            "mPivot": {
+                                "x": 0.5,
+                                "y": 0.5
+                            },
+                            "mEnabled": true,
+                            "mImageAsset": {
+                                "id": "2f7c14f05ee57aa8231c5e5d274e745c",
+                                "path": "Game field/Objects/Main/green.png"
+                            }
+                        },
+                        "Type": "o2::ImageComponent"
+                    }
+                ]
+            }
+        },
+        {
+            "Type": "o2::RigidBody",
+            "Value": {
+                "Id": 1175256802305009855,
+                "Name": "Rigid Body",
+                "Transform": {
+                    "position": {
+                        "x": 66.68870544433594,
+                        "y": 923.0609741210938
+                    },
+                    "size": {
+                        "x": 209.99996948242188,
+                        "y": 209.99996948242188
+                    },
+                    "pivot": {
+                        "x": 0.5,
+                        "y": 0.5
+                    }
+                },
+                "LayerName": "Default",
+                "Components": [
+                    {
+                        "Data": {
+                            "mId": 4228486649653583436,
+                            "mLayer": "Default",
+                            "mRadius": 104.99998474121094
+                        },
+                        "Type": "o2::CircleCollider"
+                    },
+                    {
+                        "Data": {
+                            "mId": 14414677634110982037,
+                            "mPosition": {
+                                "x": 66.68870544433594,
+                                "y": 923.0609741210938
+                            },
+                            "mSize": {
+                                "x": 209.99996948242188,
+                                "y": 209.99996948242188
+                            },
+                            "mScale": {
+                                "x": 1.0,
+                                "y": 1.0
+                            },
+                            "mPivot": {
+                                "x": 0.5,
+                                "y": 0.5
+                            },
+                            "mEnabled": true,
+                            "mImageAsset": {
+                                "id": "2f7c14f05ee57aa8231c5e5d274e745c",
+                                "path": "Game field/Objects/Main/green.png"
+                            }
+                        },
+                        "Type": "o2::ImageComponent"
+                    }
+                ]
+            }
+        },
+        {
+            "Type": "o2::RigidBody",
+            "Value": {
+                "Id": 1365671767283001920,
+                "Name": "Rigid Body",
+                "Transform": {
+                    "position": {
+                        "x": -169.08407592773438,
+                        "y": 1151.999755859375
+                    },
+                    "size": {
+                        "x": 209.99996948242188,
+                        "y": 209.99996948242188
+                    },
+                    "pivot": {
+                        "x": 0.5,
+                        "y": 0.5
+                    }
+                },
+                "LayerName": "Default",
+                "Components": [
+                    {
+                        "Data": {
+                            "mId": 9820315062110406686,
+                            "mLayer": "Default",
+                            "mRadius": 104.99998474121094
+                        },
+                        "Type": "o2::CircleCollider"
+                    },
+                    {
+                        "Data": {
+                            "mId": 11645561612374167105,
+                            "mPosition": {
+                                "x": -169.0840606689453,
+                                "y": 1151.999755859375
+                            },
+                            "mSize": {
+                                "x": 209.99996948242188,
+                                "y": 209.99996948242188
+                            },
+                            "mScale": {
+                                "x": 1.0,
+                                "y": 1.0
+                            },
+                            "mPivot": {
+                                "x": 0.5,
+                                "y": 0.5
+                            },
+                            "mEnabled": true,
+                            "mImageAsset": {
+                                "id": "2f7c14f05ee57aa8231c5e5d274e745c",
+                                "path": "Game field/Objects/Main/green.png"
+                            }
+                        },
+                        "Type": "o2::ImageComponent"
+                    }
+                ]
+            }
+        },
+        {
+            "Type": "o2::RigidBody",
+            "Value": {
+                "Id": 7745706865428884922,
+                "Name": "Rigid Body",
+                "Transform": {
+                    "position": {
+                        "x": -384.35491943359377,
+                        "y": 919.6439208984375
+                    },
+                    "size": {
+                        "x": 209.99996948242188,
+                        "y": 209.99996948242188
+                    },
+                    "pivot": {
+                        "x": 0.5,
+                        "y": 0.5
+                    }
+                },
+                "LayerName": "Default",
+                "Components": [
+                    {
+                        "Data": {
+                            "mId": 12161245812595981894,
+                            "mLayer": "Default",
+                            "mRadius": 104.99998474121094
+                        },
+                        "Type": "o2::CircleCollider"
+                    },
+                    {
+                        "Data": {
+                            "mId": 7739125097656010787,
+                            "mPosition": {
+                                "x": -384.35491943359377,
+                                "y": 919.6439208984375
+                            },
+                            "mSize": {
+                                "x": 209.99996948242188,
+                                "y": 209.99996948242188
+                            },
+                            "mScale": {
+                                "x": 1.0,
+                                "y": 1.0
+                            },
+                            "mPivot": {
+                                "x": 0.5,
+                                "y": 0.5
+                            },
+                            "mEnabled": true,
+                            "mImageAsset": {
+                                "id": "2f7c14f05ee57aa8231c5e5d274e745c",
+                                "path": "Game field/Objects/Main/green.png"
+                            }
+                        },
+                        "Type": "o2::ImageComponent"
+                    }
+                ]
+            }
+        },
+        {
+            "Type": "o2::RigidBody",
+            "Value": {
+                "Id": 272915313490394667,
+                "Name": "Rigid Body",
+                "Transform": {
+                    "position": {
+                        "x": -623.5447387695313,
+                        "y": 1148.582763671875
+                    },
+                    "size": {
+                        "x": 209.99996948242188,
+                        "y": 209.99996948242188
+                    },
+                    "pivot": {
+                        "x": 0.5,
+                        "y": 0.5
+                    }
+                },
+                "LayerName": "Default",
+                "Components": [
+                    {
+                        "Data": {
+                            "mId": 6757935734887311401,
+                            "mLayer": "Default",
+                            "mRadius": 104.99998474121094
+                        },
+                        "Type": "o2::CircleCollider"
+                    },
+                    {
+                        "Data": {
+                            "mId": 7930942053938360639,
+                            "mPosition": {
+                                "x": -623.5447387695313,
+                                "y": 1148.582763671875
+                            },
+                            "mSize": {
+                                "x": 209.99996948242188,
+                                "y": 209.99996948242188
+                            },
+                            "mScale": {
+                                "x": 1.0,
+                                "y": 1.0
+                            },
+                            "mPivot": {
+                                "x": 0.5,
+                                "y": 0.5
+                            },
+                            "mEnabled": true,
+                            "mImageAsset": {
+                                "id": "2f7c14f05ee57aa8231c5e5d274e745c",
+                                "path": "Game field/Objects/Main/green.png"
+                            }
+                        },
+                        "Type": "o2::ImageComponent"
+                    }
+                ]
+            }
+        }
+    ]
+}
