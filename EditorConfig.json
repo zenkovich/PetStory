@@ -1,11 +1,11 @@
 {
     "mWindowSize": {
-        "x": 1936,
-        "y": 1035
+        "x": 1938,
+        "y": 1060
     },
     "mWindowPosition": {
-        "x": -8,
-        "y": -8
+        "x": -9,
+        "y": -9
     },
     "mLayout": {
         "mainDock": {
@@ -20,7 +20,7 @@
                     "anchors": {
                         "left": 0.0,
                         "bottom": 0.0,
-                        "right": 0.6937500238418579,
+                        "right": 0.7145832180976868,
                         "top": 1.0
                     },
                     "childs": [
@@ -64,17 +64,17 @@
                                 "top": 0.39725738763809206
                             },
                             "windows": [
-                                "animation window",
                                 "assets window",
+                                "animation window",
                                 "log window"
                             ],
-                            "active": "assets window"
+                            "active": "animation window"
                         }
                     ]
                 },
                 {
                     "anchors": {
-                        "left": 0.6937500238418579,
+                        "left": 0.7145832180976868,
                         "bottom": 0.0,
                         "right": 1.0,
                         "top": 1.0
