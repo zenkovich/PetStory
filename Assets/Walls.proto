@@ -1,0 +1,244 @@
+{
+    "mActor": {
+        "Type": "o2::Actor",
+        "Value": {
+            "Id": 13795195474700319826,
+            "Name": "Walls",
+            "Transform": {
+                "position": {
+                    "x": 50.0,
+                    "y": 50.0
+                },
+                "size": {
+                    "x": 100.0,
+                    "y": 100.0
+                },
+                "pivot": {
+                    "x": 0.5,
+                    "y": 0.5
+                }
+            },
+            "LayerName": "Default",
+            "Children": [
+                {
+                    "Data": {
+                        "mBodyType": "Static",
+                        "Id": 5201003005377635232,
+                        "Name": "Corner",
+                        "Transform": {
+                            "position": {
+                                "x": 890.4483642578125,
+                                "y": -1687.259521484375
+                            },
+                            "size": {
+                                "x": 532.4228515625,
+                                "y": 143.61412048339845
+                            },
+                            "pivot": {
+                                "x": 0.5,
+                                "y": 0.5
+                            },
+                            "angle": 0.7039942145347595,
+                            "shear": -4.781184088642476e-7
+                        },
+                        "LayerName": "Default",
+                        "Components": [
+                            {
+                                "Type": "o2::BoxCollider",
+                                "Data": {
+                                    "mSize": {
+                                        "x": 532.4228515625,
+                                        "y": 143.61412048339845
+                                    },
+                                    "mId": 6239639142038696643
+                                }
+                            }
+                        ]
+                    },
+                    "Type": "o2::RigidBody"
+                },
+                {
+                    "Data": {
+                        "mBodyType": "Static",
+                        "Id": 6072782182327426750,
+                        "Name": "Corner",
+                        "Transform": {
+                            "position": {
+                                "x": -1075.0245361328126,
+                                "y": -1660.2833251953126
+                            },
+                            "size": {
+                                "x": 532.4228515625,
+                                "y": 143.6141815185547
+                            },
+                            "pivot": {
+                                "x": 0.5,
+                                "y": 0.5
+                            },
+                            "angle": 5.439303398132324,
+                            "shear": -5.312423922987364e-7
+                        },
+                        "LayerName": "Default",
+                        "Components": [
+                            {
+                                "Type": "o2::BoxCollider",
+                                "Data": {
+                                    "mSize": {
+                                        "x": 532.4228515625,
+                                        "y": 143.6141815185547
+                                    },
+                                    "mId": 1229187855126767313
+                                }
+                            }
+                        ]
+                    },
+                    "Type": "o2::RigidBody"
+                },
+                {
+                    "Data": {
+                        "mBodyType": "Static",
+                        "Id": 1423230001087806755,
+                        "Name": "Right wall",
+                        "Transform": {
+                            "position": {
+                                "x": 1004.158203125,
+                                "y": -402.0218505859375
+                            },
+                            "size": {
+                                "x": 220.4119873046875,
+                                "y": 2829.70458984375
+                            },
+                            "pivot": {
+                                "x": 0.5,
+                                "y": 0.5
+                            }
+                        },
+                        "LayerName": "Default",
+                        "Components": [
+                            {
+                                "Type": "o2::BoxCollider",
+                                "Data": {
+                                    "mSize": {
+                                        "x": 220.4119873046875,
+                                        "y": 2829.70458984375
+                                    },
+                                    "mId": 9128032438979858556
+                                }
+                            }
+                        ]
+                    },
+                    "Type": "o2::RigidBody"
+                },
+                {
+                    "Data": {
+                        "mBodyType": "Static",
+                        "Id": 6937758987071763483,
+                        "Name": "Left wall",
+                        "Transform": {
+                            "position": {
+                                "x": -1173.223388671875,
+                                "y": -402.0218505859375
+                            },
+                            "size": {
+                                "x": 220.4119873046875,
+                                "y": 2829.70458984375
+                            },
+                            "pivot": {
+                                "x": 0.5,
+                                "y": 0.5
+                            }
+                        },
+                        "LayerName": "Default",
+                        "Components": [
+                            {
+                                "Type": "o2::BoxCollider",
+                                "Data": {
+                                    "mSize": {
+                                        "x": 220.4119873046875,
+                                        "y": 2829.70458984375
+                                    },
+                                    "mId": 7684667324867014185
+                                }
+                            }
+                        ]
+                    },
+                    "Type": "o2::RigidBody"
+                },
+                {
+                    "Data": {
+                        "mBodyType": "Static",
+                        "Id": 11431173800279842222,
+                        "Name": "Bottom",
+                        "Transform": {
+                            "position": {
+                                "x": -144.3155517578125,
+                                "y": -1739.28662109375
+                            },
+                            "size": {
+                                "x": 2278.22509765625,
+                                "y": 155.17539978027345
+                            },
+                            "pivot": {
+                                "x": 0.5,
+                                "y": 0.5
+                            }
+                        },
+                        "LayerName": "Default",
+                        "Components": [
+                            {
+                                "Type": "o2::BoxCollider",
+                                "Data": {
+                                    "mSize": {
+                                        "x": 2278.22509765625,
+                                        "y": 155.17539978027345
+                                    },
+                                    "mId": 12239959324446258229
+                                }
+                            }
+                        ]
+                    },
+                    "Type": "o2::RigidBody"
+                }
+            ],
+            "Components": [
+                {
+                    "Type": "o2::EditorTestComponent",
+                    "Data": {
+                        "mInteger": -167,
+                        "mSprite": {
+                            "Type": "o2::Sprite",
+                            "Value": {
+                                "mScale": {
+                                    "x": 1.0,
+                                    "y": 1.0
+                                },
+                                "mPivot": {
+                                    "x": 0.5,
+                                    "y": 0.5
+                                },
+                                "mTextureSrcRect": {
+                                    "left": 0,
+                                    "bottom": 0,
+                                    "right": 0,
+                                    "top": 0
+                                }
+                            }
+                        },
+                        "mComponent": {
+                            "ActorID": 1423230001087806755,
+                            "ComponentId": 9128032438979858556
+                        },
+                        "mRigidBody": {
+                            "ID": 5201003005377635232
+                        },
+                        "mTestInside": null,
+                        "mIntVector": [
+                            0
+                        ],
+                        "mId": 11723073950433565955
+                    }
+                }
+            ]
+        }
+    }
+}

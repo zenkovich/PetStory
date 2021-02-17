@@ -6,6 +6,7 @@
 #include "o2Editor/Core/WindowsSystem/WindowsManager.h"
 #include "rapidjson/document.h"
 #include "rapidjson/writer.h"
+#include "o2/Utils/System/Time/Timer.h"
 
 using namespace o2;
 
@@ -16,10 +17,6 @@ DECLARE_SINGLETON(Editor::ToolsPanel);
 
 int main()
 {
-	DataDocument doc;
-	doc["abc"] = "asd";
-	doc.AddElement() = 5;
-
 	INITIALIZE_O2;
 
 	Editor::EditorApplication* app = mnew Editor::EditorApplication();

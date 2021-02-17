@@ -1,0 +1,43 @@
+{
+    "mActor": {
+        "Type": "o2::RigidBody",
+        "Value": {
+            "Prototype": {
+                "id": "6b562b6138ef163a34517ba070754462",
+                "path": "Prefabs/Green.proto"
+            },
+            "PrototypeLink": 10294718150399567544,
+            "Id": 1795771396683755545,
+            "Name": "Red",
+            "Components": [
+                {
+                    "Type": "o2::CircleCollider",
+                    "Data": {
+                        "mRadius": 50.0,
+                        "mId": 1149247711238671667
+                    }
+                },
+                {
+                    "Type": "o2::ImageComponent",
+                    "Data": {
+                        "mScale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "mPivot": {
+                            "x": 0.5,
+                            "y": 0.5
+                        },
+                        "mId": 14452230047463219849,
+                        "mTextureSrcRect": {
+                            "left": 0,
+                            "bottom": 0,
+                            "right": 0,
+                            "top": 0
+                        }
+                    }
+                }
+            ]
+        }
+    }
+}
