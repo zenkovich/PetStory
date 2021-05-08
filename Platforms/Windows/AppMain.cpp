@@ -6,7 +6,7 @@ int main()
 {
 	INITIALIZE_O2;
 
-	TestApplication* app = mnew TestApplication();
+	GameApplication* app = mnew GameApplication();
 	app->Initialize();
 	app->Launch();
 

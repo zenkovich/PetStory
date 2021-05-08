@@ -163,9 +163,9 @@
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets" />
   <ItemGroup>
-    <ClInclude Include="..\..\Sources\Game\TestApplication.h" />
+    <ClInclude Include="..\..\Sources\Game\GameApplication.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\Sources\Game\TestApplication.cpp" />
+    <ClCompile Include="..\..\Sources\Game\GameApplication.cpp" />
   </ItemGroup>
 </Project>

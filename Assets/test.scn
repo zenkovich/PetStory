@@ -10,216 +10,187 @@
         {
             "Type": "o2::CameraActor",
             "Value": {
-                "Id": 17799051847008967418,
-                "Name": "Camera",
+                "Prototype": {
+                    "id": "668b4b92495f02363b5045956ba43cb8",
+                    "path": "Camera Actor.proto"
+                },
+                "PrototypeLink": 7345090011475439710,
+                "Id": 16134893110783517284,
+                "LayerName": "Default",
                 "Transform": {
-                    "pivot": {
-                        "x": 0.5,
-                        "y": 0.5
+                    "position": {
+                        "x": 100.0,
+                        "y": 100.0
                     }
                 }
             }
         },
         {
-            "Type": "o2::Button",
+            "Type": "o2::Widget",
             "Value": {
                 "Prototype": {
-                    "id": "6f0155b327fd2a984b530b40642818f7",
-                    "path": "standard copy.proto"
+                    "id": "237b292452c238c0129f03363f116d88",
+                    "path": "UI Widget.proto"
                 },
-                "PrototypeLink": 11644428059897632560,
-                "Id": 2366814821711201614,
+                "PrototypeLink": 1430754687423394033,
+                "Id": 15403085621172244983,
                 "LayerName": "Default",
                 "Transform": {
                     "position": {
-                        "x": -36.0,
-                        "y": -112.0
+                        "x": -52.0,
+                        "y": -58.0
                     },
                     "offsetMin": {
-                        "x": -35.5,
-                        "y": -111.5
+                        "x": -51.5,
+                        "y": -57.5
                     },
                     "offsetMax": {
-                        "x": 64.5,
-                        "y": -11.5
+                        "x": 48.5,
+                        "y": 42.5
                     }
                 },
-                "Layers": [
+                "Children": [
                     {
-                        "mUID": 4333717649970148728,
-                        "PrototypeLink": 863111154695497173
-                    },
-                    {
-                        "mUID": 15820111340727479776,
-                        "PrototypeLink": 8128366267468212333
-                    },
-                    {
-                        "mUID": 2126995826160591563,
-                        "PrototypeLink": 14411870803297279591
-                    },
-                    {
-                        "mUID": 16279528630811713622,
-                        "PrototypeLink": 18283416065558001748
-                    },
-                    {
-                        "mUID": 7174106921672493532,
-                        "PrototypeLink": 15666432429138086043
+                        "Type": "o2::Button",
+                        "Data": {
+                            "PrototypeLink": 10481885608031185110,
+                            "Id": 10319737328415161769,
+                            "Transform": {
+                                "size": {
+                                    "x": 100.0,
+                                    "y": 100.0
+                                }
+                            },
+                            "Layers": [
+                                {
+                                    "mUID": 10001074359442841272,
+                                    "PrototypeLink": 14870340664282095014
+                                },
+                                {
+                                    "mUID": 15315554293643326267,
+                                    "PrototypeLink": 627419534704582826
+                                },
+                                {
+                                    "mUID": 5855803919215871296,
+                                    "PrototypeLink": 11409945111753501645
+                                },
+                                {
+                                    "mUID": 4293283336556644256,
+                                    "PrototypeLink": 6666231473949117502
+                                },
+                                {
+                                    "mUID": 12949500144256769197,
+                                    "PrototypeLink": 2591162399006832197
+                                }
+                            ],
+                            "States": [
+                                {
+                                    "mName": "hover"
+                                },
+                                {
+                                    "mName": "pressed"
+                                },
+                                {
+                                    "mName": "focused"
+                                },
+                                {
+                                    "mName": "visible"
+                                }
+                            ]
+                        }
                     }
                 ],
-                "States": [
+                "Components": [
                     {
-                        "mName": "hover"
-                    },
-                    {
-                        "mName": "pressed"
-                    },
-                    {
-                        "mName": "focused"
-                    },
-                    {
-                        "mName": "visible"
+                        "Type": "o2::EditorTestComponent",
+                        "Data": {
+                            "PrototypeLink": 2368116845202835051
+                        }
                     }
                 ]
             }
         },
         {
-            "Type": "o2::Button",
+            "Type": "o2::Widget",
             "Value": {
                 "Prototype": {
-                    "id": "6f0155b327fd2a984b530b40642818f7",
-                    "path": "standard copy.proto"
+                    "id": "237b292452c238c0129f03363f116d88",
+                    "path": "UI Widget.proto"
                 },
-                "PrototypeLink": 11644428059897632560,
-                "Id": 5556901642854229205,
-                "Name": "red",
+                "PrototypeLink": 1430754687423394033,
+                "Id": 13794249435327047305,
                 "LayerName": "Default",
                 "Transform": {
                     "position": {
-                        "x": 98.0,
-                        "y": -108.0
+                        "x": -247.0,
+                        "y": -62.0
                     },
                     "offsetMin": {
-                        "x": 98.49998474121094,
-                        "y": -107.5
+                        "x": -247.49996948242188,
+                        "y": -61.5
                     },
                     "offsetMax": {
-                        "x": 198.49998474121095,
-                        "y": -7.5
+                        "x": -147.49996948242188,
+                        "y": 38.5
                     }
                 },
-                "Layers": [
+                "Children": [
                     {
-                        "mDrawable": {
-                            "mColor": {
-                                "r": 246,
-                                "g": 149,
-                                "b": 149,
-                                "a": 255
-                            }
-                        },
-                        "mUID": 3327653203297944522,
-                        "PrototypeLink": 863111154695497173
-                    },
-                    {
-                        "mUID": 5479377426777847800,
-                        "PrototypeLink": 8128366267468212333
-                    },
-                    {
-                        "mUID": 15297875164922611860,
-                        "PrototypeLink": 14411870803297279591
-                    },
-                    {
-                        "mUID": 11402375049465586449,
-                        "PrototypeLink": 18283416065558001748
-                    },
-                    {
-                        "mUID": 12241250889640433364,
-                        "PrototypeLink": 15666432429138086043
+                        "Type": "o2::Button",
+                        "Data": {
+                            "PrototypeLink": 10481885608031185110,
+                            "Id": 2328925929631306468,
+                            "Transform": {
+                                "size": {
+                                    "x": 100.0,
+                                    "y": 100.0
+                                }
+                            },
+                            "Layers": [
+                                {
+                                    "mUID": 6156710465112906557,
+                                    "PrototypeLink": 14870340664282095014
+                                },
+                                {
+                                    "mUID": 9055285341282803620,
+                                    "PrototypeLink": 627419534704582826
+                                },
+                                {
+                                    "mUID": 4157599765538456101,
+                                    "PrototypeLink": 11409945111753501645
+                                },
+                                {
+                                    "mUID": 14093521594047053565,
+                                    "PrototypeLink": 6666231473949117502
+                                },
+                                {
+                                    "mUID": 7467091738247085491,
+                                    "PrototypeLink": 2591162399006832197
+                                }
+                            ],
+                            "States": [
+                                {
+                                    "mName": "hover"
+                                },
+                                {
+                                    "mName": "pressed"
+                                },
+                                {
+                                    "mName": "focused"
+                                },
+                                {
+                                    "mName": "visible"
+                                }
+                            ]
+                        }
                     }
                 ],
-                "States": [
+                "Components": [
                     {
-                        "mName": "hover"
-                    },
-                    {
-                        "mName": "pressed"
-                    },
-                    {
-                        "mName": "focused"
-                    },
-                    {
-                        "mName": "visible"
-                    }
-                ]
-            }
-        },
-        {
-            "Type": "o2::Button",
-            "Value": {
-                "Prototype": {
-                    "id": "6f0155b327fd2a984b530b40642818f7",
-                    "path": "standard copy.proto"
-                },
-                "PrototypeLink": 11644428059897632560,
-                "Id": 1040129871960806196,
-                "Name": "green",
-                "LayerName": "Default",
-                "Transform": {
-                    "position": {
-                        "x": 235.0,
-                        "y": -105.0
-                    },
-                    "offsetMin": {
-                        "x": 235.49996948242188,
-                        "y": -104.5
-                    },
-                    "offsetMax": {
-                        "x": 335.4999694824219,
-                        "y": -4.5
-                    }
-                },
-                "Layers": [
-                    {
-                        "mDrawable": {
-                            "mColor": {
-                                "r": 164,
-                                "g": 255,
-                                "b": 161,
-                                "a": 255
-                            }
-                        },
-                        "mUID": 9996714884357907607,
-                        "PrototypeLink": 863111154695497173
-                    },
-                    {
-                        "mUID": 11523385274824946296,
-                        "PrototypeLink": 8128366267468212333
-                    },
-                    {
-                        "mUID": 6932747232327718,
-                        "PrototypeLink": 14411870803297279591
-                    },
-                    {
-                        "mUID": 3018166245942126703,
-                        "PrototypeLink": 18283416065558001748
-                    },
-                    {
-                        "mUID": 175549605649982337,
-                        "PrototypeLink": 15666432429138086043
-                    }
-                ],
-                "States": [
-                    {
-                        "mName": "hover"
-                    },
-                    {
-                        "mName": "pressed"
-                    },
-                    {
-                        "mName": "focused"
-                    },
-                    {
-                        "mName": "visible"
+                        "Type": "o2::EditorTestComponent",
+                        "Data": {
+                            "PrototypeLink": 2368116845202835051
+                        }
                     }
                 ]
             }

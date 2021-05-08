@@ -5,12 +5,12 @@
     <Filter Include="Sources" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\Sources\Game\TestApplication.h">
+    <ClInclude Include="..\..\Sources\Game\GameApplication.h">
       <Filter>Sources\Game</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\Sources\Game\TestApplication.cpp">
+    <ClCompile Include="..\..\Sources\Game\GameApplication.cpp">
       <Filter>Sources\Game</Filter>
     </ClCompile>
   </ItemGroup>

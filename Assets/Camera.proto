@@ -1,8 +1,0 @@
-{
-    "mActor": {
-        "Type": "o2::CameraActor",
-        "Value": {
-            "mType": "FreeSize"
-        }
-    }
-}
