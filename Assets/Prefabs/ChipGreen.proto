@@ -1,0 +1,42 @@
+{
+    "mActor": {
+        "Type": "o2::RigidBody",
+        "Value": {
+            "Prototype": {
+                "id": "40a51b38277a7a801a03461a28b06da0",
+                "path": "Prefabs/ChipBase.proto"
+            },
+            "PrototypeLink": 12049559253004841112,
+            "Id": 1059980314957998027,
+            "mName": "ChipGreen",
+            "Components": [
+                {
+                    "Type": "o2::CircleCollider",
+                    "Data": {
+                        "PrototypeLink": 6101922541295667464,
+                        "mId": 7093605768069154103
+                    }
+                },
+                {
+                    "Type": "o2::ImageComponent",
+                    "Data": {
+                        "PrototypeLink": 2198910166740866251,
+                        "mImageAsset": {
+                            "id": "2f7c14f05ee57aa8231c5e5d274e745c",
+                            "path": "Game field/Objects/Main/green.png"
+                        },
+                        "mId": 2616493857508946924
+                    }
+                },
+                {
+                    "Type": "Chip",
+                    "Data": {
+                        "PrototypeLink": 13340611327084936354,
+                        "mType": "Green",
+                        "mId": 11891329512421010850
+                    }
+                }
+            ]
+        }
+    }
+}

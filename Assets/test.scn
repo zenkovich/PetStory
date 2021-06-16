@@ -10,186 +10,804 @@
         {
             "Type": "o2::CameraActor",
             "Value": {
-                "Prototype": {
-                    "id": "668b4b92495f02363b5045956ba43cb8",
-                    "path": "Camera Actor.proto"
+                "mName": "Camera Actor",
+                "mType": "FittedSize",
+                "mFixedOrFittedSize": {
+                    "x": 2160.0,
+                    "y": 3840.0
                 },
-                "PrototypeLink": 7345090011475439710,
-                "Id": 16134893110783517284,
-                "LayerName": "Default",
+                "Id": 18192368312946212768,
                 "Transform": {
                     "position": {
-                        "x": 100.0,
-                        "y": 100.0
+                        "x": 50.0,
+                        "y": 50.0
+                    },
+                    "size": {
+                        "x": 2160.0,
+                        "y": 3961.4228515625
+                    },
+                    "scale": {
+                        "x": 1.0,
+                        "y": 1.0
+                    },
+                    "pivot": {
+                        "x": 0.5,
+                        "y": 0.5
                     }
                 }
             }
         },
         {
-            "Type": "o2::Widget",
+            "Type": "o2::Actor",
             "Value": {
-                "Prototype": {
-                    "id": "237b292452c238c0129f03363f116d88",
-                    "path": "UI Widget.proto"
-                },
-                "PrototypeLink": 1430754687423394033,
-                "Id": 15403085621172244983,
-                "LayerName": "Default",
+                "mName": "Back",
+                "Id": 15572810633635896901,
                 "Transform": {
-                    "position": {
-                        "x": -52.0,
-                        "y": -58.0
+                    "size": {
+                        "x": 2160.0,
+                        "y": 3840.0
                     },
-                    "offsetMin": {
-                        "x": -51.5,
-                        "y": -57.5
+                    "scale": {
+                        "x": 1.0,
+                        "y": 1.0
                     },
-                    "offsetMax": {
-                        "x": 48.5,
-                        "y": 42.5
+                    "pivot": {
+                        "x": 0.5,
+                        "y": 0.5
                     }
                 },
-                "Children": [
-                    {
-                        "Type": "o2::Button",
-                        "Data": {
-                            "PrototypeLink": 10481885608031185110,
-                            "Id": 10319737328415161769,
-                            "Transform": {
-                                "size": {
-                                    "x": 100.0,
-                                    "y": 100.0
-                                }
-                            },
-                            "Layers": [
-                                {
-                                    "mUID": 10001074359442841272,
-                                    "PrototypeLink": 14870340664282095014
-                                },
-                                {
-                                    "mUID": 15315554293643326267,
-                                    "PrototypeLink": 627419534704582826
-                                },
-                                {
-                                    "mUID": 5855803919215871296,
-                                    "PrototypeLink": 11409945111753501645
-                                },
-                                {
-                                    "mUID": 4293283336556644256,
-                                    "PrototypeLink": 6666231473949117502
-                                },
-                                {
-                                    "mUID": 12949500144256769197,
-                                    "PrototypeLink": 2591162399006832197
-                                }
-                            ],
-                            "States": [
-                                {
-                                    "mName": "hover"
-                                },
-                                {
-                                    "mName": "pressed"
-                                },
-                                {
-                                    "mName": "focused"
-                                },
-                                {
-                                    "mName": "visible"
-                                }
-                            ]
-                        }
-                    }
-                ],
                 "Components": [
                     {
-                        "Type": "o2::EditorTestComponent",
+                        "Type": "o2::ImageComponent",
                         "Data": {
-                            "PrototypeLink": 2368116845202835051
+                            "mImageAsset": {
+                                "id": "2ceb437b033072b6266133a13c8704d7",
+                                "path": "Game field/Back.png"
+                            },
+                            "mId": 7631529802446425756
                         }
                     }
                 ]
             }
         },
         {
-            "Type": "o2::Widget",
+            "Type": "o2::Actor",
             "Value": {
-                "Prototype": {
-                    "id": "237b292452c238c0129f03363f116d88",
-                    "path": "UI Widget.proto"
-                },
-                "PrototypeLink": 1430754687423394033,
-                "Id": 13794249435327047305,
-                "LayerName": "Default",
+                "mName": "GameField",
+                "Id": 16851312957508339381,
                 "Transform": {
                     "position": {
-                        "x": -247.0,
-                        "y": -62.0
+                        "x": 117.75164794921875,
+                        "y": -1202.750244140625
                     },
-                    "offsetMin": {
-                        "x": -247.49996948242188,
-                        "y": -61.5
+                    "size": {
+                        "x": 2015.9998779296876,
+                        "y": 2751.0
                     },
-                    "offsetMax": {
-                        "x": -147.49996948242188,
-                        "y": 38.5
+                    "scale": {
+                        "x": 1.0,
+                        "y": 1.0
+                    },
+                    "pivot": {
+                        "x": 0.5458924770355225,
+                        "y": 0.19120508432388307
                     }
                 },
                 "Children": [
                     {
-                        "Type": "o2::Button",
                         "Data": {
-                            "PrototypeLink": 10481885608031185110,
-                            "Id": 2328925929631306468,
+                            "mName": "Walls",
+                            "Id": 10566412311032305656,
                             "Transform": {
+                                "position": {
+                                    "x": 50.0,
+                                    "y": 50.0
+                                },
                                 "size": {
                                     "x": 100.0,
                                     "y": 100.0
+                                },
+                                "scale": {
+                                    "x": 1.0,
+                                    "y": 1.0
+                                },
+                                "pivot": {
+                                    "x": 0.5,
+                                    "y": 0.5
                                 }
                             },
-                            "Layers": [
+                            "Children": [
                                 {
-                                    "mUID": 6156710465112906557,
-                                    "PrototypeLink": 14870340664282095014
+                                    "Data": {
+                                        "mName": "Wall",
+                                        "mBodyType": "Static",
+                                        "Id": 11359192724321602258,
+                                        "Transform": {
+                                            "position": {
+                                                "x": 762.604248046875,
+                                                "y": -591.673828125
+                                            },
+                                            "size": {
+                                                "x": 399.55999755859377,
+                                                "y": 228.45701599121095
+                                            },
+                                            "scale": {
+                                                "x": 1.0,
+                                                "y": 1.0
+                                            },
+                                            "pivot": {
+                                                "x": 0.5,
+                                                "y": 0.5
+                                            },
+                                            "angle": 0.5235989093780518
+                                        },
+                                        "Components": [
+                                            {
+                                                "Type": "o2::BoxCollider",
+                                                "Data": {
+                                                    "mSize": {
+                                                        "x": 399.55999755859377,
+                                                        "y": 228.45701599121095
+                                                    },
+                                                    "mId": 7877515065310127962
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    "Type": "o2::RigidBody"
                                 },
                                 {
-                                    "mUID": 9055285341282803620,
-                                    "PrototypeLink": 627419534704582826
+                                    "Data": {
+                                        "mName": "Wall",
+                                        "mBodyType": "Static",
+                                        "Id": 3741577868736029207,
+                                        "Transform": {
+                                            "position": {
+                                                "x": 918.2528686523438,
+                                                "y": 752.552734375
+                                            },
+                                            "size": {
+                                                "x": 193.75021362304688,
+                                                "y": 2958.98046875
+                                            },
+                                            "scale": {
+                                                "x": 1.0,
+                                                "y": 1.0
+                                            },
+                                            "pivot": {
+                                                "x": 0.5,
+                                                "y": 0.5
+                                            }
+                                        },
+                                        "Components": [
+                                            {
+                                                "Type": "o2::BoxCollider",
+                                                "Data": {
+                                                    "mSize": {
+                                                        "x": 193.75021362304688,
+                                                        "y": 2958.98046875
+                                                    },
+                                                    "mId": 584182782757307333
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    "Type": "o2::RigidBody"
                                 },
                                 {
-                                    "mUID": 4157599765538456101,
-                                    "PrototypeLink": 11409945111753501645
+                                    "Data": {
+                                        "mName": "Wall",
+                                        "mBodyType": "Static",
+                                        "Id": 2917316262325525675,
+                                        "Transform": {
+                                            "position": {
+                                                "x": -1234.984375,
+                                                "y": 752.552734375
+                                            },
+                                            "size": {
+                                                "x": 193.7501983642578,
+                                                "y": 2958.98046875
+                                            },
+                                            "scale": {
+                                                "x": 1.0,
+                                                "y": 1.0
+                                            },
+                                            "pivot": {
+                                                "x": 0.5,
+                                                "y": 0.5
+                                            }
+                                        },
+                                        "Components": [
+                                            {
+                                                "Type": "o2::BoxCollider",
+                                                "Data": {
+                                                    "mSize": {
+                                                        "x": 193.7501983642578,
+                                                        "y": 2958.98046875
+                                                    },
+                                                    "mId": 13276184521613729471
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    "Type": "o2::RigidBody"
                                 },
                                 {
-                                    "mUID": 14093521594047053565,
-                                    "PrototypeLink": 6666231473949117502
+                                    "Data": {
+                                        "mName": "Wall",
+                                        "mBodyType": "Static",
+                                        "Id": 14338328800770700086,
+                                        "Transform": {
+                                            "position": {
+                                                "x": -158.3642578125,
+                                                "y": -612.7099609375
+                                            },
+                                            "size": {
+                                                "x": 2346.984375,
+                                                "y": 228.4590606689453
+                                            },
+                                            "scale": {
+                                                "x": 1.0,
+                                                "y": 1.0
+                                            },
+                                            "pivot": {
+                                                "x": 0.5,
+                                                "y": 0.5
+                                            }
+                                        },
+                                        "Components": [
+                                            {
+                                                "Type": "o2::BoxCollider",
+                                                "Data": {
+                                                    "mSize": {
+                                                        "x": 2346.984375,
+                                                        "y": 228.4590606689453
+                                                    },
+                                                    "mId": 11897371047027886745
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    "Type": "o2::RigidBody"
                                 },
                                 {
-                                    "mUID": 7467091738247085491,
-                                    "PrototypeLink": 2591162399006832197
-                                }
-                            ],
-                            "States": [
-                                {
-                                    "mName": "hover"
+                                    "Data": {
+                                        "mName": "Wall",
+                                        "mBodyType": "Static",
+                                        "Id": 14491349136290684237,
+                                        "Transform": {
+                                            "position": {
+                                                "x": 883.3421020507813,
+                                                "y": -490.2373046875
+                                            },
+                                            "size": {
+                                                "x": 399.56072998046877,
+                                                "y": 228.45809936523438
+                                            },
+                                            "scale": {
+                                                "x": 1.0,
+                                                "y": 1.0
+                                            },
+                                            "pivot": {
+                                                "x": 0.5,
+                                                "y": 0.5
+                                            },
+                                            "angle": 0.9489254355430603,
+                                            "shear": -0.000010419289537821897
+                                        },
+                                        "Components": [
+                                            {
+                                                "Type": "o2::BoxCollider",
+                                                "Data": {
+                                                    "mSize": {
+                                                        "x": 399.56072998046877,
+                                                        "y": 228.45809936523438
+                                                    },
+                                                    "mId": 11778368344054722593
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    "Type": "o2::RigidBody"
                                 },
                                 {
-                                    "mName": "pressed"
+                                    "Data": {
+                                        "mName": "Wall",
+                                        "mBodyType": "Static",
+                                        "Id": 2759255260274913778,
+                                        "Transform": {
+                                            "position": {
+                                                "x": -1101.668212890625,
+                                                "y": -580.40283203125
+                                            },
+                                            "size": {
+                                                "x": 399.5592041015625,
+                                                "y": 228.45907592773438
+                                            },
+                                            "scale": {
+                                                "x": 1.0,
+                                                "y": 1.0
+                                            },
+                                            "pivot": {
+                                                "x": 0.5,
+                                                "y": 0.5
+                                            },
+                                            "angle": 5.824770927429199,
+                                            "shear": -4.00740191253135e-7
+                                        },
+                                        "Components": [
+                                            {
+                                                "Type": "o2::BoxCollider",
+                                                "Data": {
+                                                    "mSize": {
+                                                        "x": 399.5592041015625,
+                                                        "y": 228.45907592773438
+                                                    },
+                                                    "mId": 7569952771234211409
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    "Type": "o2::RigidBody"
                                 },
                                 {
-                                    "mName": "focused"
-                                },
-                                {
-                                    "mName": "visible"
+                                    "Data": {
+                                        "mName": "Wall",
+                                        "mBodyType": "Static",
+                                        "Id": 10144744105517731472,
+                                        "Transform": {
+                                            "position": {
+                                                "x": -1221.400390625,
+                                                "y": -477.77783203125
+                                            },
+                                            "size": {
+                                                "x": 399.5592346191406,
+                                                "y": 228.45901489257813
+                                            },
+                                            "scale": {
+                                                "x": 1.0,
+                                                "y": 1.0
+                                            },
+                                            "pivot": {
+                                                "x": 0.5,
+                                                "y": 0.5
+                                            },
+                                            "angle": 5.399448394775391,
+                                            "shear": -1.6697512705832197e-7
+                                        },
+                                        "Components": [
+                                            {
+                                                "Type": "o2::BoxCollider",
+                                                "Data": {
+                                                    "mSize": {
+                                                        "x": 399.5592346191406,
+                                                        "y": 228.45901489257813
+                                                    },
+                                                    "mId": 10178962429412262493
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    "Type": "o2::RigidBody"
                                 }
                             ]
-                        }
+                        },
+                        "Type": "o2::Actor"
+                    },
+                    {
+                        "Data": {
+                            "mName": "Chips",
+                            "Id": 16476334999626596526,
+                            "Transform": {
+                                "position": {
+                                    "x": -114.61016845703125,
+                                    "y": 883.3331298828125
+                                },
+                                "size": {
+                                    "x": 1961.7083740234376,
+                                    "y": 2660.547607421875
+                                },
+                                "scale": {
+                                    "x": 1.0,
+                                    "y": 1.0
+                                },
+                                "pivot": {
+                                    "x": 0.5,
+                                    "y": 0.5
+                                }
+                            }
+                        },
+                        "Type": "o2::Actor"
+                    },
+                    {
+                        "Data": {
+                            "mName": "BlueSpawnZone",
+                            "Id": 8047572492346582978,
+                            "Transform": {
+                                "position": {
+                                    "x": -106.1529541015625,
+                                    "y": 2162.658447265625
+                                },
+                                "size": {
+                                    "x": 1863.610107421875,
+                                    "y": 246.9689483642578
+                                },
+                                "scale": {
+                                    "x": 1.0,
+                                    "y": 1.0
+                                },
+                                "pivot": {
+                                    "x": 0.5,
+                                    "y": 0.5
+                                }
+                            },
+                            "Components": [
+                                {
+                                    "Type": "ChipsSpawnerComponent",
+                                    "Data": {
+                                        "mSpawnDelay": 0.20000000298023225,
+                                        "mSpawnContainer": {
+                                            "ID": 16476334999626596526
+                                        },
+                                        "mSpawnZone": {
+                                            "ID": 8047572492346582978
+                                        },
+                                        "mChipProto": {
+                                            "id": "75e92b643b6960dd3c6528b80afa3741",
+                                            "path": "Prefabs/ChipBlue.proto"
+                                        },
+                                        "mId": 4724141554487020484
+                                    }
+                                }
+                            ]
+                        },
+                        "Type": "o2::Actor"
+                    },
+                    {
+                        "Data": {
+                            "mName": "GreenSpawnZone",
+                            "Id": 17975554936052193892,
+                            "Transform": {
+                                "position": {
+                                    "x": -106.1529541015625,
+                                    "y": 2162.658447265625
+                                },
+                                "size": {
+                                    "x": 1863.610107421875,
+                                    "y": 246.9689483642578
+                                },
+                                "scale": {
+                                    "x": 1.0,
+                                    "y": 1.0
+                                },
+                                "pivot": {
+                                    "x": 0.5,
+                                    "y": 0.5
+                                }
+                            },
+                            "Components": [
+                                {
+                                    "Type": "ChipsSpawnerComponent",
+                                    "Data": {
+                                        "mSpawnDelay": 0.20000000298023225,
+                                        "mSpawnContainer": {
+                                            "ID": 16476334999626596526
+                                        },
+                                        "mSpawnZone": {
+                                            "ID": 17975554936052193892
+                                        },
+                                        "mChipProto": {
+                                            "id": "60217b044d8c54e145d755384c8a0705",
+                                            "path": "Prefabs/ChipGreen.proto"
+                                        },
+                                        "mId": 17137488240533603687
+                                    }
+                                }
+                            ]
+                        },
+                        "Type": "o2::Actor"
+                    },
+                    {
+                        "Data": {
+                            "mName": "OrangeSpawnZone",
+                            "Id": 7554314642896781137,
+                            "Transform": {
+                                "position": {
+                                    "x": -106.1529541015625,
+                                    "y": 2162.658447265625
+                                },
+                                "size": {
+                                    "x": 1863.610107421875,
+                                    "y": 246.9689483642578
+                                },
+                                "scale": {
+                                    "x": 1.0,
+                                    "y": 1.0
+                                },
+                                "pivot": {
+                                    "x": 0.5,
+                                    "y": 0.5
+                                }
+                            },
+                            "Components": [
+                                {
+                                    "Type": "ChipsSpawnerComponent",
+                                    "Data": {
+                                        "mSpawnDelay": 0.20000000298023225,
+                                        "mSpawnContainer": {
+                                            "ID": 16476334999626596526
+                                        },
+                                        "mSpawnZone": {
+                                            "ID": 7554314642896781137
+                                        },
+                                        "mChipProto": {
+                                            "id": "3519060334223eec0a3a549f18701de3",
+                                            "path": "Prefabs/ChipOrange.proto"
+                                        },
+                                        "mId": 16631791415949326950
+                                    }
+                                }
+                            ]
+                        },
+                        "Type": "o2::Actor"
+                    },
+                    {
+                        "Data": {
+                            "mName": "RedSpawnZone",
+                            "Id": 8937396420906526187,
+                            "Transform": {
+                                "position": {
+                                    "x": -106.1529541015625,
+                                    "y": 2162.658447265625
+                                },
+                                "size": {
+                                    "x": 1863.610107421875,
+                                    "y": 246.9689483642578
+                                },
+                                "scale": {
+                                    "x": 1.0,
+                                    "y": 1.0
+                                },
+                                "pivot": {
+                                    "x": 0.5,
+                                    "y": 0.5
+                                }
+                            },
+                            "Components": [
+                                {
+                                    "Type": "ChipsSpawnerComponent",
+                                    "Data": {
+                                        "mSpawnDelay": 0.20000000298023225,
+                                        "mSpawnContainer": {
+                                            "ID": 16476334999626596526
+                                        },
+                                        "mSpawnZone": {
+                                            "ID": 8937396420906526187
+                                        },
+                                        "mChipProto": {
+                                            "id": "41294346388d70ad66ad27d600b81fbf",
+                                            "path": "Prefabs/ChipRed.proto"
+                                        },
+                                        "mId": 8663953073705172780
+                                    }
+                                }
+                            ]
+                        },
+                        "Type": "o2::Actor"
+                    },
+                    {
+                        "Data": {
+                            "mName": "VioletSpawnZone",
+                            "Id": 3095883790195756153,
+                            "Transform": {
+                                "position": {
+                                    "x": -106.1529541015625,
+                                    "y": 2162.658447265625
+                                },
+                                "size": {
+                                    "x": 1863.610107421875,
+                                    "y": 246.9689483642578
+                                },
+                                "scale": {
+                                    "x": 1.0,
+                                    "y": 1.0
+                                },
+                                "pivot": {
+                                    "x": 0.5,
+                                    "y": 0.5
+                                }
+                            },
+                            "Components": [
+                                {
+                                    "Type": "ChipsSpawnerComponent",
+                                    "Data": {
+                                        "mSpawnDelay": 0.20000000298023225,
+                                        "mSpawnContainer": {
+                                            "ID": 16476334999626596526
+                                        },
+                                        "mSpawnZone": {
+                                            "ID": 3095883790195756153
+                                        },
+                                        "mChipProto": {
+                                            "id": "662650ac7ab4522a392725883ef87da8",
+                                            "path": "Prefabs/ChipViolet.proto"
+                                        },
+                                        "mId": 1528469068420403820
+                                    }
+                                }
+                            ]
+                        },
+                        "Type": "o2::Actor"
+                    },
+                    {
+                        "Data": {
+                            "mName": "YellowSpawnZone",
+                            "Id": 11679763743431581781,
+                            "Transform": {
+                                "position": {
+                                    "x": -106.1529541015625,
+                                    "y": 2162.658447265625
+                                },
+                                "size": {
+                                    "x": 1863.610107421875,
+                                    "y": 246.9689483642578
+                                },
+                                "scale": {
+                                    "x": 1.0,
+                                    "y": 1.0
+                                },
+                                "pivot": {
+                                    "x": 0.5,
+                                    "y": 0.5
+                                }
+                            },
+                            "Components": [
+                                {
+                                    "Type": "ChipsSpawnerComponent",
+                                    "Data": {
+                                        "mSpawnDelay": 0.20000000298023225,
+                                        "mSpawnContainer": {
+                                            "ID": 16476334999626596526
+                                        },
+                                        "mSpawnZone": {
+                                            "ID": 11679763743431581781
+                                        },
+                                        "mChipProto": {
+                                            "id": "237453d25990147b60ea5a0879130d15",
+                                            "path": "Prefabs/ChipYellow.proto"
+                                        },
+                                        "mId": 5736548526408266948
+                                    }
+                                }
+                            ]
+                        },
+                        "Type": "o2::Actor"
                     }
                 ],
                 "Components": [
                     {
-                        "Type": "o2::EditorTestComponent",
+                        "Type": "o2::ImageComponent",
                         "Data": {
-                            "PrototypeLink": 2368116845202835051
+                            "mImageAsset": {
+                                "id": "726128c92f792d7b03445ed14da5472a",
+                                "path": "Game field/game_field.png"
+                            },
+                            "mId": 7075168124344060158
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "Type": "o2::Actor",
+            "Value": {
+                "mName": "Dog",
+                "Id": 5242541719070785347,
+                "Transform": {
+                    "position": {
+                        "x": 90.01641082763672,
+                        "y": 1638.2222900390626
+                    },
+                    "size": {
+                        "x": 342.0,
+                        "y": 495.0
+                    },
+                    "scale": {
+                        "x": 1.0,
+                        "y": 1.0
+                    },
+                    "pivot": {
+                        "x": 0.5,
+                        "y": 0.5
+                    }
+                },
+                "Children": [
+                    {
+                        "Data": {
+                            "mName": "Dog legs",
+                            "Id": 5260942549882449163,
+                            "Transform": {
+                                "position": {
+                                    "x": -15.70050048828125,
+                                    "y": -212.9600830078125
+                                },
+                                "size": {
+                                    "x": 462.0,
+                                    "y": 91.0
+                                },
+                                "scale": {
+                                    "x": 1.0,
+                                    "y": 1.0
+                                },
+                                "pivot": {
+                                    "x": 0.5,
+                                    "y": 0.5
+                                }
+                            },
+                            "Components": [
+                                {
+                                    "Type": "o2::ImageComponent",
+                                    "Data": {
+                                        "mDrawingDepth": 2.0,
+                                        "mImageAsset": {
+                                            "id": "1f7362ec17773a893e6e55892ad27561",
+                                            "path": "Game field/Dog legs.png"
+                                        },
+                                        "mId": 16695954314518044166
+                                    }
+                                }
+                            ]
+                        },
+                        "Type": "o2::Actor"
+                    },
+                    {
+                        "Data": {
+                            "mName": "Cloth",
+                            "Id": 2085811235507786947,
+                            "Transform": {
+                                "position": {
+                                    "x": -47.436370849609378,
+                                    "y": -310.3377685546875
+                                },
+                                "size": {
+                                    "x": 778.0,
+                                    "y": 231.0
+                                },
+                                "scale": {
+                                    "x": 1.0,
+                                    "y": 1.0
+                                },
+                                "pivot": {
+                                    "x": 0.5,
+                                    "y": 0.5
+                                }
+                            },
+                            "Components": [
+                                {
+                                    "Type": "o2::ImageComponent",
+                                    "Data": {
+                                        "mDrawingDepth": 1.0,
+                                        "mImageAsset": {
+                                            "id": "75274353683d2baf1a4905923dca24f0",
+                                            "path": "Game field/Cloth.png"
+                                        },
+                                        "mId": 7363934762415179780
+                                    }
+                                }
+                            ]
+                        },
+                        "Type": "o2::Actor"
+                    }
+                ],
+                "Components": [
+                    {
+                        "Type": "o2::ImageComponent",
+                        "Data": {
+                            "mImageAsset": {
+                                "id": "025b5c1663d50f9d056d3ea753245254",
+                                "path": "Game field/Dog.png"
+                            },
+                            "mId": 7964158972697370977
                         }
                     }
                 ]

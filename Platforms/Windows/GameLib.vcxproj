@@ -163,9 +163,13 @@
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets" />
   <ItemGroup>
+    <ClInclude Include="..\..\Sources\Game\Chip.h" />
+    <ClInclude Include="..\..\Sources\Game\ChipsSpawner.h" />
     <ClInclude Include="..\..\Sources\Game\GameApplication.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\Sources\Game\Chip.cpp" />
+    <ClCompile Include="..\..\Sources\Game\ChipsSpawner.cpp" />
     <ClCompile Include="..\..\Sources\Game\GameApplication.cpp" />
   </ItemGroup>
 </Project>
