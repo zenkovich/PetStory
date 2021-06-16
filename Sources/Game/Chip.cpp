@@ -1,5 +1,7 @@
 #include "Chip.h"
+
 #include "o2/Scene/Actor.h"
+#include "o2/Render/Render.h"
 
 bool Chip::IsUnderPoint(const Vec2F& point)
 {
@@ -13,7 +15,7 @@ void Chip::OnStart()
 {
 	mImage = mOwner->GetComponent<ImageComponent>();
 	if (mImage)
-		mImage->Sprite::onDraw = [&] { OnDrawn(); };
+		mImage->onDraw = [&] { OnDrawn(); };
 }
 
 void Chip::OnCursorReleased(const Input::Cursor& cursor)
@@ -23,25 +25,43 @@ void Chip::OnCursorReleased(const Input::Cursor& cursor)
 		return;
 
 	Vector<Chip*> group;
-	group.Add(this);
+	Vector<Chip*> iterationChipGroup;
+	iterationChipGroup.Add(this);
 
-	for (auto child : parent->GetChildren())
+	while (!iterationChipGroup.IsEmpty())
 	{
-		if (child == GetOwnerActor())
-			continue;
+		group.Add(iterationChipGroup);
 
-		if (auto chip = child->GetComponent<Chip>())
+		Vector<Chip*> prevIterationChipGroup = iterationChipGroup;
+		iterationChipGroup.Clear();
+
+		for (auto groupChip : prevIterationChipGroup)
 		{
-			if (chip->mType == mType &&
-				(child->transform->worldPosition.Get() - mOwner->transform->worldPosition).Length() < chip->mGroupingRadius + mGroupingRadius)
+			for (auto child : parent->GetChildren())
 			{
-				group.Add(chip);
+				if (child == GetOwnerActor())
+					continue;
+
+				if (auto chip = child->GetComponent<Chip>())
+				{
+					if (chip->mType != mType)
+						continue;
+
+					if (group.Contains(chip))
+						continue;
+
+					float distance = (child->transform->worldPosition.Get() - mOwner->transform->worldPosition).Length();
+					if (distance > chip->mGroupingRadius + mGroupingRadius)
+						continue;
+						
+					iterationChipGroup.Add(chip);
+				}
 			}
 		}
 	}
 
-	if (group.Count() < 3)
-		return;
+	if (group.Count() < 2)
+ 		return;
 
 	for (auto chip : group)
 		o2Scene.DestroyActor(chip->GetOwnerActor());
