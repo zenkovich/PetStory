@@ -1,5 +1,5 @@
 #include "o2/stdafx.h"
-#include "TestApplication.h"
+#include "GameApplication.h"
 #include "o2/O2.h"
 
 int main()
@@ -9,6 +9,7 @@ int main()
 	GameApplication* app = mnew GameApplication();
 	app->Initialize();
 	app->Launch();
+	delete app;
 
 	return 0;
 }

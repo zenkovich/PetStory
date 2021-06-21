@@ -21,6 +21,7 @@ int main()
 	Editor::EditorApplication* app = mnew Editor::EditorApplication();
 	app->Initialize();
 	app->Launch();
+	delete app;
 
 	return 0;
 }

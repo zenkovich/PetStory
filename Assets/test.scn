@@ -11,6 +11,12 @@
             "Type": "o2::CameraActor",
             "Value": {
                 "mName": "Camera Actor",
+                "fillColor": {
+                    "r": 0,
+                    "g": 0,
+                    "b": 0,
+                    "a": 255
+                },
                 "mType": "FittedSize",
                 "mFixedOrFittedSize": {
                     "x": 2160.0,
@@ -124,7 +130,7 @@
                                         "Id": 11359192724321602258,
                                         "Transform": {
                                             "position": {
-                                                "x": 762.604248046875,
+                                                "x": 762.6041870117188,
                                                 "y": -591.673828125
                                             },
                                             "size": {
@@ -163,7 +169,7 @@
                                         "Id": 3741577868736029207,
                                         "Transform": {
                                             "position": {
-                                                "x": 918.2528686523438,
+                                                "x": 918.2527465820313,
                                                 "y": 752.552734375
                                             },
                                             "size": {
@@ -278,7 +284,7 @@
                                         "Transform": {
                                             "position": {
                                                 "x": 883.3421020507813,
-                                                "y": -490.2373046875
+                                                "y": -490.2371826171875
                                             },
                                             "size": {
                                                 "x": 399.56072998046877,
@@ -318,7 +324,7 @@
                                         "Transform": {
                                             "position": {
                                                 "x": -1101.668212890625,
-                                                "y": -580.40283203125
+                                                "y": -580.4027099609375
                                             },
                                             "size": {
                                                 "x": 399.5592041015625,
@@ -445,7 +451,6 @@
                                 {
                                     "Type": "ChipsSpawnerComponent",
                                     "Data": {
-                                        "mSpawnDelay": 0.20000000298023225,
                                         "mSpawnContainer": {
                                             "ID": 16476334999626596526
                                         },
@@ -489,7 +494,6 @@
                                 {
                                     "Type": "ChipsSpawnerComponent",
                                     "Data": {
-                                        "mSpawnDelay": 0.20000000298023225,
                                         "mSpawnContainer": {
                                             "ID": 16476334999626596526
                                         },
@@ -533,7 +537,6 @@
                                 {
                                     "Type": "ChipsSpawnerComponent",
                                     "Data": {
-                                        "mSpawnDelay": 0.20000000298023225,
                                         "mSpawnContainer": {
                                             "ID": 16476334999626596526
                                         },
@@ -577,7 +580,6 @@
                                 {
                                     "Type": "ChipsSpawnerComponent",
                                     "Data": {
-                                        "mSpawnDelay": 0.20000000298023225,
                                         "mSpawnContainer": {
                                             "ID": 16476334999626596526
                                         },
@@ -621,7 +623,6 @@
                                 {
                                     "Type": "ChipsSpawnerComponent",
                                     "Data": {
-                                        "mSpawnDelay": 0.20000000298023225,
                                         "mSpawnContainer": {
                                             "ID": 16476334999626596526
                                         },
@@ -665,7 +666,6 @@
                                 {
                                     "Type": "ChipsSpawnerComponent",
                                     "Data": {
-                                        "mSpawnDelay": 0.20000000298023225,
                                         "mSpawnContainer": {
                                             "ID": 16476334999626596526
                                         },
