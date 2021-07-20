@@ -1,5 +1,6 @@
 {
     "physics": {
-        "scale": 100.0
+        "scale": 100.0,
+        "debugDrawAlpha": 0.0
     }
 }
