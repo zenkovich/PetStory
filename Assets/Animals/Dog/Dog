@@ -1,0 +1,34 @@
+{
+    "mPages": [
+        {
+            "mSize": {
+                "x": 2048,
+                "y": 2048
+            },
+            "mImagesRects": [
+                {
+                    "Key": "7ca1420b5ff34bcd0c4763336bb862bd",
+                    "Value": {
+                        "left": 0,
+                        "bottom": 0,
+                        "right": 383,
+                        "top": 268
+                    }
+                }
+            ]
+        }
+    ],
+    "mImages": [
+        {
+            "id": "7ca1420b5ff34bcd0c4763336bb862bd",
+            "time": {
+                "mYear": 2021,
+                "mMonth": 8,
+                "mDay": 1,
+                "mHour": 16,
+                "mMinute": 17,
+                "mSecond": 23
+            }
+        }
+    ]
+}
