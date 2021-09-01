@@ -1,0 +1,438 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A612A96F26DFCC9000CD45A5 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A612A96E26DFCC9000CD45A5 /* AppKit.framework */; };
+		A68E84D826D5453D00DD2240 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A68E84D726D5453D00DD2240 /* Assets.xcassets */; };
+		A68E84DE26D5453D00DD2240 /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = A68E84DD26D5453D00DD2240 /* main.mm */; };
+		A6CA54C126DD646900EAD895 /* libEditor.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A6CA52C126DD1DE100EAD895 /* libEditor.a */; };
+		A6CA54C226DD646C00EAD895 /* libFramework.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A68E885126D5711300DD2240 /* libFramework.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A68E885026D5711300DD2240 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A68E884C26D5711300DD2240 /* Framework.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A68E84EE26D5464400DD2240;
+			remoteInfo = Framework;
+		};
+		A68E8B9826D5713E00DD2240 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A68E884C26D5711300DD2240 /* Framework.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = A68E84ED26D5464400DD2240;
+			remoteInfo = Framework;
+		};
+		A6CA52C026DD1DE100EAD895 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A6CA52BC26DD1DE100EAD895 /* Editor.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A6CA52A626DD1D9400EAD895;
+			remoteInfo = Editor;
+		};
+		A6CA52C226DD1DF200EAD895 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A6CA52BC26DD1DE100EAD895 /* Editor.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = A6CA52A526DD1D9400EAD895;
+			remoteInfo = Editor;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A612A96E26DFCC9000CD45A5 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		A68E84C826D5453C00DD2240 /* PetStory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PetStory.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A68E84D726D5453D00DD2240 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A68E84DC26D5453D00DD2240 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A68E84DD26D5453D00DD2240 /* main.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
+		A68E84DF26D5453D00DD2240 /* PetStory.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PetStory.entitlements; sourceTree = "<group>"; };
+		A68E884C26D5711300DD2240 /* Framework.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Framework.xcodeproj; path = ../../o2/Framework/Platforms/Mac/Framework.xcodeproj; sourceTree = "<group>"; };
+		A6CA52BC26DD1DE100EAD895 /* Editor.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Editor.xcodeproj; path = ../../o2/Editor/Platforms/Mac/Editor.xcodeproj; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A68E84C526D5453C00DD2240 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A612A96F26DFCC9000CD45A5 /* AppKit.framework in Frameworks */,
+				A6CA54C226DD646C00EAD895 /* libFramework.a in Frameworks */,
+				A6CA54C126DD646900EAD895 /* libEditor.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A68E84BF26D5453C00DD2240 = {
+			isa = PBXGroup;
+			children = (
+				A6CA52BC26DD1DE100EAD895 /* Editor.xcodeproj */,
+				A68E884C26D5711300DD2240 /* Framework.xcodeproj */,
+				A68E84CA26D5453C00DD2240 /* PetStory */,
+				A68E84C926D5453C00DD2240 /* Products */,
+				A6CA54C026DD646900EAD895 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		A68E84C926D5453C00DD2240 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A68E84C826D5453C00DD2240 /* PetStory.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A68E84CA26D5453C00DD2240 /* PetStory */ = {
+			isa = PBXGroup;
+			children = (
+				A68E84D726D5453D00DD2240 /* Assets.xcassets */,
+				A68E84DC26D5453D00DD2240 /* Info.plist */,
+				A68E84DD26D5453D00DD2240 /* main.mm */,
+				A68E84DF26D5453D00DD2240 /* PetStory.entitlements */,
+			);
+			path = PetStory;
+			sourceTree = "<group>";
+		};
+		A68E884D26D5711300DD2240 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A68E885126D5711300DD2240 /* libFramework.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A6CA52BD26DD1DE100EAD895 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A6CA52C126DD1DE100EAD895 /* libEditor.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A6CA54C026DD646900EAD895 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A612A96E26DFCC9000CD45A5 /* AppKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A68E84C726D5453C00DD2240 /* PetStory */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A68E84E226D5453D00DD2240 /* Build configuration list for PBXNativeTarget "PetStory" */;
+			buildPhases = (
+				A68E84C426D5453C00DD2240 /* Sources */,
+				A68E84C526D5453C00DD2240 /* Frameworks */,
+				A68E84C626D5453C00DD2240 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A68E8B9926D5713E00DD2240 /* PBXTargetDependency */,
+				A6CA52C326DD1DF200EAD895 /* PBXTargetDependency */,
+			);
+			name = PetStory;
+			productName = PetStory;
+			productReference = A68E84C826D5453C00DD2240 /* PetStory.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A68E84C026D5453C00DD2240 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					A68E84C726D5453C00DD2240 = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+				};
+			};
+			buildConfigurationList = A68E84C326D5453C00DD2240 /* Build configuration list for PBXProject "PetStory" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A68E84BF26D5453C00DD2240;
+			productRefGroup = A68E84C926D5453C00DD2240 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = A6CA52BD26DD1DE100EAD895 /* Products */;
+					ProjectRef = A6CA52BC26DD1DE100EAD895 /* Editor.xcodeproj */;
+				},
+				{
+					ProductGroup = A68E884D26D5711300DD2240 /* Products */;
+					ProjectRef = A68E884C26D5711300DD2240 /* Framework.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				A68E84C726D5453C00DD2240 /* PetStory */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		A68E885126D5711300DD2240 /* libFramework.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libFramework.a;
+			remoteRef = A68E885026D5711300DD2240 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A6CA52C126DD1DE100EAD895 /* libEditor.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libEditor.a;
+			remoteRef = A6CA52C026DD1DE100EAD895 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A68E84C626D5453C00DD2240 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A68E84D826D5453D00DD2240 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A68E84C426D5453C00DD2240 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A68E84DE26D5453D00DD2240 /* main.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A68E8B9926D5713E00DD2240 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Framework;
+			targetProxy = A68E8B9826D5713E00DD2240 /* PBXContainerItemProxy */;
+		};
+		A6CA52C326DD1DF200EAD895 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Editor;
+			targetProxy = A6CA52C226DD1DF200EAD895 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		A68E84E026D5453D00DD2240 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = c11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		A68E84E126D5453D00DD2240 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = c11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		A68E84E326D5453D00DD2240 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CODE_SIGN_ENTITLEMENTS = PetStory/PetStory.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = K48QWFFT79;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = PetStory/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = o2.PetStory;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = (
+					/Users/playrix/PetStory/o2/Framework/Sources,
+					/Users/playrix/PetStory/o2/Framework,
+					/Users/playrix/PetStory/o2/Framework/3rdPartyLibs/FreeType/include,
+					/Users/playrix/PetStory/o2/Framework/3rdPartyLibs,
+					/Users/playrix/PetStory/o2/Framework/3rdPartyLibs/rapidjson/include,
+					/Users/playrix/PetStory/o2/Editor/Sources,
+				);
+			};
+			name = Debug;
+		};
+		A68E84E426D5453D00DD2240 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CODE_SIGN_ENTITLEMENTS = PetStory/PetStory.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = K48QWFFT79;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = PetStory/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = o2.PetStory;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = (
+					/Users/playrix/PetStory/o2/Framework/Sources,
+					/Users/playrix/PetStory/o2/Framework,
+					/Users/playrix/PetStory/o2/Framework/3rdPartyLibs/FreeType/include,
+					/Users/playrix/PetStory/o2/Framework/3rdPartyLibs,
+					/Users/playrix/PetStory/o2/Framework/3rdPartyLibs/rapidjson/include,
+					/Users/playrix/PetStory/o2/Editor/Sources,
+				);
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A68E84C326D5453C00DD2240 /* Build configuration list for PBXProject "PetStory" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A68E84E026D5453D00DD2240 /* Debug */,
+				A68E84E126D5453D00DD2240 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A68E84E226D5453D00DD2240 /* Build configuration list for PBXNativeTarget "PetStory" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A68E84E326D5453D00DD2240 /* Debug */,
+				A68E84E426D5453D00DD2240 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A68E84C026D5453C00DD2240 /* Project object */;
+}

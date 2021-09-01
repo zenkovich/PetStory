@@ -41,3 +41,4 @@
 /Tests_fast_dbg.ilk
 /Tests_fast_dbg.pdb
 /Tests_fast_dbg.exe
+*.DS_Store
