@@ -2,6 +2,7 @@
 
 #include "o2/Render/Render.h"
 #include "o2/Scene/Scene.h"
+#include "o2/Application/Input.h"
 
 void GameApplication::OnStarted()
 {
@@ -11,11 +12,16 @@ void GameApplication::OnStarted()
 
 void GameApplication::OnUpdate(float dt)
 {
+	o2Application.windowCaption = String("Pet story") +
+	"; FPS: " + (String)((int)o2Time.GetFPS()) +
+	" Cursor: " + (String)o2Input.GetCursorPos();
 }
 
 void GameApplication::OnDraw()
 {
-	o2Render.Clear();
-	o2Render.SetCamera(Camera::Default());
+	float scale = o2Application.GetGraphicsScale();
+	Camera camera = Camera::Default();
+	camera.scale = Vec2F(1.0f/scale, 1.0f/scale);
+	o2Render.camera = camera;
 }
 

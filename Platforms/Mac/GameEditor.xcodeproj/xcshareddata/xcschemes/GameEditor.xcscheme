@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A68E84C726D5453C00DD2240"
-               BuildableName = "PetStoryEditor.app"
-               BlueprintName = "PetStoryEditor"
-               ReferencedContainer = "container:PetStory.xcodeproj">
+               BlueprintIdentifier = "A651F18727244E8A00C59EF7"
+               BuildableName = "libGameEditor.a"
+               BlueprintName = "GameEditor"
+               ReferencedContainer = "container:GameEditor.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -34,32 +34,12 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      enableASanStackUseAfterReturn = "YES"
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A651F1B927245F3200C59EF7"
-            BuildableName = "PetStory.app"
-            BlueprintName = "PetStory"
-            ReferencedContainer = "container:PetStory.xcodeproj">
-         </BuildableReference>
-      </BuildableProductRunnable>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A68E84C726D5453C00DD2240"
-            BuildableName = "PetStoryEditor.app"
-            BlueprintName = "PetStoryEditor"
-            ReferencedContainer = "container:PetStory.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -67,16 +47,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A68E84C726D5453C00DD2240"
-            BuildableName = "PetStoryEditor.app"
-            BlueprintName = "PetStoryEditor"
-            ReferencedContainer = "container:PetStory.xcodeproj">
+            BlueprintIdentifier = "A651F18727244E8A00C59EF7"
+            BuildableName = "libGameEditor.a"
+            BlueprintName = "GameEditor"
+            ReferencedContainer = "container:GameEditor.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

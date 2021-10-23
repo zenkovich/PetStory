@@ -1,6 +1,7 @@
 #include "Chip.h"
 
 #include "o2/Scene/Actor.h"
+#include "o2/Scene/Scene.h"
 #include "o2/Render/Render.h"
 
 bool Chip::IsUnderPoint(const Vec2F& point)
@@ -15,7 +16,7 @@ void Chip::OnStart()
 {
 	mImage = mOwner->GetComponent<ImageComponent>();
 	if (mImage)
-		mImage->onDraw = [&] { OnDrawn(); };
+		mImage->DrawableComponent::onDraw = [&] { OnDrawn(); };
 }
 
 void Chip::OnCursorReleased(const Input::Cursor& cursor)

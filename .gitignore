@@ -42,3 +42,6 @@
 /Tests_fast_dbg.pdb
 /Tests_fast_dbg.exe
 *.DS_Store
+PetStory.app.dSYM
+XCBuildData
+Platforms/Mac/build

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "o2::Color4::SetABGR(unsigned long):Color.cpp">
+         <PersistentStrings>
+            <PersistentString
+               value = "sizeof(Ulong)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[ViewController keyDown:]:RendererView.mm">
+      </ContextState>
+      <ContextState
+         contextName = "o2::CursorAreaEventListenersLayer::Update():CursorAreaEventsListenersLayer.cpp">
+         <PersistentStrings>
+            <PersistentString
+               value = "o2::Input::mInstance">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "o2::Render::DrawBuffer(o2::PrimitiveType, o2::Vertex2*, unsigned int, unsigned short*, unsigned int, o2::TextureRef const&amp;):RenderImpl.mm">
+         <PersistentStrings>
+            <PersistentString
+               value = "indexes[j]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[ViewController getMousePos:]:RendererView.mm">
+         <PersistentStrings>
+            <PersistentString
+               value = "o2::Render::mInstance">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "o2::EventSystem::Update():EventSystem.cpp">
+         <PersistentStrings>
+            <PersistentString
+               value = "&amp;mCursorAreaListenersBasicLayer">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
