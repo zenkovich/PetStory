@@ -45,3 +45,5 @@
 PetStory.app.dSYM
 XCBuildData
 Platforms/Mac/build
+PetStoryEditor.app
+PetStory.app
