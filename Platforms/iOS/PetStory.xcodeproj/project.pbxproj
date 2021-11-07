@@ -12,12 +12,14 @@
 		A632E46F272497C70066CE6A /* libFramework.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A632DE1C2724938A0066CE6A /* libFramework.a */; };
 		A632E476272497DD0066CE6A /* lib3rdPartyLibs.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A632DE162724938A0066CE6A /* lib3rdPartyLibs.a */; };
 		A632E477272497DD0066CE6A /* libGame.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A632DE22272493AC0066CE6A /* libGame.a */; };
-		A6926E2C27317BF600C7268D /* Data.json in Resources */ = {isa = PBXBuildFile; fileRef = A6926E2A27317BF600C7268D /* Data.json */; };
-		A6926E2D27317BF600C7268D /* Data in Resources */ = {isa = PBXBuildFile; fileRef = A6926E2B27317BF600C7268D /* Data */; };
 		A6926E2F273193A000C7268D /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = A6926E2E273193A000C7268D /* Shaders.metal */; };
 		A6926E3227319E3F00C7268D /* MetalKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6926E3027319E3F00C7268D /* MetalKit.framework */; };
 		A6926E3327319E3F00C7268D /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6926E3127319E3F00C7268D /* Metal.framework */; };
 		A6926E3527319F7400C7268D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6926E3427319F7400C7268D /* UIKit.framework */; };
+		A6D01CBE27380F2B0078E799 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6D01CBD27380F2B0078E799 /* Launch Screen.storyboard */; };
+		A6FF263D2733B949004E2152 /* ProjectSettings.json in Resources */ = {isa = PBXBuildFile; fileRef = A6FF263C2733B949004E2152 /* ProjectSettings.json */; };
+		A6FF26402733B993004E2152 /* Data in Resources */ = {isa = PBXBuildFile; fileRef = A6FF263E2733B993004E2152 /* Data */; };
+		A6FF26412733B993004E2152 /* Data.json in Resources */ = {isa = PBXBuildFile; fileRef = A6FF263F2733B993004E2152 /* Data.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,12 +75,14 @@
 		A632DE112724938A0066CE6A /* 3rdPartyLibs.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = 3rdPartyLibs.xcodeproj; path = ../../o2/Framework/Platforms/iOS/3rdPartyLibs.xcodeproj; sourceTree = "<group>"; };
 		A632DE172724938A0066CE6A /* Framework.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Framework.xcodeproj; path = ../../o2/Framework/Platforms/iOS/Framework.xcodeproj; sourceTree = "<group>"; };
 		A632DE1D272493AC0066CE6A /* Game.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = Game.xcodeproj; sourceTree = "<group>"; };
-		A6926E2A27317BF600C7268D /* Data.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = Data.json; path = ../../BuiltAssets/iOS/Data.json; sourceTree = "<group>"; };
-		A6926E2B27317BF600C7268D /* Data */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Data; path = ../../BuiltAssets/iOS/Data; sourceTree = "<group>"; };
 		A6926E2E273193A000C7268D /* Shaders.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = Shaders.metal; sourceTree = "<group>"; };
 		A6926E3027319E3F00C7268D /* MetalKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetalKit.framework; path = System/Library/Frameworks/MetalKit.framework; sourceTree = SDKROOT; };
 		A6926E3127319E3F00C7268D /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
 		A6926E3427319F7400C7268D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		A6D01CBD27380F2B0078E799 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		A6FF263C2733B949004E2152 /* ProjectSettings.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = ProjectSettings.json; path = ../../ProjectSettings.json; sourceTree = "<group>"; };
+		A6FF263E2733B993004E2152 /* Data */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Data; path = ../../BuiltAssets/iOS/Data; sourceTree = "<group>"; };
+		A6FF263F2733B993004E2152 /* Data.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = Data.json; path = ../../BuiltAssets/iOS/Data.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,8 +105,9 @@
 		A632DD7B27248E010066CE6A = {
 			isa = PBXGroup;
 			children = (
-				A6926E2B27317BF600C7268D /* Data */,
-				A6926E2A27317BF600C7268D /* Data.json */,
+				A6FF263E2733B993004E2152 /* Data */,
+				A6FF263F2733B993004E2152 /* Data.json */,
+				A6FF263C2733B949004E2152 /* ProjectSettings.json */,
 				A632DE1D272493AC0066CE6A /* Game.xcodeproj */,
 				A632DE112724938A0066CE6A /* 3rdPartyLibs.xcodeproj */,
 				A632DE172724938A0066CE6A /* Framework.xcodeproj */,
@@ -127,6 +132,7 @@
 				A632DD9627248E050066CE6A /* Assets.xcassets */,
 				A632DD9827248E050066CE6A /* Info.plist */,
 				A632DD9927248E050066CE6A /* main.mm */,
+				A6D01CBD27380F2B0078E799 /* Launch Screen.storyboard */,
 			);
 			path = PetStory;
 			sourceTree = "<group>";
@@ -262,8 +268,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A6926E2C27317BF600C7268D /* Data.json in Resources */,
-				A6926E2D27317BF600C7268D /* Data in Resources */,
+				A6FF26402733B993004E2152 /* Data in Resources */,
+				A6FF26412733B993004E2152 /* Data.json in Resources */,
+				A6FF263D2733B949004E2152 /* ProjectSettings.json in Resources */,
+				A6D01CBE27380F2B0078E799 /* Launch Screen.storyboard in Resources */,
 				A632DD9727248E050066CE6A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -360,7 +368,6 @@
 				OTHER_CPLUSPLUSFLAGS = (
 					"$(OTHER_CFLAGS)",
 					"-fdeclspec",
-					"-Wundefined-var-template",
 				);
 				SDKROOT = iphoneos;
 				SYSTEM_HEADER_SEARCH_PATHS = (
@@ -378,7 +385,7 @@
 					/Users/playrix/PetStory/o2/Framework/3rdPartyLibs/rapidjson/include,
 					/Users/playrix/PetStory/Sources/Game,
 				);
-				WARNING_CFLAGS = "-Wundefined-var-template";
+				WARNING_CFLAGS = "-Wno-undefined-var-template";
 			};
 			name = Debug;
 		};
@@ -439,7 +446,6 @@
 				OTHER_CPLUSPLUSFLAGS = (
 					"$(OTHER_CFLAGS)",
 					"-fdeclspec",
-					"-Wundefined-var-template",
 				);
 				SDKROOT = iphoneos;
 				SYSTEM_HEADER_SEARCH_PATHS = (
@@ -458,7 +464,7 @@
 					/Users/playrix/PetStory/Sources/Game,
 				);
 				VALIDATE_PRODUCT = YES;
-				WARNING_CFLAGS = "-Wundefined-var-template";
+				WARNING_CFLAGS = "-Wno-undefined-var-template";
 			};
 			name = Release;
 		};

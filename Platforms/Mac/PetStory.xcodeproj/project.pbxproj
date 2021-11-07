@@ -134,7 +134,7 @@
 		A651F16C27244E5000C59EF7 /* Game.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = Game.xcodeproj; sourceTree = "<group>"; };
 		A651F1A827244EB900C59EF7 /* GameEditor.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = GameEditor.xcodeproj; sourceTree = "<group>"; };
 		A651F1D527245F3200C59EF7 /* PetStory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PetStory.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		A651F1D627245F3200C59EF7 /* PetStory copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "PetStory copy-Info.plist"; path = "/Users/playrix/PetStory/Platforms/Mac/PetStory copy-Info.plist"; sourceTree = "<absolute>"; };
+		A651F1D627245F3200C59EF7 /* PetStory-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "PetStory-Info.plist"; path = "/Users/playrix/PetStory/Platforms/Mac/PetStory-Info.plist"; sourceTree = "<absolute>"; };
 		A68E84C826D5453C00DD2240 /* PetStoryEditor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PetStoryEditor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A68E84D726D5453D00DD2240 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A68E84DC26D5453D00DD2240 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -230,7 +230,7 @@
 				A68E84CA26D5453C00DD2240 /* PetStory */,
 				A68E84C926D5453C00DD2240 /* Products */,
 				A6CA54C026DD646900EAD895 /* Frameworks */,
-				A651F1D627245F3200C59EF7 /* PetStory copy-Info.plist */,
+				A651F1D627245F3200C59EF7 /* PetStory-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -516,7 +516,6 @@
 				OTHER_CPLUSPLUSFLAGS = (
 					"$(OTHER_CFLAGS)",
 					"-fdeclspec",
-					"-Wundefined-var-template",
 				);
 				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_BUNDLE_IDENTIFIER = o2.PetStory;
@@ -537,7 +536,7 @@
 					/Users/playrix/PetStory/o2/Framework/3rdPartyLibs/rapidjson/include,
 					/Users/playrix/PetStory/Sources/Game,
 				);
-				WARNING_CFLAGS = "-Wundefined-var-template";
+				WARNING_CFLAGS = "-Wno-undefined-var-template";
 			};
 			name = Debug;
 		};
@@ -568,7 +567,6 @@
 				OTHER_CPLUSPLUSFLAGS = (
 					"$(OTHER_CFLAGS)",
 					"-fdeclspec",
-					"-Wundefined-var-template",
 				);
 				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_BUNDLE_IDENTIFIER = o2.PetStory;
@@ -589,7 +587,7 @@
 					/Users/playrix/PetStory/o2/Framework/3rdPartyLibs/rapidjson/include,
 					/Users/playrix/PetStory/Sources/Game,
 				);
-				WARNING_CFLAGS = "-Wundefined-var-template";
+				WARNING_CFLAGS = "-Wno-undefined-var-template";
 			};
 			name = Release;
 		};
@@ -634,10 +632,6 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -733,7 +727,6 @@
 				OTHER_CPLUSPLUSFLAGS = (
 					"$(OTHER_CFLAGS)",
 					"-fdeclspec",
-					"-Wundefined-var-template",
 				);
 				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_BUNDLE_IDENTIFIER = o2.PetStory;
@@ -756,7 +749,7 @@
 					/Users/playrix/PetStory/Sources/Game,
 					/Users/playrix/PetStory/o2/Editor/Sources,
 				);
-				WARNING_CFLAGS = "-Wundefined-var-template";
+				WARNING_CFLAGS = "-Wno-undefined-var-template";
 			};
 			name = Debug;
 		};
@@ -787,7 +780,6 @@
 				OTHER_CPLUSPLUSFLAGS = (
 					"$(OTHER_CFLAGS)",
 					"-fdeclspec",
-					"-Wundefined-var-template",
 				);
 				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_BUNDLE_IDENTIFIER = o2.PetStory;
@@ -810,7 +802,7 @@
 					/Users/playrix/PetStory/Sources/Game,
 					/Users/playrix/PetStory/o2/Editor/Sources,
 				);
-				WARNING_CFLAGS = "-Wundefined-var-template";
+				WARNING_CFLAGS = "-Wno-undefined-var-template";
 			};
 			name = Release;
 		};

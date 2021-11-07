@@ -14,8 +14,8 @@
             filePath = "../../o2/Editor/Sources/o2Editor/Core/UI/ScrollView.cpp"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "255"
-            endingLineNumber = "255"
+            startingLineNumber = "254"
+            endingLineNumber = "254"
             landmarkName = "ScrollView::RedrawRenderTarget()"
             landmarkType = "7">
          </BreakpointContent>
@@ -129,22 +129,6 @@
             startingLineNumber = "24"
             endingLineNumber = "24"
             landmarkName = "GameApplication::OnDraw()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "F1BDA57C-6C6B-403A-84B3-DC645D951CB3"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "../../o2/Framework/Sources/o2/Utils/Bitmap/Bitmap.cpp"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "82"
-            endingLineNumber = "82"
-            landmarkName = "Bitmap::Load(fileName, type)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

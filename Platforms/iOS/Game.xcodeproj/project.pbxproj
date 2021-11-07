@@ -202,7 +202,6 @@
 				OTHER_CPLUSPLUSFLAGS = (
 					"$(OTHER_CFLAGS)",
 					"-fdeclspec",
-					"-Wundefined-var-template",
 				);
 				SDKROOT = iphoneos;
 				SYSTEM_HEADER_SEARCH_PATHS = (
@@ -220,7 +219,7 @@
 					/Users/playrix/PetStory/o2/Framework/3rdPartyLibs/rapidjson/include,
 					/Users/playrix/PetStory/Sources/Game,
 				);
-				WARNING_CFLAGS = "-Wundefined-var-template";
+				WARNING_CFLAGS = "-Wno-undefined-var-template";
 			};
 			name = Debug;
 		};
@@ -280,7 +279,6 @@
 				OTHER_CPLUSPLUSFLAGS = (
 					"$(OTHER_CFLAGS)",
 					"-fdeclspec",
-					"-Wundefined-var-template",
 				);
 				SDKROOT = iphoneos;
 				SYSTEM_HEADER_SEARCH_PATHS = (
@@ -298,7 +296,7 @@
 					/Users/playrix/PetStory/o2/Framework/3rdPartyLibs/rapidjson/include,
 					/Users/playrix/PetStory/Sources/Game,
 				);
-				WARNING_CFLAGS = "-Wundefined-var-template";
+				WARNING_CFLAGS = "-Wno-undefined-var-template";
 			};
 			name = Release;
 		};

@@ -1,6 +1,5 @@
 #include "Chip.h"
 
-#include "o2/Scene/Actor.h"
 #include "o2/Scene/Scene.h"
 #include "o2/Render/Render.h"
 
