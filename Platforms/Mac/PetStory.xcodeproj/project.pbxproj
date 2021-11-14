@@ -499,7 +499,7 @@
 				CODE_SIGN_ENTITLEMENTS = PetStory/PetStory.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CONFIGURATION_BUILD_DIR = /Users/playrix/PetStory/;
+				CONFIGURATION_BUILD_DIR = /Users/playrix/PetStory/Bin/Mac/;
 				DEVELOPMENT_TEAM = K48QWFFT79;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -511,7 +511,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MTL_HEADER_SEARCH_PATHS = "/Users/playrix/PetStory/o2/Framework/Sources /Users/playrix/PetStory/o2/Framework /Users/playrix/PetStory/o2/Framework/3rdPartyLibs/FreeType/include /Users/playrix/PetStory/o2/Framework/3rdPartyLibs /Users/playrix/PetStory/o2/Framework/3rdPartyLibs/rapidjson/include /Users/playrix/PetStory/o2/Editor/Sources";
+				MTL_HEADER_SEARCH_PATHS = "../../o2/Framework/Sources ../../o2/Framework ../../o2/Framework/3rdPartyLibs/FreeType/include ../../o2/Framework/3rdPartyLibs ../../o2/Framework/3rdPartyLibs/rapidjson/include ../../o2/Editor/Sources";
 				OBJROOT = build;
 				OTHER_CPLUSPLUSFLAGS = (
 					"$(OTHER_CFLAGS)",
@@ -550,7 +550,7 @@
 				CODE_SIGN_ENTITLEMENTS = PetStory/PetStoryRelease.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CONFIGURATION_BUILD_DIR = /Users/playrix/PetStory/;
+				CONFIGURATION_BUILD_DIR = /Users/playrix/PetStory/Bin/Mac/;
 				DEVELOPMENT_TEAM = K48QWFFT79;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -562,7 +562,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MTL_HEADER_SEARCH_PATHS = "/Users/playrix/PetStory/o2/Framework/Sources /Users/playrix/PetStory/o2/Framework /Users/playrix/PetStory/o2/Framework/3rdPartyLibs/FreeType/include /Users/playrix/PetStory/o2/Framework/3rdPartyLibs /Users/playrix/PetStory/o2/Framework/3rdPartyLibs/rapidjson/include /Users/playrix/PetStory/o2/Editor/Sources";
+				MTL_HEADER_SEARCH_PATHS = "../../o2/Framework/Sources ../../o2/Framework ../../o2/Framework/3rdPartyLibs/FreeType/include ../../o2/Framework/3rdPartyLibs ../../o2/Framework/3rdPartyLibs/rapidjson/include ../../o2/Editor/Sources";
 				OBJROOT = build;
 				OTHER_CPLUSPLUSFLAGS = (
 					"$(OTHER_CFLAGS)",
@@ -710,7 +710,7 @@
 				CODE_SIGN_ENTITLEMENTS = PetStory/PetStory.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CONFIGURATION_BUILD_DIR = /Users/playrix/PetStory/;
+				CONFIGURATION_BUILD_DIR = /Users/playrix/PetStory/Bin/Mac/;
 				DEVELOPMENT_TEAM = K48QWFFT79;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -722,7 +722,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MTL_HEADER_SEARCH_PATHS = "/Users/playrix/PetStory/o2/Framework/Sources /Users/playrix/PetStory/o2/Framework /Users/playrix/PetStory/o2/Framework/3rdPartyLibs/FreeType/include /Users/playrix/PetStory/o2/Framework/3rdPartyLibs /Users/playrix/PetStory/o2/Framework/3rdPartyLibs/rapidjson/include /Users/playrix/PetStory/o2/Editor/Sources";
+				MTL_HEADER_SEARCH_PATHS = "../../o2/Framework/Sources ../../o2/Framework ../../o2/Framework/3rdPartyLibs/FreeType/include ../../o2/Framework/3rdPartyLibs ../../o2/Framework/3rdPartyLibs/rapidjson/include ../../o2/Editor/Sources";
 				OBJROOT = build;
 				OTHER_CPLUSPLUSFLAGS = (
 					"$(OTHER_CFLAGS)",
@@ -763,7 +763,7 @@
 				CODE_SIGN_ENTITLEMENTS = PetStory/PetStoryRelease.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CONFIGURATION_BUILD_DIR = /Users/playrix/PetStory/;
+				CONFIGURATION_BUILD_DIR = /Users/playrix/PetStory/Bin/Mac/;
 				DEVELOPMENT_TEAM = K48QWFFT79;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -775,7 +775,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MTL_HEADER_SEARCH_PATHS = "/Users/playrix/PetStory/o2/Framework/Sources /Users/playrix/PetStory/o2/Framework /Users/playrix/PetStory/o2/Framework/3rdPartyLibs/FreeType/include /Users/playrix/PetStory/o2/Framework/3rdPartyLibs /Users/playrix/PetStory/o2/Framework/3rdPartyLibs/rapidjson/include /Users/playrix/PetStory/o2/Editor/Sources";
+				MTL_HEADER_SEARCH_PATHS = "../../o2/Framework/Sources ../../o2/Framework ../../o2/Framework/3rdPartyLibs/FreeType/include ../../o2/Framework/3rdPartyLibs ../../o2/Framework/3rdPartyLibs/rapidjson/include ../../o2/Editor/Sources";
 				OBJROOT = build;
 				OTHER_CPLUSPLUSFLAGS = (
 					"$(OTHER_CFLAGS)",

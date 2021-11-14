@@ -11,7 +11,15 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "-[ViewController keyDown:]:RendererView.mm">
+         contextName = "o2::EventSystem::Update():EventSystem.cpp">
+         <PersistentStrings>
+            <PersistentString
+               value = "&amp;mCursorAreaListenersBasicLayer">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "o2::EventSystem::PushCursorAreaEventsListenersLayer(o2::CursorAreaEventListenersLayer*):EventSystem.cpp">
       </ContextState>
       <ContextState
          contextName = "o2::CursorAreaEventListenersLayer::Update():CursorAreaEventsListenersLayer.cpp">
@@ -38,10 +46,10 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "o2::EventSystem::Update():EventSystem.cpp">
+         contextName = "-[ViewController keyDown:]:RendererView.mm">
          <PersistentStrings>
             <PersistentString
-               value = "&amp;mCursorAreaListenersBasicLayer">
+               value = "(char)charCode">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
