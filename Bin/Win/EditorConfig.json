@@ -1,0 +1,117 @@
+{
+    "mWindowSize": {
+        "x": 1938,
+        "y": 1038
+    },
+    "mWindowPosition": {
+        "x": -9,
+        "y": -9
+    },
+    "mLayout": {
+        "mainDock": {
+            "anchors": {
+                "left": 0.0,
+                "bottom": 0.0,
+                "right": 1.0,
+                "top": 1.0
+            }
+        },
+        "windows": [
+            {
+                "Key": "animation window",
+                "Value": {
+                    "offsetMax": {
+                        "x": 200.0,
+                        "y": 200.0
+                    },
+                    "minSize": {
+                        "x": 100.0,
+                        "y": 50.0
+                    }
+                }
+            },
+            {
+                "Key": "assets window",
+                "Value": {
+                    "offsetMax": {
+                        "x": 200.0,
+                        "y": 200.0
+                    },
+                    "minSize": {
+                        "x": 100.0,
+                        "y": 50.0
+                    }
+                }
+            },
+            {
+                "Key": "game window",
+                "Value": {
+                    "offsetMax": {
+                        "x": 200.0,
+                        "y": 200.0
+                    },
+                    "minSize": {
+                        "x": 100.0,
+                        "y": 50.0
+                    }
+                }
+            },
+            {
+                "Key": "log window",
+                "Value": {
+                    "offsetMax": {
+                        "x": 200.0,
+                        "y": 200.0
+                    },
+                    "minSize": {
+                        "x": 100.0,
+                        "y": 50.0
+                    }
+                }
+            },
+            {
+                "Key": "properties window",
+                "Value": {
+                    "offsetMax": {
+                        "x": 200.0,
+                        "y": 200.0
+                    },
+                    "minSize": {
+                        "x": 100.0,
+                        "y": 50.0
+                    }
+                }
+            },
+            {
+                "Key": "scene window",
+                "Value": {
+                    "offsetMax": {
+                        "x": 200.0,
+                        "y": 200.0
+                    },
+                    "minSize": {
+                        "x": 100.0,
+                        "y": 50.0
+                    }
+                }
+            },
+            {
+                "Key": "tree window",
+                "Value": {
+                    "offsetMin": {
+                        "x": 629.0,
+                        "y": 570.0
+                    },
+                    "offsetMax": {
+                        "x": 829.0,
+                        "y": 770.0
+                    },
+                    "minSize": {
+                        "x": 100.0,
+                        "y": 50.0
+                    }
+                }
+            }
+        ]
+    }
+}

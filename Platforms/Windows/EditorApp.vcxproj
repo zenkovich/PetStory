@@ -58,19 +58,19 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <OutDir>$(SolutionDir)..\..\</OutDir>
+    <OutDir>$(SolutionDir)..\..\Bin\Win</OutDir>
     <IntDir>$(SolutionDir)Temp\$(Configuration)\EditorApp\</IntDir>
     <TargetName>Editor_dbg</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='FastDebug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <OutDir>$(SolutionDir)..\..\</OutDir>
+    <OutDir>$(SolutionDir)..\..\Bin\Win</OutDir>
     <IntDir>$(SolutionDir)Temp\$(Configuration)\EditorApp\</IntDir>
     <TargetName>Editor_fast_dbg</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
-    <OutDir>$(SolutionDir)..\..\</OutDir>
+    <OutDir>$(SolutionDir)..\..\Bin\Win</OutDir>
     <IntDir>$(SolutionDir)Temp\$(Configuration)\EditorApp\</IntDir>
     <TargetName>Editor</TargetName>
   </PropertyGroup>

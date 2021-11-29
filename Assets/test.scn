@@ -944,91 +944,80 @@
                                 {
                                     "Type": "o2::AnimationState",
                                     "Value": {
-                                        "mask": {},
-                                        "mAnimation": {
-                                            "own": true,
-                                            "asset": {
-                                                "Type": "o2::AnimationAsset",
-                                                "Value": {
-                                                    "animation": {
-                                                        "mTracks": [
-                                                            {
-                                                                "Type": "o2::AnimationTrack<o2::Vec2F>",
-                                                                "Value": {
-                                                                    "path": "transform/position",
-                                                                    "timeCurve": {
-                                                                        "mKeys": [
-                                                                            {
-                                                                                "uid": 4984096284636045248,
-                                                                                "rightSupportValue": 0.5,
-                                                                                "rightSupportPosition": 0.20901863276958466
-                                                                            },
-                                                                            {
-                                                                                "uid": 4962328609287043063,
-                                                                                "value": 1.0,
-                                                                                "position": 0.4180372655391693,
-                                                                                "leftSupportValue": -0.5,
-                                                                                "leftSupportPosition": -0.20901863276958466
-                                                                            }
-                                                                        ]
-                                                                    },
-                                                                    "spline": {
-                                                                        "mKeys": [
-                                                                            {
-                                                                                "uid": 2126941227613291645,
-                                                                                "value": {
-                                                                                    "x": 1758.2255859375,
-                                                                                    "y": -37.585845947265628
-                                                                                },
-                                                                                "supportsType": "Broken"
-                                                                            },
-                                                                            {
-                                                                                "uid": 5822906448145068469,
-                                                                                "position": 391.4612731933594,
-                                                                                "value": {
-                                                                                    "x": 1510.876708984375,
-                                                                                    "y": 265.8288269042969
-                                                                                },
-                                                                                "supportsType": "Broken"
-                                                                            },
-                                                                            {
-                                                                                "uid": 18092499155607891142,
-                                                                                "position": 657.6803588867188,
-                                                                                "value": {
-                                                                                    "x": 1332.7855224609376,
-                                                                                    "y": 67.94967651367188
-                                                                                },
-                                                                                "supportsType": "Broken"
-                                                                            },
-                                                                            {
-                                                                                "uid": 12315512108684168867,
-                                                                                "position": 959.098876953125,
-                                                                                "value": {
-                                                                                    "x": 1425.129150390625,
-                                                                                    "y": -218.97503662109376
-                                                                                },
-                                                                                "supportsType": "Broken"
-                                                                            }
-                                                                        ]
-                                                                    }
-                                                                }
-                                                            }
-                                                        ],
-                                                        "mDuration": 0.4180372655391693
-                                                    }
-                                                }
-                                            },
-                                            "meta": {
-                                                "Type": "o2::DefaultAssetMeta<o2::AnimationAsset>",
-                                                "Value": {
-                                                    "mId": "00000000000000000000000000000000"
-                                                }
-                                            }
-                                        }
+                                        "mask": {}
                                     }
                                 }
                             ],
                             "mId": 16508958725880061729
+                        }
+                    },
+                    {
+                        "Type": "o2::MeshComponent",
+                        "Data": {
+                            "spline": {
+                                "mKeys": [
+                                    {
+                                        "uid": 8119926807298335545,
+                                        "value": {
+                                            "x": 38.376220703125,
+                                            "y": 802.497314453125
+                                        },
+                                        "prevSupport": {
+                                            "x": 166.412841796875,
+                                            "y": -181.09617614746095
+                                        },
+                                        "nextSupport": {
+                                            "x": -166.41259765625,
+                                            "y": 181.095947265625
+                                        },
+                                        "supportsType": "Broken"
+                                    },
+                                    {
+                                        "uid": 11630670720072626440,
+                                        "position": 515.3170166015625,
+                                        "value": {
+                                            "x": 212.4407958984375,
+                                            "y": 1125.27197265625
+                                        },
+                                        "prevSupport": {
+                                            "x": -185.9908447265625,
+                                            "y": 39.155975341796878
+                                        },
+                                        "nextSupport": {
+                                            "x": 185.990478515625,
+                                            "y": -39.1558837890625
+                                        },
+                                        "supportsType": "Broken"
+                                    },
+                                    {
+                                        "uid": 5792733169029326196,
+                                        "position": 1143.335205078125,
+                                        "value": {
+                                            "x": 445.376220703125,
+                                            "y": 647.497314453125
+                                        },
+                                        "prevSupport": {
+                                            "x": 122.3621826171875,
+                                            "y": 293.66912841796877
+                                        },
+                                        "nextSupport": {
+                                            "x": -122.3621826171875,
+                                            "y": -293.6690979003906
+                                        },
+                                        "supportsType": "Broken"
+                                    },
+                                    {
+                                        "uid": 17004490701868580339,
+                                        "position": 1632.0799560546876,
+                                        "value": {
+                                            "x": 76.954833984375,
+                                            "y": 373.07720947265627
+                                        },
+                                        "supportsType": "Broken"
+                                    }
+                                ]
+                            },
+                            "mId": 15832772416254233775
                         }
                     }
                 ]
