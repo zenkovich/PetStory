@@ -135,7 +135,7 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Console</SubSystem>
-      <AdditionalDependencies>/WHOLEARCHIVE:$(ProjectDir)Temp\$(Configuration)\Libs\3rdPartyLibs.lib;/WHOLEARCHIVE:$(ProjectDir)Temp\$(Configuration)\Libs\Framework.lib;/WHOLEARCHIVE:$(ProjectDir)Temp\$(Configuration)\Libs\Game.lib;opengl32.lib;Shlwapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>$(ProjectDir)Temp\$(Configuration)\Libs\3rdPartyLibs.lib;/WHOLEARCHIVE:$(ProjectDir)Temp\$(Configuration)\Libs\Framework.lib;/WHOLEARCHIVE:$(ProjectDir)Temp\$(Configuration)\Libs\Game.lib;opengl32.lib;Shlwapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
