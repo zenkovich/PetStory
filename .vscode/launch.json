@@ -1,0 +1,15 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "name": "IoT.js: Attach",
+        "type": "iotjs",
+        "request": "attach",
+        "address": "localhost",
+        "port": 5001,
+        "localRoot": "${workspaceRoot}",
+        "stopOnEntry": false,
+        "debugLog": 0
+      },
+    ]
+  }

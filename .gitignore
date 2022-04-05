@@ -52,3 +52,11 @@ Platforms/Mac/PetStory.xcodeproj/project.xcworkspace/xcuserdata/playrix.xcuserda
 Platforms/Mac/Game.xcodeproj/xcuserdata
 Platforms/Mac/PetStory.xcodeproj/project.xcworkspace/xcuserdata
 Platforms/iOS/PetStory.xcodeproj/project.xcworkspace/xcuserdata
+Bin/Win/Editor.pdb
+Bin/Win/Editor_dbg.pdb
+Bin/Win/Editor_fast_dbg.pdb
+Bin/Win/Editor_fast_dbg.exe
+Bin/Win/Editor_dbg.exe
+Bin/Win/PetStory_dbg.exe
+Bin/Win/PetStory_dbg.pdb
+Bin/Win/PetStory.pdb

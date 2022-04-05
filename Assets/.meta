@@ -1,6 +1,6 @@
 {
-    "Type": "o2::DefaultAssetMeta<o2::AnimationAsset>",
+    "Type": "o2::DefaultAssetMeta<o2::ActorAsset>",
     "Value": {
-        "mId": "4fd4281b545744dd388a009506f83491"
+        "mId": "5c2b4c662ab745d0742c106f787553b8"
     }
 }

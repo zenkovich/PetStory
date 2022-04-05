@@ -15,4 +15,7 @@ protected:
 
 	// Called on drawing
 	void OnDraw();
+
+	// Draws scene
+	void DrawScene() override;
 };

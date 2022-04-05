@@ -1,3 +1,4 @@
+#include "o2/stdafx.h"
 #include "Chip.h"
 
 #include "o2/Scene/Scene.h"

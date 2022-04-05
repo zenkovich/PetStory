@@ -1,3 +1,4 @@
+#include "o2/stdafx.h"
 #include "ChipsSpawner.h"
 #include "o2/Scene/Actor.h"
 
