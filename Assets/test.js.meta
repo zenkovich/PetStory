@@ -1,6 +1,6 @@
 {
-    "Type": "o2::DefaultAssetMeta<o2::BinaryAsset>",
+    "Type": "o2::DefaultAssetMeta<o2::JavaScriptAsset>",
     "Value": {
-        "mId": "2d6306272d3f56621095694f5aa37011"
+        "mId": "5760396a52b6735d46e61bef16b73cca"
     }
 }
