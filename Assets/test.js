@@ -2,24 +2,21 @@
 
 test = class test {
     constructor() {
-        // this.a = 5;
-        // this.b = 'bla bla bla';
-        // this.c = false;
-        // this.d = { a: 5, b: false, c: 'stroka' };
-        // this.e = new Vec2(3, 50);
-        // this.f = new Rect(0, 1, 2, 3);
-        // this.g = new Border(0, 1, 2, 3);
-        // this.h = new Color4(255, 255, 255, 127);
-        // this.ref = o2.RefAnimationAsset.New('xxx.anim');
-        // this.ref2= o2.RefActorAsset.New();
-        // this.sprite = o2.Sprite.New();
-        // this.actorRef = o2.RefActor.New();
-        // this.bodyRef = o2.RefRigidBody.New();
-        // this.curve = o2.Curve.New();
-        this.obj = o2.EditorTestComponent.TestInside.New();
-        print(JSON.stringify(this.obj));
-        this.obj.mFloat = 12;
-        print(JSON.stringify(this.obj));
+        this.a = 5;
+        this.b = 'bla bla bla';
+        this.c = false;
+        this.d = { a: 5, b: false, c: 'stroka' };
+        this.e = new Vec2(3, 50);
+        this.f = new Rect(0, 1, 2, 3);
+        this.g = new Border(0, 1, 2, 3);
+        this.h = new Color4(255, 255, 255, 127);
+        this.ref = new o2.RefAnimationAsset('xxx.anim');
+        this.ref2= new o2.RefActorAsset();
+        this.sprite = new o2.Sprite();
+        this.actorRef = new o2.RefActor();
+        this.bodyRef = new o2.RefRigidBody();
+        this.curve = new o2.Curve();
+        this.obj = new o2.EditorTestComponent.TestInside();
         this.array = [ 1, 2, 3, 4, 5 ];
         print('using fucking class');
     }

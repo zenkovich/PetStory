@@ -1533,6 +1533,16 @@
                             ],
                             "mId": 8496843878370907150
                         }
+                    },
+                    {
+                        "Type": "o2::ScriptableComponent",
+                        "Data": {
+                            "mScript": {
+                                "id": "5760396a52b6735d46e61bef16b73cca",
+                                "path": "test.js"
+                            },
+                            "mId": 4344343723130747411
+                        }
                     }
                 ]
             }
