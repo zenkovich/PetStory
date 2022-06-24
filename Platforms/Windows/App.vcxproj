@@ -81,7 +81,7 @@
       <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;PLATFORM_WINDOWS;SCRIPTING_BACKEND_JERRYSCRIPT;DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>false</ConformanceMode>
       <AdditionalIncludeDirectories>$(ProjectDir)..\..\o2\Framework;$(ProjectDir)..\..\o2\Framework\3rdPartyLibs\FreeType\include;$(ProjectDir)..\..\o2\Framework\Sources;$(ProjectDir)..\..\Sources\Game;$(ProjectDir)..\..\o2\Framework\3rdPartyLibs;$(ProjectDir)..\..\o2\Framework\3rdPartyLibs\rapidjson\include;$(ProjectDir)..\..\o2\Framework\3rdPartyLibs\jerryscript\jerry-core\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <LanguageStandard>stdcpp17</LanguageStandard>
+      <LanguageStandard>stdcpp20</LanguageStandard>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <SDLCheck>true</SDLCheck>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
