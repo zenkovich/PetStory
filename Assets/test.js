@@ -1,7 +1,9 @@
-//let test = function() { print('fuck you'); };
+test = class test extends o2.Component
+ {
+    constructor()
+     {
+        super();
 
-test = class test {
-    constructor() {
         this.a = 5;
         this.b = 'bla bla bla';
         this.c = false;
@@ -21,12 +23,25 @@ test = class test {
         print('using fucking class');
     }
 
-    OnStart() {
+    OnStart() 
+    {
         print('component started');
+        print('actor name = ' + this._actor.name);
+
+        print('children:')
+        for (let child of this._actor.GetChildren())
+            print(child.name)
+
+        let act = new o2.Actor();
+        act.name = 'from script';
+        this._actor.AddChild(act);
+
+        let fnd = this._actor.GetChild('Empty');
+        this._actor.RemoveChild(fnd);
     }
 
-    Update(dt) {
+    Update(dt)
+     {
         this.a += dt;
-        print('this is ' + JSON.stringify(this));
     }
 }

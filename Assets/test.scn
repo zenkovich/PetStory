@@ -1057,6 +1057,114 @@
                         "y": 0.5
                     }
                 },
+                "Children": [
+                    {
+                        "Data": {
+                            "mName": "Empty",
+                            "Id": 463835714494355862,
+                            "Transform": {
+                                "position": {
+                                    "x": 50.0,
+                                    "y": 50.0
+                                },
+                                "size": {
+                                    "x": 100.0,
+                                    "y": 100.0
+                                },
+                                "scale": {
+                                    "x": 1.0,
+                                    "y": 1.0
+                                },
+                                "pivot": {
+                                    "x": 0.5,
+                                    "y": 0.5
+                                }
+                            },
+                            "Components": [
+                                {
+                                    "Type": "o2::EditorTestComponent",
+                                    "Data": {
+                                        "mSprite": {
+                                            "Type": "o2::Sprite",
+                                            "Value": {
+                                                "mScale": {
+                                                    "x": 1.0,
+                                                    "y": 1.0
+                                                },
+                                                "mPivot": {
+                                                    "x": 0.5,
+                                                    "y": 0.5
+                                                },
+                                                "mTextureSrcRect": {
+                                                    "left": 0,
+                                                    "bottom": 0,
+                                                    "right": 0,
+                                                    "top": 0
+                                                }
+                                            }
+                                        },
+                                        "mTestInside": {},
+                                        "mId": 13518207023555909902
+                                    }
+                                }
+                            ]
+                        },
+                        "Type": "o2::Actor"
+                    },
+                    {
+                        "Data": {
+                            "mName": "Empty",
+                            "Id": 6927950417294039881,
+                            "Transform": {
+                                "position": {
+                                    "x": 50.0,
+                                    "y": 50.0
+                                },
+                                "size": {
+                                    "x": 100.0,
+                                    "y": 100.0
+                                },
+                                "scale": {
+                                    "x": 1.0,
+                                    "y": 1.0
+                                },
+                                "pivot": {
+                                    "x": 0.5,
+                                    "y": 0.5
+                                }
+                            },
+                            "Components": [
+                                {
+                                    "Type": "o2::EditorTestComponent",
+                                    "Data": {
+                                        "mSprite": {
+                                            "Type": "o2::Sprite",
+                                            "Value": {
+                                                "mScale": {
+                                                    "x": 1.0,
+                                                    "y": 1.0
+                                                },
+                                                "mPivot": {
+                                                    "x": 0.5,
+                                                    "y": 0.5
+                                                },
+                                                "mTextureSrcRect": {
+                                                    "left": 0,
+                                                    "bottom": 0,
+                                                    "right": 0,
+                                                    "top": 0
+                                                }
+                                            }
+                                        },
+                                        "mTestInside": {},
+                                        "mId": 9268416672000832158
+                                    }
+                                }
+                            ]
+                        },
+                        "Type": "o2::Actor"
+                    }
+                ],
                 "Components": [
                     {
                         "Type": "o2::MeshComponent",
@@ -1537,11 +1645,93 @@
                     {
                         "Type": "o2::ScriptableComponent",
                         "Data": {
+                            "mId": 4344343723130747411,
                             "mScript": {
                                 "id": "5760396a52b6735d46e61bef16b73cca",
                                 "path": "test.js"
                             },
-                            "mId": 4344343723130747411
+                            "mObject": {
+                                "a": 10.0,
+                                "b": "bla bla bla",
+                                "c": false,
+                                "d": {
+                                    "a": 5.0,
+                                    "b": false,
+                                    "c": "stroka"
+                                },
+                                "e": {
+                                    "x": 3.0,
+                                    "y": 50.0
+                                },
+                                "f": {
+                                    "left": 0.0,
+                                    "bottom": 1.0,
+                                    "right": 2.0,
+                                    "top": 3.0
+                                },
+                                "g": {
+                                    "left": 0.0,
+                                    "bottom": 1.0,
+                                    "right": 2.0,
+                                    "top": 3.0
+                                },
+                                "h": {
+                                    "r": 255.0,
+                                    "g": 255.0,
+                                    "b": 255.0,
+                                    "a": 127.0
+                                },
+                                "ref": {
+                                    "Type": "o2::Ref<o2::AnimationAsset>",
+                                    "Value": {}
+                                },
+                                "ref2": {
+                                    "Type": "o2::Ref<o2::ActorAsset>",
+                                    "Value": {}
+                                },
+                                "sprite": {
+                                    "Type": "o2::Sprite",
+                                    "Value": {
+                                        "mScale": {
+                                            "x": 1.0,
+                                            "y": 1.0
+                                        },
+                                        "mPivot": {
+                                            "x": 0.5,
+                                            "y": 0.5
+                                        },
+                                        "mTextureSrcRect": {
+                                            "left": 0,
+                                            "bottom": 0,
+                                            "right": 0,
+                                            "top": 0
+                                        }
+                                    }
+                                },
+                                "actorRef": {
+                                    "Type": "o2::Ref<o2::Actor>",
+                                    "Value": {}
+                                },
+                                "bodyRef": {
+                                    "Type": "o2::Ref<o2::RigidBody>",
+                                    "Value": {}
+                                },
+                                "curve": {
+                                    "Type": "o2::Curve",
+                                    "Value": {}
+                                },
+                                "obj": {
+                                    "Type": "o2::EditorTestComponent::TestInside",
+                                    "Value": {}
+                                },
+                                "array": [
+                                    1.0,
+                                    2.0,
+                                    3.0,
+                                    4.0,
+                                    5.0
+                                ]
+                            }
                         }
                     }
                 ]
