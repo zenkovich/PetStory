@@ -32,12 +32,13 @@ test = class test extends o2.Component
         for (let child of this._actor.GetChildren())
             print(child.name)
 
-        let act = new o2.Actor();
+        let act = new o2.Actor().FreeOwnership();
         act.name = 'from script';
         this._actor.AddChild(act);
 
         let fnd = this._actor.GetChild('Empty');
-        this._actor.RemoveChild(fnd);
+        if (fnd)
+            this._actor.RemoveChild(fnd);
     }
 
     Update(dt)

@@ -30,7 +30,7 @@
                     },
                     "size": {
                         "x": 2160.0,
-                        "y": 3961.4228515625
+                        "y": 4330.53662109375
                     },
                     "scale": {
                         "x": 1.0,
@@ -1060,17 +1060,9 @@
                 "Children": [
                     {
                         "Data": {
-                            "mName": "Empty",
-                            "Id": 463835714494355862,
+                            "mName": "from script",
+                            "Id": 15999412842307288174,
                             "Transform": {
-                                "position": {
-                                    "x": 50.0,
-                                    "y": 50.0
-                                },
-                                "size": {
-                                    "x": 100.0,
-                                    "y": 100.0
-                                },
                                 "scale": {
                                     "x": 1.0,
                                     "y": 1.0
@@ -1079,51 +1071,15 @@
                                     "x": 0.5,
                                     "y": 0.5
                                 }
-                            },
-                            "Components": [
-                                {
-                                    "Type": "o2::EditorTestComponent",
-                                    "Data": {
-                                        "mSprite": {
-                                            "Type": "o2::Sprite",
-                                            "Value": {
-                                                "mScale": {
-                                                    "x": 1.0,
-                                                    "y": 1.0
-                                                },
-                                                "mPivot": {
-                                                    "x": 0.5,
-                                                    "y": 0.5
-                                                },
-                                                "mTextureSrcRect": {
-                                                    "left": 0,
-                                                    "bottom": 0,
-                                                    "right": 0,
-                                                    "top": 0
-                                                }
-                                            }
-                                        },
-                                        "mTestInside": {},
-                                        "mId": 13518207023555909902
-                                    }
-                                }
-                            ]
+                            }
                         },
                         "Type": "o2::Actor"
                     },
                     {
                         "Data": {
-                            "mName": "Empty",
-                            "Id": 6927950417294039881,
+                            "mName": "from script",
+                            "Id": 14157043514385734074,
                             "Transform": {
-                                "position": {
-                                    "x": 50.0,
-                                    "y": 50.0
-                                },
-                                "size": {
-                                    "x": 100.0,
-                                    "y": 100.0
-                                },
                                 "scale": {
                                     "x": 1.0,
                                     "y": 1.0
@@ -1132,35 +1088,7 @@
                                     "x": 0.5,
                                     "y": 0.5
                                 }
-                            },
-                            "Components": [
-                                {
-                                    "Type": "o2::EditorTestComponent",
-                                    "Data": {
-                                        "mSprite": {
-                                            "Type": "o2::Sprite",
-                                            "Value": {
-                                                "mScale": {
-                                                    "x": 1.0,
-                                                    "y": 1.0
-                                                },
-                                                "mPivot": {
-                                                    "x": 0.5,
-                                                    "y": 0.5
-                                                },
-                                                "mTextureSrcRect": {
-                                                    "left": 0,
-                                                    "bottom": 0,
-                                                    "right": 0,
-                                                    "top": 0
-                                                }
-                                            }
-                                        },
-                                        "mTestInside": {},
-                                        "mId": 9268416672000832158
-                                    }
-                                }
-                            ]
+                            }
                         },
                         "Type": "o2::Actor"
                     }
@@ -1651,7 +1579,7 @@
                                 "path": "test.js"
                             },
                             "mObject": {
-                                "a": 10.0,
+                                "a": 5.0,
                                 "b": "bla bla bla",
                                 "c": false,
                                 "d": {
@@ -1731,6 +1659,43 @@
                                     4.0,
                                     5.0
                                 ]
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "Type": "o2::Actor",
+            "Value": {
+                "mName": "Empty",
+                "Id": 12922838475583608605,
+                "Transform": {
+                    "position": {
+                        "x": 50.0,
+                        "y": 50.0
+                    },
+                    "size": {
+                        "x": 100.0,
+                        "y": 100.0
+                    },
+                    "scale": {
+                        "x": 1.0,
+                        "y": 1.0
+                    },
+                    "pivot": {
+                        "x": 0.5,
+                        "y": 0.5
+                    }
+                },
+                "Components": [
+                    {
+                        "Type": "o2::ScriptableComponent",
+                        "Data": {
+                            "mId": 530959070973466162,
+                            "mScript": {
+                                "id": "485a03ce7a1704015cba0de539ec4c2d",
+                                "path": "Chip.js"
                             }
                         }
                     }

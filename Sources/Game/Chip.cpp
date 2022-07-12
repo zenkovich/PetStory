@@ -51,7 +51,7 @@ void Chip::OnCursorReleased(const Input::Cursor& cursor)
 					if (group.Contains(chip))
 						continue;
 
-					float distance = (child->transform->worldPosition.Get() - mOwner->transform->worldPosition).Length();
+					float distance = (child->transform->worldPosition.Get() - groupChip->GetOwnerActor()->transform->worldPosition).Length();
 					if (distance > chip->mGroupingRadius + mGroupingRadius)
 						continue;
 						
