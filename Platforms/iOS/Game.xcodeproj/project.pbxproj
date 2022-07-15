@@ -188,6 +188,7 @@
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					PLATFORM_IOS,
 					"$(inherited)",
+					SCRIPTING_BACKEND_JERRYSCRIPT,
 				);
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
@@ -210,6 +211,7 @@
 					/Users/playrix/PetStory/o2/Framework/3rdPartyLibs/FreeType/include,
 					/Users/playrix/PetStory/o2/Framework/3rdPartyLibs,
 					/Users/playrix/PetStory/o2/Framework/3rdPartyLibs/rapidjson/include,
+					../../o2/Framework/3rdPartyLibs/rapidjson/include,
 				);
 				USER_HEADER_SEARCH_PATHS = (
 					/Users/playrix/PetStory/o2/Framework/Sources,
@@ -218,6 +220,7 @@
 					/Users/playrix/PetStory/o2/Framework/3rdPartyLibs,
 					/Users/playrix/PetStory/o2/Framework/3rdPartyLibs/rapidjson/include,
 					/Users/playrix/PetStory/Sources/Game,
+					../../o2/Framework/3rdPartyLibs/rapidjson/include,
 				);
 				WARNING_CFLAGS = "-Wno-undefined-var-template";
 			};
@@ -265,6 +268,7 @@
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					PLATFORM_IOS,
 					"$(inherited)",
+					SCRIPTING_BACKEND_JERRYSCRIPT,
 				);
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
@@ -287,6 +291,7 @@
 					/Users/playrix/PetStory/o2/Framework/3rdPartyLibs/FreeType/include,
 					/Users/playrix/PetStory/o2/Framework/3rdPartyLibs,
 					/Users/playrix/PetStory/o2/Framework/3rdPartyLibs/rapidjson/include,
+					../../o2/Framework/3rdPartyLibs/rapidjson/include,
 				);
 				USER_HEADER_SEARCH_PATHS = (
 					/Users/playrix/PetStory/o2/Framework/Sources,
@@ -295,6 +300,7 @@
 					/Users/playrix/PetStory/o2/Framework/3rdPartyLibs,
 					/Users/playrix/PetStory/o2/Framework/3rdPartyLibs/rapidjson/include,
 					/Users/playrix/PetStory/Sources/Game,
+					../../o2/Framework/3rdPartyLibs/rapidjson/include,
 				);
 				WARNING_CFLAGS = "-Wno-undefined-var-template";
 			};

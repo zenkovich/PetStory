@@ -8,13 +8,13 @@ class GameApplication: public Application
 {
 protected:
 	// Calls when application is starting
-	void OnStarted();
+	void OnStarted() override;
 
 	// Called on updating
-	void OnUpdate(float dt);
+	void OnUpdate(float dt) override;
 
 	// Called on drawing
-	void OnDraw();
+	void OnDraw() override;
 
 	// Draws scene
 	void DrawScene() override;

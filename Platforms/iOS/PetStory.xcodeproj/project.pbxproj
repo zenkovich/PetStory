@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A620DFC92881675D00E464E0 /* FrameworkAssets in Resources */ = {isa = PBXBuildFile; fileRef = A620DFC82881675D00E464E0 /* FrameworkAssets */; };
 		A632DD9727248E050066CE6A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A632DD9627248E050066CE6A /* Assets.xcassets */; };
 		A632DD9A27248E050066CE6A /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = A632DD9927248E050066CE6A /* main.mm */; };
 		A632E46F272497C70066CE6A /* libFramework.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A632DE1C2724938A0066CE6A /* libFramework.a */; };
@@ -68,6 +69,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A620DFC82881675D00E464E0 /* FrameworkAssets */ = {isa = PBXFileReference; lastKnownFileType = folder; name = FrameworkAssets; path = ../../BuiltAssets/iOS/FrameworkAssets; sourceTree = "<group>"; };
 		A632DD8427248E010066CE6A /* PetStory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PetStory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A632DD9627248E050066CE6A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A632DD9827248E050066CE6A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 		A632DD7B27248E010066CE6A = {
 			isa = PBXGroup;
 			children = (
+				A620DFC82881675D00E464E0 /* FrameworkAssets */,
 				A6FF263E2733B993004E2152 /* Data */,
 				A6FF263F2733B993004E2152 /* Data.json */,
 				A6FF263C2733B949004E2152 /* ProjectSettings.json */,
@@ -272,6 +275,7 @@
 				A6FF26412733B993004E2152 /* Data.json in Resources */,
 				A6FF263D2733B949004E2152 /* ProjectSettings.json in Resources */,
 				A6D01CBE27380F2B0078E799 /* Launch Screen.storyboard in Resources */,
+				A620DFC92881675D00E464E0 /* FrameworkAssets in Resources */,
 				A632DD9727248E050066CE6A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -354,6 +358,7 @@
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					PLATFORM_IOS,
 					"$(inherited)",
+					SCRIPTING_BACKEND_JERRYSCRIPT,
 				);
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
@@ -432,6 +437,7 @@
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					PLATFORM_IOS,
 					"$(inherited)",
+					SCRIPTING_BACKEND_JERRYSCRIPT,
 				);
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
