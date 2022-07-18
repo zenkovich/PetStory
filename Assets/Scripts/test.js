@@ -42,7 +42,7 @@ test = class test extends o2.Component
     }
 
     Update(dt)
-     {
+    {
         this.a += dt;
     }
 }

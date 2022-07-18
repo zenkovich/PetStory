@@ -449,19 +449,36 @@
                             },
                             "Components": [
                                 {
-                                    "Type": "ChipsSpawnerComponent",
+                                    "Type": "o2::ScriptableComponent",
                                     "Data": {
-                                        "mSpawnContainer": {
-                                            "ID": 16476334999626596526
+                                        "mId": 11745778342737962836,
+                                        "mScript": {
+                                            "id": "3469578a61c71ca81aed6984133b0304",
+                                            "path": "Scripts/ChipSpawner.js"
                                         },
-                                        "mSpawnZone": {
-                                            "ID": 8047572492346582978
-                                        },
-                                        "mChipProto": {
-                                            "id": "75e92b643b6960dd3c6528b80afa3741",
-                                            "path": "Prefabs/ChipBlue.proto"
-                                        },
-                                        "mId": 4724141554487020484
+                                        "mInstance": {
+                                            "spawnDelay": 0.20000000298023225,
+                                            "maxChipsCount": 20.0,
+                                            "spawnContainer": {
+                                                "Type": "o2::Ref<o2::Actor>",
+                                                "Value": {
+                                                    "ID": 16476334999626596526
+                                                }
+                                            },
+                                            "spawnZone": {
+                                                "Type": "o2::Ref<o2::Actor>",
+                                                "Value": {
+                                                    "ID": 8047572492346582978
+                                                }
+                                            },
+                                            "chipProto": {
+                                                "Type": "o2::Ref<o2::ActorAsset>",
+                                                "Value": {
+                                                    "id": "75e92b643b6960dd3c6528b80afa3741",
+                                                    "path": "Prefabs/ChipBlue.proto"
+                                                }
+                                            }
+                                        }
                                     }
                                 }
                             ]
@@ -1061,6 +1078,57 @@
                     {
                         "Data": {
                             "mName": "from script",
+                            "Id": 16346421058717322381,
+                            "Transform": {
+                                "scale": {
+                                    "x": 1.0,
+                                    "y": 1.0
+                                },
+                                "pivot": {
+                                    "x": 0.5,
+                                    "y": 0.5
+                                }
+                            }
+                        },
+                        "Type": "o2::Actor"
+                    },
+                    {
+                        "Data": {
+                            "mName": "from script",
+                            "Id": 14157043514385734074,
+                            "Transform": {
+                                "scale": {
+                                    "x": 1.0,
+                                    "y": 1.0
+                                },
+                                "pivot": {
+                                    "x": 0.5,
+                                    "y": 0.5
+                                }
+                            }
+                        },
+                        "Type": "o2::Actor"
+                    },
+                    {
+                        "Data": {
+                            "mName": "from script",
+                            "Id": 7715240519219991462,
+                            "Transform": {
+                                "scale": {
+                                    "x": 1.0,
+                                    "y": 1.0
+                                },
+                                "pivot": {
+                                    "x": 0.5,
+                                    "y": 0.5
+                                }
+                            }
+                        },
+                        "Type": "o2::Actor"
+                    },
+                    {
+                        "Data": {
+                            "mName": "from script",
                             "Id": 15999412842307288174,
                             "Transform": {
                                 "scale": {
@@ -1576,9 +1644,9 @@
                             "mId": 4344343723130747411,
                             "mScript": {
                                 "id": "5760396a52b6735d46e61bef16b73cca",
-                                "path": "test.js"
+                                "path": "Scripts/test.js"
                             },
-                            "mObject": {
+                            "mInstance": {
                                 "a": 5.0,
                                 "b": "bla bla bla",
                                 "c": false,
@@ -1659,43 +1727,6 @@
                                     4.0,
                                     5.0
                                 ]
-                            }
-                        }
-                    }
-                ]
-            }
-        },
-        {
-            "Type": "o2::Actor",
-            "Value": {
-                "mName": "Empty",
-                "Id": 12922838475583608605,
-                "Transform": {
-                    "position": {
-                        "x": 50.0,
-                        "y": 50.0
-                    },
-                    "size": {
-                        "x": 100.0,
-                        "y": 100.0
-                    },
-                    "scale": {
-                        "x": 1.0,
-                        "y": 1.0
-                    },
-                    "pivot": {
-                        "x": 0.5,
-                        "y": 0.5
-                    }
-                },
-                "Components": [
-                    {
-                        "Type": "o2::ScriptableComponent",
-                        "Data": {
-                            "mId": 530959070973466162,
-                            "mScript": {
-                                "id": "485a03ce7a1704015cba0de539ec4c2d",
-                                "path": "Chip.js"
                             }
                         }
                     }
