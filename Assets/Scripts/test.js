@@ -20,25 +20,10 @@ test = class test extends o2.Component
         this.curve = new o2.Curve();
         this.obj = new o2.EditorTestComponent.TestInside();
         this.array = [ 1, 2, 3, 4, 5 ];
-        print('using fucking class');
     }
 
     OnStart() 
     {
-        print('component started');
-        print('actor name = ' + this._actor.name);
-
-        print('children:')
-        for (let child of this._actor.GetChildren())
-            print(child.name)
-
-        let act = new o2.Actor().FreeOwnership();
-        act.name = 'from script';
-        this._actor.AddChild(act);
-
-        let fnd = this._actor.GetChild('Empty');
-        if (fnd)
-            this._actor.RemoveChild(fnd);
     }
 
     Update(dt)
