@@ -20,12 +20,13 @@ void GameApplication::OnStarted()
 void GameApplication::OnUpdate(float dt)
 {
 	o2Application.windowCaption = String("Pet story") +
-	"; FPS: " + (String)((int)o2Time.GetFPS()) +
-	" Cursor: " + (String)o2Input.GetCursorPos();
+		"; FPS: " + (String)((int)o2Time.GetFPS()) +
+		" Cursor: " + (String)o2Input.GetCursorPos() +
+		" JS: " + (String)(o2Scripts.GetUsedMemory() / 1024) + "kb";
 
 	if (o2Input.IsKeyPressed('J'))
 		o2Scripts.Run(o2Scripts.Parse(o2FileSystem.ReadFile(GetAssetsPath() + String("testUpdate.js"))));
-	
+
 	//o2Debug.DrawCircle(o2Input.GetCursorPos(), 20);
 }
 
@@ -33,7 +34,7 @@ void GameApplication::OnDraw()
 {
 	float scale = o2Application.GetGraphicsScale();
 	Camera camera = Camera::Default();
-	camera.scale = Vec2F(1.0f/scale, 1.0f/scale);
+	camera.scale = Vec2F(1.0f / scale, 1.0f / scale);
 	o2Render.camera = camera;
 }
 

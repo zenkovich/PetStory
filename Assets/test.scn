@@ -509,19 +509,36 @@
                             },
                             "Components": [
                                 {
-                                    "Type": "ChipsSpawnerComponent",
+                                    "Type": "o2::ScriptableComponent",
                                     "Data": {
-                                        "mSpawnContainer": {
-                                            "ID": 16476334999626596526
+                                        "mId": 13808450178938813675,
+                                        "mScript": {
+                                            "id": "3469578a61c71ca81aed6984133b0304",
+                                            "path": "Scripts/ChipSpawner.js"
                                         },
-                                        "mSpawnZone": {
-                                            "ID": 17975554936052193892
-                                        },
-                                        "mChipProto": {
-                                            "id": "60217b044d8c54e145d755384c8a0705",
-                                            "path": "Prefabs/ChipGreen.proto"
-                                        },
-                                        "mId": 17137488240533603687
+                                        "mInstance": {
+                                            "spawnDelay": 0.20000000298023225,
+                                            "maxChipsCount": 20.0,
+                                            "spawnContainer": {
+                                                "Type": "o2::Ref<o2::Actor>",
+                                                "Value": {
+                                                    "ID": 16476334999626596526
+                                                }
+                                            },
+                                            "spawnZone": {
+                                                "Type": "o2::Ref<o2::Actor>",
+                                                "Value": {
+                                                    "ID": 17975554936052193892
+                                                }
+                                            },
+                                            "chipProto": {
+                                                "Type": "o2::Ref<o2::ActorAsset>",
+                                                "Value": {
+                                                    "id": "60217b044d8c54e145d755384c8a0705",
+                                                    "path": "Prefabs/ChipGreen.proto"
+                                                }
+                                            }
+                                        }
                                     }
                                 }
                             ]
@@ -552,19 +569,36 @@
                             },
                             "Components": [
                                 {
-                                    "Type": "ChipsSpawnerComponent",
+                                    "Type": "o2::ScriptableComponent",
                                     "Data": {
-                                        "mSpawnContainer": {
-                                            "ID": 16476334999626596526
+                                        "mId": 15395610324166451340,
+                                        "mScript": {
+                                            "id": "3469578a61c71ca81aed6984133b0304",
+                                            "path": "Scripts/ChipSpawner.js"
                                         },
-                                        "mSpawnZone": {
-                                            "ID": 7554314642896781137
-                                        },
-                                        "mChipProto": {
-                                            "id": "3519060334223eec0a3a549f18701de3",
-                                            "path": "Prefabs/ChipOrange.proto"
-                                        },
-                                        "mId": 16631791415949326950
+                                        "mInstance": {
+                                            "spawnDelay": 0.20000000298023225,
+                                            "maxChipsCount": 20.0,
+                                            "spawnContainer": {
+                                                "Type": "o2::Ref<o2::Actor>",
+                                                "Value": {
+                                                    "ID": 16476334999626596526
+                                                }
+                                            },
+                                            "spawnZone": {
+                                                "Type": "o2::Ref<o2::Actor>",
+                                                "Value": {
+                                                    "ID": 7554314642896781137
+                                                }
+                                            },
+                                            "chipProto": {
+                                                "Type": "o2::Ref<o2::ActorAsset>",
+                                                "Value": {
+                                                    "id": "3519060334223eec0a3a549f18701de3",
+                                                    "path": "Prefabs/ChipOrange.proto"
+                                                }
+                                            }
+                                        }
                                     }
                                 }
                             ]
@@ -595,19 +629,36 @@
                             },
                             "Components": [
                                 {
-                                    "Type": "ChipsSpawnerComponent",
+                                    "Type": "o2::ScriptableComponent",
                                     "Data": {
-                                        "mSpawnContainer": {
-                                            "ID": 16476334999626596526
+                                        "mId": 5584133733786579427,
+                                        "mScript": {
+                                            "id": "3469578a61c71ca81aed6984133b0304",
+                                            "path": "Scripts/ChipSpawner.js"
                                         },
-                                        "mSpawnZone": {
-                                            "ID": 8937396420906526187
-                                        },
-                                        "mChipProto": {
-                                            "id": "41294346388d70ad66ad27d600b81fbf",
-                                            "path": "Prefabs/ChipRed.proto"
-                                        },
-                                        "mId": 8663953073705172780
+                                        "mInstance": {
+                                            "spawnDelay": 0.20000000298023225,
+                                            "maxChipsCount": 20.0,
+                                            "spawnContainer": {
+                                                "Type": "o2::Ref<o2::Actor>",
+                                                "Value": {
+                                                    "ID": 16476334999626596526
+                                                }
+                                            },
+                                            "spawnZone": {
+                                                "Type": "o2::Ref<o2::Actor>",
+                                                "Value": {
+                                                    "ID": 8937396420906526187
+                                                }
+                                            },
+                                            "chipProto": {
+                                                "Type": "o2::Ref<o2::ActorAsset>",
+                                                "Value": {
+                                                    "id": "41294346388d70ad66ad27d600b81fbf",
+                                                    "path": "Prefabs/ChipRed.proto"
+                                                }
+                                            }
+                                        }
                                     }
                                 }
                             ]
@@ -638,19 +689,36 @@
                             },
                             "Components": [
                                 {
-                                    "Type": "ChipsSpawnerComponent",
+                                    "Type": "o2::ScriptableComponent",
                                     "Data": {
-                                        "mSpawnContainer": {
-                                            "ID": 16476334999626596526
+                                        "mId": 8976332141392304850,
+                                        "mScript": {
+                                            "id": "3469578a61c71ca81aed6984133b0304",
+                                            "path": "Scripts/ChipSpawner.js"
                                         },
-                                        "mSpawnZone": {
-                                            "ID": 3095883790195756153
-                                        },
-                                        "mChipProto": {
-                                            "id": "662650ac7ab4522a392725883ef87da8",
-                                            "path": "Prefabs/ChipViolet.proto"
-                                        },
-                                        "mId": 1528469068420403820
+                                        "mInstance": {
+                                            "spawnDelay": 0.20000000298023225,
+                                            "maxChipsCount": 20.0,
+                                            "spawnContainer": {
+                                                "Type": "o2::Ref<o2::Actor>",
+                                                "Value": {
+                                                    "ID": 16476334999626596526
+                                                }
+                                            },
+                                            "spawnZone": {
+                                                "Type": "o2::Ref<o2::Actor>",
+                                                "Value": {
+                                                    "ID": 3095883790195756153
+                                                }
+                                            },
+                                            "chipProto": {
+                                                "Type": "o2::Ref<o2::ActorAsset>",
+                                                "Value": {
+                                                    "id": "662650ac7ab4522a392725883ef87da8",
+                                                    "path": "Prefabs/ChipViolet.proto"
+                                                }
+                                            }
+                                        }
                                     }
                                 }
                             ]
@@ -681,19 +749,36 @@
                             },
                             "Components": [
                                 {
-                                    "Type": "ChipsSpawnerComponent",
+                                    "Type": "o2::ScriptableComponent",
                                     "Data": {
-                                        "mSpawnContainer": {
-                                            "ID": 16476334999626596526
+                                        "mId": 8732936132120648816,
+                                        "mScript": {
+                                            "id": "3469578a61c71ca81aed6984133b0304",
+                                            "path": "Scripts/ChipSpawner.js"
                                         },
-                                        "mSpawnZone": {
-                                            "ID": 11679763743431581781
-                                        },
-                                        "mChipProto": {
-                                            "id": "237453d25990147b60ea5a0879130d15",
-                                            "path": "Prefabs/ChipYellow.proto"
-                                        },
-                                        "mId": 5736548526408266948
+                                        "mInstance": {
+                                            "spawnDelay": 0.20000000298023225,
+                                            "maxChipsCount": 20.0,
+                                            "spawnContainer": {
+                                                "Type": "o2::Ref<o2::Actor>",
+                                                "Value": {
+                                                    "ID": 16476334999626596526
+                                                }
+                                            },
+                                            "spawnZone": {
+                                                "Type": "o2::Ref<o2::Actor>",
+                                                "Value": {
+                                                    "ID": 11679763743431581781
+                                                }
+                                            },
+                                            "chipProto": {
+                                                "Type": "o2::Ref<o2::ActorAsset>",
+                                                "Value": {
+                                                    "id": "237453d25990147b60ea5a0879130d15",
+                                                    "path": "Prefabs/ChipYellow.proto"
+                                                }
+                                            }
+                                        }
                                     }
                                 }
                             ]
@@ -1647,26 +1732,26 @@
                                 "path": "Scripts/test.js"
                             },
                             "mInstance": {
-                                "a": 5.0,
+                                "a": 5.0397114753723148,
                                 "b": "bla bla bla",
                                 "c": false,
                                 "d": {
                                     "a": 5.0,
-                                    "b": false,
+                                    "b": true,
                                     "c": "stroka"
                                 },
                                 "e": {
-                                    "x": 3.0,
+                                    "x": 5.210001468658447,
                                     "y": 50.0
                                 },
                                 "f": {
-                                    "left": 0.0,
+                                    "left": 1.0300002098083497,
                                     "bottom": 1.0,
                                     "right": 2.0,
                                     "top": 3.0
                                 },
                                 "g": {
-                                    "left": 0.0,
+                                    "left": -0.6000000834465027,
                                     "bottom": 1.0,
                                     "right": 2.0,
                                     "top": 3.0
@@ -1718,7 +1803,9 @@
                                 },
                                 "obj": {
                                     "Type": "o2::EditorTestComponent::TestInside",
-                                    "Value": {}
+                                    "Value": {
+                                        "mWString": "asdasd"
+                                    }
                                 },
                                 "array": [
                                     1.0,

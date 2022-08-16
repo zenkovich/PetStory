@@ -25,19 +25,22 @@ ChipSpawner = class ChipSpawner extends o2.Component
 
     CheckChipsCount()
     {        
-        let currentCount = this.spawnContainer.Get().GetChildren()
-            .filter(actor => actor.GetPrototype() == this.chipProto).length;
+        let currentCount = 0;
+        for (let child of this.spawnContainer.Get().GetChildren())
+        {
+            if (child.GetPrototype().Get() === this.chipProto.Get())
+                currentCount++;
+        }
             
         if (currentCount >= this.maxChipsCount)
             return;
 
-        let spawnZone = this.spawnZone.Get().transform.worldRect;
+        let spawnZone = this.spawnZone.Get().GetTransform().worldRect;
         
-        print(Dump(this.chipProto.Get()));
         let newChip = this.chipProto.Get().Instantiate();
-        // newChip.transform.position = new Vec2(Math.randomBetween(spawnZone.left, spawnZone.right),
-        //                                       Math.randomBetween(spawnZone.bottom, spawnZone.top));
+        newChip.Get().GetTransform().position = new Vec2(Math.randomBetween(spawnZone.left, spawnZone.right),
+                                                    Math.randomBetween(spawnZone.bottom, spawnZone.top));
                                            
-        // newChip.SetParent(this.spawnContainer.Get());
+        newChip.Get().SetParent(this.spawnContainer.Get());
     }
 }
