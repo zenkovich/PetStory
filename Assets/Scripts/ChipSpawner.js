@@ -35,11 +35,11 @@ ChipSpawner = class ChipSpawner extends o2.Component
         if (currentCount >= this.maxChipsCount)
             return;
 
-        let spawnZone = this.spawnZone.Get().GetTransform().worldRect;
+        let spawnZone = this.spawnZone.Get().GetTransform().GetWorldRect();
         
         let newChip = this.chipProto.Get().Instantiate();
-        newChip.Get().GetTransform().position = new Vec2(Math.randomBetween(spawnZone.left, spawnZone.right),
-                                                    Math.randomBetween(spawnZone.bottom, spawnZone.top));
+        newChip.Get().GetTransform().SetPosition(new Vec2(Math.randomBetween(spawnZone.left, spawnZone.right),
+                                                          Math.randomBetween(spawnZone.bottom, spawnZone.top)));
                                            
         newChip.Get().SetParent(this.spawnContainer.Get());
     }
