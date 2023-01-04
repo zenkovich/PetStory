@@ -17,6 +17,7 @@
 		A6926E3227319E3F00C7268D /* MetalKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6926E3027319E3F00C7268D /* MetalKit.framework */; };
 		A6926E3327319E3F00C7268D /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6926E3127319E3F00C7268D /* Metal.framework */; };
 		A6926E3527319F7400C7268D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6926E3427319F7400C7268D /* UIKit.framework */; };
+		A6A138A129631D11008BB789 /* libc++.1.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A6A138A029631D11008BB789 /* libc++.1.tbd */; };
 		A6D01CBE27380F2B0078E799 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6D01CBD27380F2B0078E799 /* Launch Screen.storyboard */; };
 		A6FF263D2733B949004E2152 /* ProjectSettings.json in Resources */ = {isa = PBXBuildFile; fileRef = A6FF263C2733B949004E2152 /* ProjectSettings.json */; };
 		A6FF26402733B993004E2152 /* Data in Resources */ = {isa = PBXBuildFile; fileRef = A6FF263E2733B993004E2152 /* Data */; };
@@ -81,6 +82,7 @@
 		A6926E3027319E3F00C7268D /* MetalKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetalKit.framework; path = System/Library/Frameworks/MetalKit.framework; sourceTree = SDKROOT; };
 		A6926E3127319E3F00C7268D /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
 		A6926E3427319F7400C7268D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		A6A138A029631D11008BB789 /* libc++.1.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.1.tbd"; path = "usr/lib/libc++.1.tbd"; sourceTree = SDKROOT; };
 		A6D01CBD27380F2B0078E799 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		A6FF263C2733B949004E2152 /* ProjectSettings.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = ProjectSettings.json; path = ../../ProjectSettings.json; sourceTree = "<group>"; };
 		A6FF263E2733B993004E2152 /* Data */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Data; path = ../../BuiltAssets/iOS/Data; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 				A632E476272497DD0066CE6A /* lib3rdPartyLibs.a in Frameworks */,
 				A632E477272497DD0066CE6A /* libGame.a in Frameworks */,
 				A632E46F272497C70066CE6A /* libFramework.a in Frameworks */,
+				A6A138A129631D11008BB789 /* libc++.1.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -167,6 +170,7 @@
 		A632E46E272497C70066CE6A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A6A138A029631D11008BB789 /* libc++.1.tbd */,
 				A6926E3427319F7400C7268D /* UIKit.framework */,
 				A6926E3127319E3F00C7268D /* Metal.framework */,
 				A6926E3027319E3F00C7268D /* MetalKit.framework */,
@@ -188,9 +192,9 @@
 			buildRules = (
 			);
 			dependencies = (
-				A632E471272497D40066CE6A /* PBXTargetDependency */,
 				A632E473272497D40066CE6A /* PBXTargetDependency */,
 				A632E475272497D40066CE6A /* PBXTargetDependency */,
+				A632E471272497D40066CE6A /* PBXTargetDependency */,
 			);
 			name = PetStory;
 			productName = PetStory;
@@ -319,7 +323,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++20";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -400,7 +404,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++20";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -489,7 +493,7 @@
 				);
 				MTL_HEADER_SEARCH_PATHS = "/Users/playrix/PetStory/o2/Framework/Sources /Users/playrix/PetStory/o2/Framework /Users/playrix/PetStory/o2/Framework/3rdPartyLibs/FreeType/include /Users/playrix/PetStory/o2/Framework/3rdPartyLibs /Users/playrix/PetStory/o2/Framework/3rdPartyLibs/rapidjson/include /Users/playrix/PetStory/o2/Editor/Sources";
 				OTHER_LDFLAGS = "-all_load";
-				PRODUCT_BUNDLE_IDENTIFIER = o2.PetStory;
+				PRODUCT_BUNDLE_IDENTIFIER = o2.PetStory2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -510,7 +514,7 @@
 				);
 				MTL_HEADER_SEARCH_PATHS = "/Users/playrix/PetStory/o2/Framework/Sources /Users/playrix/PetStory/o2/Framework /Users/playrix/PetStory/o2/Framework/3rdPartyLibs/FreeType/include /Users/playrix/PetStory/o2/Framework/3rdPartyLibs /Users/playrix/PetStory/o2/Framework/3rdPartyLibs/rapidjson/include /Users/playrix/PetStory/o2/Editor/Sources";
 				OTHER_LDFLAGS = "-all_load";
-				PRODUCT_BUNDLE_IDENTIFIER = o2.PetStory;
+				PRODUCT_BUNDLE_IDENTIFIER = o2.PetStory2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
