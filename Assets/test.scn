@@ -1819,6 +1819,154 @@
                     }
                 ]
             }
+        },
+        {
+            "Type": "o2::Button",
+            "Value": {
+                "mName": "UI Button",
+                "onClick": [
+                    {
+                        "type": "ActorFunction",
+                        "actor": {
+                            "ID": 16225923754916404565
+                        },
+                        "func": "FixedUpdate"
+                    }
+                ],
+                "Id": 15256716671204934073,
+                "Transform": {
+                    "anchorMin": {
+                        "x": 0.5,
+                        "y": 0.5
+                    },
+                    "anchorMax": {
+                        "x": 0.5,
+                        "y": 0.5
+                    },
+                    "offsetMin": {
+                        "x": -50.0,
+                        "y": -50.0
+                    },
+                    "offsetMax": {
+                        "x": 50.0,
+                        "y": 50.0
+                    }
+                },
+                "InternalWidgets": [],
+                "Layers": [],
+                "States": []
+            }
+        },
+        {
+            "Type": "o2::Actor",
+            "Value": {
+                "mName": "green",
+                "Id": 16284485979790590118,
+                "Transform": {
+                    "position": {
+                        "x": -1952.3447265625,
+                        "y": -322.1715087890625
+                    },
+                    "size": {
+                        "x": 210.0,
+                        "y": 210.0
+                    },
+                    "scale": {
+                        "x": 1.0,
+                        "y": 1.0
+                    },
+                    "pivot": {
+                        "x": 0.5,
+                        "y": 0.5
+                    }
+                },
+                "Components": [
+                    {
+                        "Type": "o2::ImageComponent",
+                        "Data": {
+                            "mImageAsset": {
+                                "id": "2f7c14f05ee57aa8231c5e5d274e745c",
+                                "path": "Game field/Objects/Main/green.png"
+                            },
+                            "mId": 1625606353923469549
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "Type": "o2::Actor",
+            "Value": {
+                "mName": "blue",
+                "Id": 8448699135546125700,
+                "Transform": {
+                    "position": {
+                        "x": -1830.66162109375,
+                        "y": -432.81646728515627
+                    },
+                    "size": {
+                        "x": 209.99998474121095,
+                        "y": 209.99998474121095
+                    },
+                    "scale": {
+                        "x": 1.0,
+                        "y": 1.0
+                    },
+                    "pivot": {
+                        "x": 0.5,
+                        "y": 0.5
+                    }
+                },
+                "Components": [
+                    {
+                        "Type": "o2::ImageComponent",
+                        "Data": {
+                            "mImageAsset": {
+                                "id": "791972b27a442c2e114b6b7269aa5087",
+                                "path": "Game field/Objects/Main/blue.png"
+                            },
+                            "mId": 7825260646415239674
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "Type": "o2::Actor",
+            "Value": {
+                "mName": "red",
+                "Id": 13240795228811127187,
+                "Transform": {
+                    "position": {
+                        "x": -2081.6025390625,
+                        "y": -208.82766723632813
+                    },
+                    "size": {
+                        "x": 209.99998474121095,
+                        "y": 209.99998474121095
+                    },
+                    "scale": {
+                        "x": 1.0,
+                        "y": 1.0
+                    },
+                    "pivot": {
+                        "x": 0.5,
+                        "y": 0.5
+                    }
+                },
+                "Components": [
+                    {
+                        "Type": "o2::ImageComponent",
+                        "Data": {
+                            "mImageAsset": {
+                                "id": "592d45c52f371b1200273ab5702278fe",
+                                "path": "Game field/Objects/Main/red.png"
+                            },
+                            "mId": 13465224167265958181
+                        }
+                    }
+                ]
+            }
         }
     ]
 }
