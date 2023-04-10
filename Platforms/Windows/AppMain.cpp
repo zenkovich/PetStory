@@ -1,4 +1,3 @@
-#include "o2/stdafx.h"
 #include "GameApplication.h"
 #include "o2/O2.h"
 
