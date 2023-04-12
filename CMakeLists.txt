@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.23)
+cmake_minimum_required(VERSION 3.6)
 project(PetStory LANGUAGES CXX)
 
 # Common definitions
@@ -37,7 +37,7 @@ if(WIN32)
     add_custom_command(TARGET GameLib PRE_BUILD
                        COMMAND ${CMAKE_CURRENT_SOURCE_DIR}/o2/CodeTool/Bin/CodeTool.exe 
                             -sources "${CMAKE_CURRENT_SOURCE_DIR}/Sources/Game" 
-                            -parent_projects "${CMAKE_CURRENT_SOURCE_DIR}/Framework/Sources/o2/CodeToolCache.xml" -r)
+                            -parent_projects "${CMAKE_CURRENT_SOURCE_DIR}/o2/Framework/Sources/o2/CodeToolCache.xml")
 endif()
 
 if(MSVC)
@@ -64,7 +64,7 @@ if(WIN32)
     add_custom_command(TARGET EditorLib PRE_BUILD
                        COMMAND ${CMAKE_CURRENT_SOURCE_DIR}/o2/CodeTool/Bin/CodeTool.exe 
                             -sources "${CMAKE_CURRENT_SOURCE_DIR}/Sources/Game" 
-                            -parent_projects "${CMAKE_CURRENT_SOURCE_DIR}/Framework/Sources/o2/CodeToolCache.xml")
+                            -parent_projects "${CMAKE_CURRENT_SOURCE_DIR}/o2/Framework/Sources/o2/CodeToolCache.xml")
 endif()
 
 if(MSVC)
@@ -121,3 +121,6 @@ set_target_properties(EditorLib PROPERTIES FOLDER PetStory)
 
 set_target_properties(PetStory PROPERTIES FOLDER Apps)
 set_target_properties(Editor PROPERTIES FOLDER Apps)
+
+# Default startup target
+set_property(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR} PROPERTY VS_STARTUP_PROJECT Editor)
