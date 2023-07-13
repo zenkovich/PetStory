@@ -24,6 +24,7 @@ private:
 private:
 	 void OnCursorReleased(const Input::Cursor& cursor) override;
 };
+// --- META ---
 
 CLASS_BASES_META(Chip)
 {
@@ -46,3 +47,4 @@ CLASS_METHODS_META(Chip)
 	FUNCTION().PRIVATE().SIGNATURE(void, OnCursorReleased, const Input::Cursor&);
 }
 END_META;
+// --- END META ---

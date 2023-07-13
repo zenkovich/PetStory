@@ -31,5 +31,7 @@ void ChipsSpawnerComponent::CheckChipsCount()
 										 Math::Random(spawnZone.bottom, spawnZone.top));
 	newChip->SetParent(mSpawnContainer.Get());
 }
+// --- META ---
 
 DECLARE_CLASS(ChipsSpawnerComponent);
+// --- END META ---

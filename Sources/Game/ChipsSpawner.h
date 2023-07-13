@@ -27,6 +27,7 @@ private:
 private:
 	void CheckChipsCount();
 };
+// --- META ---
 
 CLASS_BASES_META(ChipsSpawnerComponent)
 {
@@ -50,3 +51,4 @@ CLASS_METHODS_META(ChipsSpawnerComponent)
 	FUNCTION().PRIVATE().SIGNATURE(void, CheckChipsCount);
 }
 END_META;
+// --- END META ---

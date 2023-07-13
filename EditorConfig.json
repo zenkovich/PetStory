@@ -64,11 +64,11 @@
                                 "top": 0.31596454977989199
                             },
                             "windows": [
-                                "log window",
                                 "assets window",
+                                "log window",
                                 "animation window"
                             ],
-                            "active": "assets window"
+                            "active": "log window"
                         }
                     ]
                 },

@@ -62,3 +62,6 @@ Bin/Win/PetStory_dbg.exe
 Bin/Win/PetStory_dbg.pdb
 Bin/Win/PetStory.pdb
 Platforms/iOS/PetStory.xcodeproj/xcuserdata
+build
+Bin/Windows/log.txt
+*.pdb

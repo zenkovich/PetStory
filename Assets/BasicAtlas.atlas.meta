@@ -2,30 +2,13 @@
     "Type": "o2::AtlasAsset::Meta",
     "Value": {
         "mId": "7ed6506572ef7475746b72ec2bb85080",
-        "ios": {
+        "common": {
+            "format": "DXT5",
             "maxSize": {
-                "x": 4096,
-                "y": 4096
+                "x" : 4096,
+                "y" : 4096
             }
-        },
-        "android": {
-            "maxSize": {
-                "x": 4096,
-                "y": 4096
-            }
-        },
-        "macOS": {
-            "maxSize": {
-                "x": 4096,
-                "y": 4096
-            }
-        },
-        "windows": {
-            "maxSize": {
-                "x": 4096,
-                "y": 4096
-            }
-        },
-        "border": 1
+            "border": 2
+        }
     }
 }

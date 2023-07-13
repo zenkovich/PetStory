@@ -67,5 +67,7 @@ void Chip::OnCursorReleased(const Input::Cursor& cursor)
 	for (auto chip : group)
 		o2Scene.DestroyActor(chip->GetOwnerActor());
 }
+// --- META ---
 
 DECLARE_CLASS(Chip);
+// --- END META ---
