@@ -1,6 +1,6 @@
 {
-    "Type": "o2::DefaultAssetMeta<o2::BinaryAsset>",
+    "Type": "o2::DefaultAssetMeta<o2::SceneAsset>",
     "Value": {
-        "mId": "1320101b270740e632142a787f2c0b26"
+        "mId": "1e1820db0b8f629038096c8e705c42e4"
     }
 }

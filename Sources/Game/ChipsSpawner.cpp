@@ -2,7 +2,7 @@
 #include "ChipsSpawner.h"
 #include "o2/Scene/Actor.h"
 
-void ChipsSpawnerComponent::Update(float dt)
+void ChipsSpawnerComponent::OnUpdate(float dt)
 {
 	mAccumulatedTimer += dt;
 	if (mAccumulatedTimer > mSpawnDelay)

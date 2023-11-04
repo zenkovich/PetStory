@@ -1,0 +1,12 @@
+{
+    "Type": "o2::AtlasAsset::Meta",
+    "Value": {
+        "mId": "77e165ef2ce73b2a3bd270135b9d3d82",
+        "common": {
+            "maxSize": {
+                "x": 4096,
+                "y": 4096
+            }
+        }
+    }
+}

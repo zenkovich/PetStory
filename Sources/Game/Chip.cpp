@@ -16,7 +16,7 @@ void Chip::OnStart()
 {
 	mImage = mOwner->GetComponent<ImageComponent>();
 	if (mImage)
-		mImage->DrawableComponent::onDraw = [&] { OnDrawn(); };
+		mImage->onDraw = [&] { OnDrawn(); };
 }
 
 void Chip::OnCursorReleased(const Input::Cursor& cursor)

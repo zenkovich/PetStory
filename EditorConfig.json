@@ -1,7 +1,7 @@
 {
     "mWindowSize": {
-        "x": 1552,
-        "y": 946
+        "x": 1936,
+        "y": 1168
     },
     "mWindowPosition": {
         "x": -8,
@@ -64,11 +64,11 @@
                                 "top": 0.31596454977989199
                             },
                             "windows": [
-                                "assets window",
                                 "log window",
+                                "assets window",
                                 "animation window"
                             ],
-                            "active": "log window"
+                            "active": "assets window"
                         }
                     ]
                 },
@@ -83,9 +83,10 @@
                         "properties window",
                         "game window"
                     ],
-                    "active": "properties window"
+                    "active": "game window"
                 }
             ]
         }
-    }
+    },
+    "mLastLoadedScene": "test.scn"
 }

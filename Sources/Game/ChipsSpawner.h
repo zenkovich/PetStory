@@ -11,7 +11,7 @@ class ChipsSpawnerComponent: public Component
 {
 public:
 	// Updates component, checks count of chips
-	void Update(float dt) override;
+	void OnUpdate(float dt) override;
 
 	SERIALIZABLE(ChipsSpawnerComponent);
 
@@ -47,7 +47,7 @@ END_META;
 CLASS_METHODS_META(ChipsSpawnerComponent)
 {
 
-	FUNCTION().PUBLIC().SIGNATURE(void, Update, float);
+	FUNCTION().PUBLIC().SIGNATURE(void, OnUpdate, float);
 	FUNCTION().PRIVATE().SIGNATURE(void, CheckChipsCount);
 }
 END_META;
