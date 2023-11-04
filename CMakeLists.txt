@@ -38,7 +38,7 @@ add_dependencies(GameLib o2Framework)
 
 if(WIN32)
     add_custom_command(TARGET GameLib PRE_BUILD
-                       COMMAND ${CMAKE_CURRENT_SOURCE_DIR}/o2/CodeTool/Bin/CodeTool.exe 
+                       COMMAND ${CMAKE_CURRENT_SOURCE_DIR}/o2/CodeTool/Bin/o2CodeTool 
                             -sources "${CMAKE_CURRENT_SOURCE_DIR}/Sources/Game" 
                             -parent_projects "${CMAKE_CURRENT_SOURCE_DIR}/o2/Framework/Sources/o2/CodeToolCache.xml")
 endif()
@@ -67,7 +67,7 @@ add_dependencies(EditorLib GameLib o2Editor)
 
 if(WIN32)
     add_custom_command(TARGET EditorLib PRE_BUILD
-                       COMMAND ${CMAKE_CURRENT_SOURCE_DIR}/o2/CodeTool/Bin/CodeTool.exe 
+                       COMMAND ${CMAKE_CURRENT_SOURCE_DIR}/o2/CodeTool/Bin/o2CodeTool 
                             -sources "${CMAKE_CURRENT_SOURCE_DIR}/Sources/Game" 
                             -parent_projects "${CMAKE_CURRENT_SOURCE_DIR}/o2/Framework/Sources/o2/CodeToolCache.xml")
 endif()
