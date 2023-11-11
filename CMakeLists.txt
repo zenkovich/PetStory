@@ -39,6 +39,7 @@ add_dependencies(GameLib o2Framework)
 if(WIN32)
     add_custom_command(TARGET GameLib PRE_BUILD
                        COMMAND ${CMAKE_CURRENT_SOURCE_DIR}/o2/CodeTool/Bin/o2CodeTool 
+                            -project GameLib
                             -sources "${CMAKE_CURRENT_SOURCE_DIR}/Sources/Game" 
                             -parent_projects "${CMAKE_CURRENT_SOURCE_DIR}/o2/Framework/Sources/o2/CodeToolCache.xml")
 endif()
@@ -68,7 +69,8 @@ add_dependencies(EditorLib GameLib o2Editor)
 if(WIN32)
     add_custom_command(TARGET EditorLib PRE_BUILD
                        COMMAND ${CMAKE_CURRENT_SOURCE_DIR}/o2/CodeTool/Bin/o2CodeTool 
-                            -sources "${CMAKE_CURRENT_SOURCE_DIR}/Sources/Game" 
+                            -project EditorLib
+                            -sources "${CMAKE_CURRENT_SOURCE_DIR}/Sources/Editor" 
                             -parent_projects "${CMAKE_CURRENT_SOURCE_DIR}/o2/Framework/Sources/o2/CodeToolCache.xml")
 endif()
 
@@ -94,7 +96,9 @@ if(MSVC)
     set_target_properties(AssetsBuilder PROPERTIES 
         RUNTIME_OUTPUT_DIRECTORY ${BIN_OUTPUTDIR}
         RUNTIME_OUTPUT_DIRECTORY_DEBUG ${BIN_OUTPUTDIR}
+        RUNTIME_OUTPUT_DIRECTORY_MINSIZEREL ${BIN_OUTPUTDIR}
         RUNTIME_OUTPUT_DIRECTORY_RELEASE ${BIN_OUTPUTDIR}
+        RUNTIME_OUTPUT_DIRECTORY_RELWITHDEBINFO ${BIN_OUTPUTDIR}
     )       
 elseif (UNIX)
     target_compile_options(AssetsBuilder PRIVATE ${DEMO_WARNING_OPTION} -Wno-pedantic)
@@ -125,7 +129,7 @@ set_target_properties(PetStory PROPERTIES
     RUNTIME_OUTPUT_DIRECTORY_DEBUG ${BIN_OUTPUTDIR}
     RUNTIME_OUTPUT_DIRECTORY_MINSIZEREL ${BIN_OUTPUTDIR}
     RUNTIME_OUTPUT_DIRECTORY_RELEASE ${BIN_OUTPUTDIR}
-    RUNTIME_OUTPUT_DIRECTORY_RELEASEWITHDEBUGINFO ${BIN_OUTPUTDIR}
+    RUNTIME_OUTPUT_DIRECTORY_RELWITHDEBINFO ${BIN_OUTPUTDIR}
 )       
 
 if(MSVC)
@@ -159,7 +163,7 @@ if(O2_EDITOR)
         RUNTIME_OUTPUT_DIRECTORY_DEBUG ${BIN_OUTPUTDIR}
         RUNTIME_OUTPUT_DIRECTORY_MINSIZEREL ${BIN_OUTPUTDIR}
         RUNTIME_OUTPUT_DIRECTORY_RELEASE ${BIN_OUTPUTDIR}
-        RUNTIME_OUTPUT_DIRECTORY_RELEASEWITHDEBUGINFO ${BIN_OUTPUTDIR}
+        RUNTIME_OUTPUT_DIRECTORY_RELWITHDEBINFO ${BIN_OUTPUTDIR}
     )  
 
     if(MSVC)

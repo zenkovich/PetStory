@@ -33,5 +33,5 @@ void ChipsSpawnerComponent::CheckChipsCount()
 }
 // --- META ---
 
-DECLARE_CLASS(ChipsSpawnerComponent);
+DECLARE_CLASS(ChipsSpawnerComponent, ChipsSpawnerComponent);
 // --- END META ---

@@ -14,8 +14,13 @@ DECLARE_SINGLETON(Editor::WindowsManager);
 DECLARE_SINGLETON(Editor::EditorConfig);
 DECLARE_SINGLETON(Editor::ToolsPanel);
 
+extern void InitializeTypeso2Editor();
+extern void InitializeTypesGameLib();
+
 int main()
 {
+    InitializeTypeso2Editor();
+    InitializeTypesGameLib();
 	INITIALIZE_O2;
 
 	Editor::EditorApplication* app = mnew Editor::EditorApplication();

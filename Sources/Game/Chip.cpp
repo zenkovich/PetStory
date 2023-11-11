@@ -69,5 +69,5 @@ void Chip::OnCursorReleased(const Input::Cursor& cursor)
 }
 // --- META ---
 
-DECLARE_CLASS(Chip);
+DECLARE_CLASS(Chip, Chip);
 // --- END META ---
