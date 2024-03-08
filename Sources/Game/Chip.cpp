@@ -14,26 +14,26 @@ bool Chip::IsUnderPoint(const Vec2F& point)
 
 void Chip::OnStart()
 {
-	mImage = mOwner->GetComponent<ImageComponent>();
+	mImage = mOwner.Lock()->GetComponent<ImageComponent>();
 	if (mImage)
 		mImage->onDraw = [&] { OnDrawn(); };
 }
 
 void Chip::OnCursorReleased(const Input::Cursor& cursor)
 {
-	auto parent = mOwner->GetParent();
+	auto parent = mOwner.Lock()->GetParent().Lock();
 	if (!parent)
 		return;
 
-	Vector<Chip*> group;
-	Vector<Chip*> iterationChipGroup;
-	iterationChipGroup.Add(this);
+	Vector<Ref<Chip>> group;
+	Vector<Ref<Chip>> iterationChipGroup;
+	iterationChipGroup.Add(Ref(this));
 
 	while (!iterationChipGroup.IsEmpty())
 	{
 		group.Add(iterationChipGroup);
 
-		Vector<Chip*> prevIterationChipGroup = iterationChipGroup;
+		Vector<Ref<Chip>> prevIterationChipGroup = iterationChipGroup;
 		iterationChipGroup.Clear();
 
 		for (auto groupChip : prevIterationChipGroup)
@@ -67,6 +67,8 @@ void Chip::OnCursorReleased(const Input::Cursor& cursor)
 	for (auto chip : group)
 		o2Scene.DestroyActor(chip->GetOwnerActor());
 }
+
+DECLARE_TEMPLATE_CLASS(o2::Ref<Chip>);
 // --- META ---
 
 DECLARE_CLASS(Chip, Chip);

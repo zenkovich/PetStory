@@ -17,7 +17,7 @@ void ChipsSpawnerComponent::CheckChipsCount()
 	if (!mSpawnContainer || !mSpawnZone || !mChipProto)
 		return;
 
-	int currentCount = mSpawnContainer->GetChildren().Count([&](Actor* actor) {
+	int currentCount = mSpawnContainer->GetChildren().Count([&](auto& actor) {
 		return actor->GetPrototype() == mChipProto;
 	});
 
@@ -29,8 +29,10 @@ void ChipsSpawnerComponent::CheckChipsCount()
 	auto newChip = mChipProto->Instantiate();
 	newChip->transform->position = Vec2F(Math::Random(spawnZone.left, spawnZone.right),
 										 Math::Random(spawnZone.bottom, spawnZone.top));
-	newChip->SetParent(mSpawnContainer.Get());
+	newChip->SetParent(mSpawnContainer);
 }
+
+DECLARE_TEMPLATE_CLASS(o2::Ref<ChipsSpawnerComponent>);
 // --- META ---
 
 DECLARE_CLASS(ChipsSpawnerComponent, ChipsSpawnerComponent);

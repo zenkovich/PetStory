@@ -18,9 +18,9 @@ public:
 private:
 	float         mSpawnDelay = 0.2f;  // @SERIALIZABLE @EDITOR_PROPERTY
 	int           mMaxChipsCount = 20; // @SERIALIZABLE @EDITOR_PROPERTY
-	ActorRef      mSpawnContainer;     // @SERIALIZABLE @EDITOR_PROPERTY
-	ActorRef      mSpawnZone;          // @SERIALIZABLE @EDITOR_PROPERTY
-	ActorAssetRef mChipProto;          // @SERIALIZABLE @EDITOR_PROPERTY
+	Ref<Actor>      mSpawnContainer;     // @SERIALIZABLE @EDITOR_PROPERTY
+	Ref<Actor>      mSpawnZone;          // @SERIALIZABLE @EDITOR_PROPERTY
+	Ref<ActorAsset> mChipProto;          // @SERIALIZABLE @EDITOR_PROPERTY
 
 	float mAccumulatedTimer = 0.0f;
 
