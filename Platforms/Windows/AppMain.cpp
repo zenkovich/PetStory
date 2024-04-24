@@ -8,10 +8,9 @@ int main()
 	InitializeTypesGameLib();
 	INITIALIZE_O2;
 
-	GameApplication* app = mnew GameApplication();
-	app->Initialize();
-	app->Launch();
-	delete app;
+	GameApplication app;
+	app.Initialize();
+	app.Launch();
 
 	return 0;
 }

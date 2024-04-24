@@ -23,10 +23,9 @@ int main()
     InitializeTypesGameLib();
 	INITIALIZE_O2;
 
-	Editor::EditorApplication* app = mnew Editor::EditorApplication();
-	app->Initialize();
-	app->Launch();
-	delete app;
+	Editor::EditorApplication app;
+	app.Initialize();
+	app.Launch();
 
 	return 0;
 }

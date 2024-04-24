@@ -4,10 +4,16 @@ project(PetStory LANGUAGES CXX)
 # Options
 option(O2_SELFPROFILE "Enable profiling o2 benchmark." OFF)
 option(O2_EDITOR "Enables o2 editor." ON)
+option(O2_ASAN "Enables ASAN (address sanitizer)." ON)
 
 # Common definitions
 set(CMAKE_CXX_STANDARD 20)
 set_property(GLOBAL PROPERTY USE_FOLDERS ON)
+
+if(MSVC AND O2_ASAN)
+    add_compile_definitions(_DISABLE_STRING_ANNOTATION _DISABLE_VECTOR_ANNOTATION _DISABLE_ITERATOR_ANNOTATION)
+    add_compile_options(-fsanitize=address)
+endif()
 
 if (UNIX)
     set(O2_PLATFORM "Linux")
