@@ -1,7 +1,7 @@
 #pragma once
 #include "o2/Events/CursorAreaEventsListener.h"
 #include "o2/Scene/Component.h"
-#include "o2/Scene/ComponentRef.h"
+#include "o2/Scene/ComponentLinkRef.h"
 #include "o2/Scene/Components/ImageComponent.h"
 
 using namespace o2;
@@ -22,7 +22,9 @@ private:
 	Ref<ImageComponent> mImage;
 
 private:
-	 void OnCursorReleased(const Input::Cursor& cursor) override;
+    void OnCursorReleased(const Input::Cursor& cursor) override;
+
+    REF_COUNTERABLE_IMPL(Component);
 };
 // --- META ---
 

@@ -68,7 +68,7 @@ void Chip::OnCursorReleased(const Input::Cursor& cursor)
 		o2Scene.DestroyActor(chip->GetOwnerActor());
 }
 
-DECLARE_TEMPLATE_CLASS(o2::Ref<Chip>);
+DECLARE_TEMPLATE_CLASS(o2::LinkRef<Chip>);
 // --- META ---
 
 DECLARE_CLASS(Chip, Chip);

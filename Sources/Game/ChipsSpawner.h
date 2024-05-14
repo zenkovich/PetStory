@@ -1,6 +1,6 @@
 #pragma once
 #include "o2/Assets/Types/ActorAsset.h"
-#include "o2/Scene/ActorRef.h"
+#include "o2/Scene/ActorLinkRef.h"
 #include "o2/Scene/Component.h"
 #include "o2/Utils/Editor/Attributes/EditorPropertyAttribute.h"
 #include "o2/Utils/Math/Math.h"

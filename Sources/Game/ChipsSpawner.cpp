@@ -32,7 +32,7 @@ void ChipsSpawnerComponent::CheckChipsCount()
 	newChip->SetParent(mSpawnContainer);
 }
 
-DECLARE_TEMPLATE_CLASS(o2::Ref<ChipsSpawnerComponent>);
+DECLARE_TEMPLATE_CLASS(o2::LinkRef<ChipsSpawnerComponent>);
 // --- META ---
 
 DECLARE_CLASS(ChipsSpawnerComponent, ChipsSpawnerComponent);
