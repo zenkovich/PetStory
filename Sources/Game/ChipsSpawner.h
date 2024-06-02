@@ -20,7 +20,7 @@ private:
 	int           mMaxChipsCount = 20; // @SERIALIZABLE @EDITOR_PROPERTY
 	Ref<Actor>      mSpawnContainer;     // @SERIALIZABLE @EDITOR_PROPERTY
 	Ref<Actor>      mSpawnZone;          // @SERIALIZABLE @EDITOR_PROPERTY
-	Ref<ActorAsset> mChipProto;          // @SERIALIZABLE @EDITOR_PROPERTY
+	AssetRef<ActorAsset> mChipProto;          // @SERIALIZABLE @EDITOR_PROPERTY
 
 	float mAccumulatedTimer = 0.0f;
 

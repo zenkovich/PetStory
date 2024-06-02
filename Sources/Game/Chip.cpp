@@ -36,9 +36,9 @@ void Chip::OnCursorReleased(const Input::Cursor& cursor)
 		Vector<Ref<Chip>> prevIterationChipGroup = iterationChipGroup;
 		iterationChipGroup.Clear();
 
-		for (auto groupChip : prevIterationChipGroup)
+		for (auto& groupChip : prevIterationChipGroup)
 		{
-			for (auto child : parent->GetChildren())
+			for (auto& child : parent->GetChildren())
 			{
 				if (child == GetOwnerActor())
 					continue;
@@ -64,7 +64,7 @@ void Chip::OnCursorReleased(const Input::Cursor& cursor)
 	if (group.Count() < 2)
  		return;
 
-	for (auto chip : group)
+	for (auto& chip : group)
 		o2Scene.DestroyActor(chip->GetOwnerActor());
 }
 
