@@ -65,3 +65,4 @@ Platforms/iOS/PetStory.xcodeproj/xcuserdata
 build
 Bin/Windows/log.txt
 *.pdb
+Bin

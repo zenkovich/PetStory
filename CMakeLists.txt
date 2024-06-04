@@ -1,11 +1,6 @@
 cmake_minimum_required(VERSION 3.6)
 project(PetStory LANGUAGES CXX)
 
-# Options
-option(O2_SELFPROFILE "Enable profiling o2 benchmark." OFF)
-option(O2_EDITOR "Enables o2 editor." ON)
-option(O2_ASAN "Enables ASAN (address sanitizer)." ON)
-
 # Common definitions
 set(CMAKE_CXX_STANDARD 20)
 set_property(GLOBAL PROPERTY USE_FOLDERS ON)
