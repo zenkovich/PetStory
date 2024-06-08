@@ -20,7 +20,6 @@ set(BIN_OUTPUTDIR "${CMAKE_CURRENT_SOURCE_DIR}/Bin/${O2_PLATFORM}")
 
 # o2 libraries
 add_subdirectory(o2)
-add_compile_definitions(${O2_COMPILE_DEFINITIONS_EXPORT})
 
 # Game library
 add_library(GameLib STATIC)
@@ -81,7 +80,6 @@ endif()
 
 # Assets builder
 add_executable(AssetsBuilder)
-add_compile_definitions(${O2_COMPILE_DEFINITIONS_EXPORT})
 target_sources(AssetsBuilder PRIVATE 
     ${CMAKE_CURRENT_SOURCE_DIR}/o2/AssetsBuildTool/Sources/o2AssetBuilder/AssetsBuilderRunner.cpp)
 

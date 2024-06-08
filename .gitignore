@@ -66,3 +66,5 @@ build
 Bin/Windows/log.txt
 *.pdb
 Bin
+.idea
+cmake-build-debug
