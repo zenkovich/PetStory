@@ -1,4 +1,4 @@
-name: CMake MSVS Build
+name: Windows MSVS
 
 on:
   push:
