@@ -18,17 +18,19 @@ jobs:
       with:
         submodules: recursive 
 
-    - name: Install dependencies
-      run: |
-        sudo apt-get update
-        sudo apt-get install -y ninja-build clang cmake
-        
-    - name: Setup OpenGL
-      uses: openrndr/setup-opengl@v1.1
+    - name: Set up CMake
+      uses: actions/setup-cmake@v3
 
-    - name: Configure CMake
-      run: cmake -G "Ninja" -DCMAKE_C_COMPILER=clang -DCMAKE_CXX_COMPILER=clang++ -DCMAKE_BUILD_TYPE=Release .
+    - name: Install dependencies
+      run: sudo apt-get update && sudo apt-get install -y \
+          build-essential \
+          cmake \
+          libgl1-mesa-dev \
+          libglu1-mesa-dev
 
     - name: Build with CMake
-      run: cmake --build . --config Release
-            
+      run: |
+        mkdir -p build
+        cd build
+        cmake ..
+        make
