@@ -1,4 +1,4 @@
-name: Linux clang
+name: Linux
 
 on:
   push:
