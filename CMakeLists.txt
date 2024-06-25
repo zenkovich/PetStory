@@ -60,8 +60,8 @@ target_sources(EditorLib PRIVATE ${EditorLib_SOURCES})
 target_include_directories(EditorLib PUBLIC ${EditorLib_INCLUDES})
 
 target_link_libraries(EditorLib PUBLIC
-    GameLib 
     o2Editor
+    GameLib
 )    
 
 add_dependencies(EditorLib GameLib o2Editor)    
@@ -84,24 +84,25 @@ target_sources(AssetsBuilder PRIVATE
     ${CMAKE_CURRENT_SOURCE_DIR}/o2/AssetsBuildTool/Sources/o2AssetBuilder/AssetsBuilderRunner.cpp)
 
 target_link_libraries(AssetsBuilder 
-    PRIVATE
-    o2AssetsBuilder
+    PUBLIC
     o2Framework
+    o2AssetsBuilder
     GameLib
 )
 
 if(MSVC)
     target_compile_options(AssetsBuilder PRIVATE "/MP" "/Zc:__cplusplus")
-    set_target_properties(AssetsBuilder PROPERTIES 
+elseif (UNIX)
+    target_compile_options(AssetsBuilder PRIVATE ${DEMO_WARNING_OPTION} -Wno-pedantic)
+endif()
+
+set_target_properties(AssetsBuilder PROPERTIES
         RUNTIME_OUTPUT_DIRECTORY ${BIN_OUTPUTDIR}
         RUNTIME_OUTPUT_DIRECTORY_DEBUG ${BIN_OUTPUTDIR}
         RUNTIME_OUTPUT_DIRECTORY_MINSIZEREL ${BIN_OUTPUTDIR}
         RUNTIME_OUTPUT_DIRECTORY_RELEASE ${BIN_OUTPUTDIR}
         RUNTIME_OUTPUT_DIRECTORY_RELWITHDEBINFO ${BIN_OUTPUTDIR}
-    )       
-elseif (UNIX)
-    target_compile_options(AssetsBuilder PRIVATE ${DEMO_WARNING_OPTION} -Wno-pedantic)
-endif()
+)
 
 # Build assets step
 add_custom_target(
@@ -116,7 +117,7 @@ add_dependencies(BuildAssets o2AssetsBuilder AssetsBuilder)
 # Game App
 add_executable(PetStory)
 
-if (WIN32)
+if (WIN32 OR UNIX)
     target_sources(PetStory PRIVATE "Platforms/Windows/AppMain.cpp")
 endif()
 
@@ -150,12 +151,12 @@ if(O2_EDITOR)
     # Editor executable
     add_executable(Editor)
 
-    if (WIN32)
+    if (WIN32 OR UNIX)
         target_sources(Editor PRIVATE "Platforms/Windows/EditorMain.cpp")
     endif()
 
     target_link_libraries(Editor PUBLIC EditorLib)  
-    add_dependencies(Editor EditorLib BuildAssets BuildEditorAssets)      
+    add_dependencies(Editor EditorLib BuildAssets BuildEditorAssets)
 
     set_target_properties(Editor PROPERTIES 
         RUNTIME_OUTPUT_DIRECTORY ${BIN_OUTPUTDIR}
