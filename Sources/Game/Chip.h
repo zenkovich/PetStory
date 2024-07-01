@@ -13,7 +13,8 @@ public:
 
 	void OnStart() override;
 
-	SERIALIZABLE(Chip);
+    SERIALIZABLE(Chip);
+    CLONEABLE_REF(Chip);
 
 private:
 	String mType;                    // @SERIALIZABLE @EDITOR_PROPERTY

@@ -13,13 +13,14 @@ public:
 	// Updates component, checks count of chips
 	void OnUpdate(float dt) override;
 
-	SERIALIZABLE(ChipsSpawnerComponent);
+    SERIALIZABLE(ChipsSpawnerComponent);
+    CLONEABLE_REF(ChipsSpawnerComponent);
 
 private:
-	float         mSpawnDelay = 0.2f;  // @SERIALIZABLE @EDITOR_PROPERTY
-	int           mMaxChipsCount = 20; // @SERIALIZABLE @EDITOR_PROPERTY
-	Ref<Actor>      mSpawnContainer;     // @SERIALIZABLE @EDITOR_PROPERTY
-	Ref<Actor>      mSpawnZone;          // @SERIALIZABLE @EDITOR_PROPERTY
+	float                mSpawnDelay = 0.2f;  // @SERIALIZABLE @EDITOR_PROPERTY
+	int                  mMaxChipsCount = 20; // @SERIALIZABLE @EDITOR_PROPERTY
+    LinkRef<Actor>       mSpawnContainer;     // @SERIALIZABLE @EDITOR_PROPERTY
+    LinkRef<Actor>       mSpawnZone;          // @SERIALIZABLE @EDITOR_PROPERTY
 	AssetRef<ActorAsset> mChipProto;          // @SERIALIZABLE @EDITOR_PROPERTY
 
 	float mAccumulatedTimer = 0.0f;

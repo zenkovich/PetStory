@@ -14,7 +14,7 @@
                 "Id": 17799051847008967418,
                 "Transform": {
                     "size": {
-                        "x": 490.0,
+                        "x": 446.0,
                         "y": 1044.0
                     },
                     "scale": {
@@ -25,433 +25,575 @@
                         "x": 0.5,
                         "y": 0.5
                     }
-                }
-            }
-        },
-        {
-            "Type": "o2::Actor",
-            "Value": {
-                "mName": "Empty",
-                "Id": 12676431823769781463,
-                "Transform": {
-                    "position": {
-                        "x": 50.0,
-                        "y": 50.0
-                    },
-                    "size": {
-                        "x": 100.0,
-                        "y": 100.0
-                    },
-                    "scale": {
-                        "x": 1.0,
-                        "y": 1.0
-                    },
-                    "pivot": {
-                        "x": 0.5,
-                        "y": 0.5
-                    }
-                },
-                "Components": [
-                    {
-                        "Type": "o2::EditorTestComponent",
-                        "Data": {
-                            "mInteger": 256,
-                            "mSprite": {
-                                "Type": "o2::Sprite",
-                                "Value": {
-                                    "mScale": {
-                                        "x": 1.0,
-                                        "y": 1.0
-                                    },
-                                    "mPivot": {
-                                        "x": 0.5,
-                                        "y": 0.5
-                                    },
-                                    "mTextureSrcRect": {
-                                        "left": 0,
-                                        "bottom": 0,
-                                        "right": 0,
-                                        "top": 0
-                                    }
-                                }
-                            },
-                            "mTestInside": {},
-                            "mId": 16487213028316518328
-                        }
-                    }
-                ]
-            }
-        },
-        {
-            "Type": "Editor::FloatProperty",
-            "Value": {
-                "Prototype": {
-                    "id": "251a60d87dcf246f0d1678846b7635b9",
-                    "path": "Editor UI styles/Float Property with caption.proto"
-                },
-                "PrototypeLink": 12177703519040955107,
-                "Id": 13817573273362175842,
-                "Transform": {
-                    "offsetMax": {
-                        "x": 344.9999694824219,
-                        "y": 20.0
-                    },
-                    "weight": {
-                        "x": 1.600000023841858,
-                        "y": 1.0
-                    }
                 },
                 "Children": [
                     {
-                        "Type": "o2::Label",
-                        "Data": {
-                            "Prototype": {
-                                "id": "7d5f55e1507d5e0059862ed85c5712ad",
-                                "path": "Editor UI styles/Label standard.proto"
-                            },
-                            "PrototypeLink": 4017553954690665318,
-                            "Id": 15717314405071664700,
-                            "Transform": {
-                                "anchorMax": {
-                                    "x": 0.0,
-                                    "y": 1.0
-                                },
-                                "offsetMin": {
-                                    "x": 10.0,
-                                    "y": 0.0
-                                },
-                                "offsetMax": {
-                                    "x": 148.125,
-                                    "y": -0.0
-                                }
-                            },
-                            "Layers": [
-                                {
-                                    "mDrawable": {
-                                        "Type": "o2::Text",
-                                        "Value": {
-                                            "mColor": {
-                                                "r": 96,
-                                                "g": 125,
-                                                "b": 139,
-                                                "a": 255
-                                            },
-                                            "mFontAssetId": "28ea3885486a6d3e5658445b2de14465",
-                                            "mHeight": 11,
-                                            "mSymbolsDistCoef": 1.0,
-                                            "mLinesDistanceCoef": 1.0,
-                                            "mVerAlign": "Middle",
-                                            "mDotsEndings": true
-                                        }
-                                    },
-                                    "mUID": 13292765337888221469,
-                                    "PrototypeLink": 5237750340267674562
-                                }
-                            ]
-                        }
-                    },
-                    {
                         "Type": "o2::Widget",
                         "Data": {
-                            "PrototypeLink": 964861009568432152,
-                            "Id": 10490918472312164960,
+                            "mName": "UI",
+                            "Id": 6089638790867922046,
                             "Transform": {
                                 "anchorMax": {
-                                    "x": 0.0,
+                                    "x": 1.0,
                                     "y": 1.0
                                 },
-                                "offsetMin": {
-                                    "x": 148.125,
-                                    "y": 0.0
-                                },
                                 "offsetMax": {
-                                    "x": 345.0,
+                                    "x": -0.0,
                                     "y": -0.0
                                 }
                             },
                             "Children": [
                                 {
-                                    "Type": "o2::HorizontalLayout",
+                                    "Type": "o2::Image",
                                     "Data": {
-                                        "PrototypeLink": 10271710431413718255,
-                                        "Id": 4337015696939429471,
+                                        "mName": "Background",
+                                        "Id": 7305561622258471750,
                                         "Transform": {
-                                            "weight": {
-                                                "x": 2.0,
+                                            "anchorMax": {
+                                                "x": 1.0,
                                                 "y": 1.0
+                                            },
+                                            "offsetMax": {
+                                                "x": 0.0,
+                                                "y": 0.0
+                                            }
+                                        },
+                                        "InternalWidgets": [],
+                                        "Layers": [
+                                            {
+                                                "Type": "o2::WidgetLayer",
+                                                "Value": {
+                                                    "name": "image",
+                                                    "mDrawable": {
+                                                        "Type": "o2::Sprite",
+                                                        "Value": {
+                                                            "mImageAsset": {
+                                                                "id": "2ceb437b033072b6266133a13c8704d7",
+                                                                "path": "Game field/Back.png"
+                                                            },
+                                                            "mMode": "FixedAspect"
+                                                        }
+                                                    },
+                                                    "mUID": 5976453462656469540
+                                                }
+                                            }
+                                        ],
+                                        "States": []
+                                    }
+                                }
+                            ],
+                            "InternalWidgets": [],
+                            "Layers": [],
+                            "States": []
+                        }
+                    },
+                    {
+                        "Type": "o2::Actor",
+                        "Data": {
+                            "mName": "Gamefield",
+                            "Id": 11307289722237499899,
+                            "Transform": {
+                                "position": {
+                                    "x": 0.0,
+                                    "y": -25.0
+                                },
+                                "size": {
+                                    "x": 430.0,
+                                    "y": 582.0
+                                },
+                                "scale": {
+                                    "x": 1.0,
+                                    "y": 1.0
+                                },
+                                "pivot": {
+                                    "x": 0.5,
+                                    "y": 0.5
+                                }
+                            },
+                            "Children": [
+                                {
+                                    "Type": "o2::Actor",
+                                    "Data": {
+                                        "mName": "Back",
+                                        "Id": 646811238242694201,
+                                        "Transform": {
+                                            "position": {
+                                                "x": 0.0,
+                                                "y": -11.0
+                                            },
+                                            "size": {
+                                                "x": 396.0,
+                                                "y": 578.0
+                                            },
+                                            "scale": {
+                                                "x": 1.0,
+                                                "y": 1.0
+                                            },
+                                            "pivot": {
+                                                "x": 0.5,
+                                                "y": 0.5
+                                            }
+                                        },
+                                        "Components": [
+                                            {
+                                                "Type": "o2::ImageComponent",
+                                                "Data": {
+                                                    "mImageAsset": {
+                                                        "id": "726128c92f792d7b03445ed14da5472a",
+                                                        "path": "Game field/game_field.png"
+                                                    },
+                                                    "mId": 16055298241293896852
+                                                }
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "Type": "o2::Actor",
+                                    "Data": {
+                                        "mName": "Walls",
+                                        "Id": 126150045630403632,
+                                        "Transform": {
+                                            "position": {
+                                                "x": -3.468475341796875,
+                                                "y": -4.767547607421875
+                                            },
+                                            "size": {
+                                                "x": 390.06231689453127,
+                                                "y": 565.086669921875
+                                            },
+                                            "scale": {
+                                                "x": 1.0,
+                                                "y": 1.0
+                                            },
+                                            "pivot": {
+                                                "x": 0.5,
+                                                "y": 0.5
                                             }
                                         },
                                         "Children": [
                                             {
-                                                "Type": "o2::EditBox",
+                                                "Type": "o2::RigidBody",
                                                 "Data": {
-                                                    "Prototype": {
-                                                        "id": "046c25fd1bb333ba3c5a410d76fa3ed3",
-                                                        "path": "Editor UI styles/Edit Box singleline with arrows.proto"
-                                                    },
-                                                    "PrototypeLink": 13134547545914067903,
-                                                    "Id": 16798273367132290521,
+                                                    "mName": "Wall",
+                                                    "mBodyType": "Static",
+                                                    "Id": 17788688250922529220,
                                                     "Transform": {
-                                                        "anchorMax": {
-                                                            "x": 0.0,
+                                                        "position": {
+                                                            "x": -213.7026824951172,
+                                                            "y": 19.399871826171876
+                                                        },
+                                                        "size": {
+                                                            "x": 42.931453704833987,
+                                                            "y": 664.2172241210938
+                                                        },
+                                                        "scale": {
+                                                            "x": 1.0,
                                                             "y": 1.0
                                                         },
-                                                        "offsetMax": {
-                                                            "x": 197.0,
-                                                            "y": -0.0
+                                                        "pivot": {
+                                                            "x": 0.5,
+                                                            "y": 0.5
                                                         }
                                                     },
-                                                    "mText": "0",
-                                                    "mTextDrawable": {
-                                                        "Type": "o2::Text",
-                                                        "Value": {
-                                                            "mPosition": {
-                                                                "x": 244.0,
-                                                                "y": 11.0
-                                                            },
-                                                            "mSize": {
-                                                                "x": 186.0,
-                                                                "y": 20.0
-                                                            },
-                                                            "mScale": {
-                                                                "x": 1.0,
-                                                                "y": 1.0
-                                                            },
-                                                            "mPivot": {
-                                                                "x": 0.5,
-                                                                "y": 0.5
-                                                            },
-                                                            "mColor": {
-                                                                "r": 96,
-                                                                "g": 125,
-                                                                "b": 139,
-                                                                "a": 255
-                                                            },
-                                                            "mText": "0",
-                                                            "mFontAssetId": "28ea3885486a6d3e5658445b2de14465",
-                                                            "mHeight": 11,
-                                                            "mSymbolsDistCoef": 1.0,
-                                                            "mLinesDistanceCoef": 1.0,
-                                                            "mVerAlign": "Middle"
-                                                        }
-                                                    },
-                                                    "mCaretDrawable": {
-                                                        "Type": "o2::Sprite",
-                                                        "Value": {
-                                                            "mPosition": {
-                                                                "x": 151.0,
-                                                                "y": 5.0
-                                                            },
-                                                            "mSize": {
-                                                                "x": 1.0,
-                                                                "y": 18.700000762939454
-                                                            },
-                                                            "mScale": {
-                                                                "x": 1.0,
-                                                                "y": 1.0
-                                                            },
-                                                            "mPivot": {
-                                                                "x": 0.0,
-                                                                "y": 0.25999999046325686
-                                                            },
-                                                            "mColor": {
-                                                                "r": 0,
-                                                                "g": 0,
-                                                                "b": 0,
-                                                                "a": 255
-                                                            },
-                                                            "mTextureSrcRect": {
-                                                                "left": 0,
-                                                                "bottom": 0,
-                                                                "right": 0,
-                                                                "top": 0
+                                                    "Components": [
+                                                        {
+                                                            "Type": "o2::BoxCollider",
+                                                            "Data": {
+                                                                "mSize": {
+                                                                    "x": 42.931453704833987,
+                                                                    "y": 664.2172241210938
+                                                                },
+                                                                "mId": 9015237678434905198
                                                             }
-                                                        }
-                                                    },
-                                                    "Layers": [
-                                                        {
-                                                            "mDrawable": {
-                                                                "Type": "o2::Sprite",
-                                                                "Value": {
-                                                                    "mImageAsset": {
-                                                                        "id": "41516f7f0265318f5f6d731f16f66682",
-                                                                        "path": "ui/UI4_Editbox_regular.png"
-                                                                    },
-                                                                    "mMode": "Sliced",
-                                                                    "mSlices": {
-                                                                        "left": 13,
-                                                                        "bottom": 14,
-                                                                        "right": 14,
-                                                                        "top": 14
-                                                                    }
-                                                                }
-                                                            },
-                                                            "mUID": 13043473787125839606,
-                                                            "PrototypeLink": 3943500168074418783
-                                                        },
-                                                        {
-                                                            "mDrawable": {
-                                                                "Type": "o2::Sprite",
-                                                                "Value": {
-                                                                    "mColor": {
-                                                                        "r": 255,
-                                                                        "g": 255,
-                                                                        "b": 255,
-                                                                        "a": 0
-                                                                    },
-                                                                    "mImageAsset": {
-                                                                        "id": "4fc26f8f22f13b4d2b45412a54061211",
-                                                                        "path": "ui/UI4_Editbox_select.png"
-                                                                    },
-                                                                    "mMode": "Sliced",
-                                                                    "mSlices": {
-                                                                        "left": 13,
-                                                                        "bottom": 14,
-                                                                        "right": 14,
-                                                                        "top": 14
-                                                                    }
-                                                                }
-                                                            },
-                                                            "mUID": 14735170418693078632,
-                                                            "PrototypeLink": 11910300096957648060
-                                                        },
-                                                        {
-                                                            "mDrawable": {
-                                                                "Type": "o2::Sprite",
-                                                                "Value": {
-                                                                    "mColor": {
-                                                                        "r": 255,
-                                                                        "g": 255,
-                                                                        "b": 255,
-                                                                        "a": 0
-                                                                    },
-                                                                    "mImageAsset": {
-                                                                        "id": "7c09624e7daa45ef4dd24628717942d5",
-                                                                        "path": "ui/UI4_Editbox_focus.png"
-                                                                    },
-                                                                    "mMode": "Sliced",
-                                                                    "mSlices": {
-                                                                        "left": 13,
-                                                                        "bottom": 14,
-                                                                        "right": 14,
-                                                                        "top": 14
-                                                                    }
-                                                                }
-                                                            },
-                                                            "mUID": 3683618752404888889,
-                                                            "PrototypeLink": 7021610986684938487
-                                                        },
-                                                        {
-                                                            "mDrawable": {
-                                                                "Type": "o2::Sprite",
-                                                                "Value": {
-                                                                    "mImageAsset": {
-                                                                        "id": "5219235a0fc2622920a3158b12741171",
-                                                                        "path": "ui/UI4_ch_arrows.png"
-                                                                    }
-                                                                }
-                                                            },
-                                                            "mUID": 1970859746125955215,
-                                                            "PrototypeLink": 1913164185709659042
-                                                        }
-                                                    ],
-                                                    "States": [
-                                                        {
-                                                            "name": "visible"
-                                                        },
-                                                        {
-                                                            "name": "focused"
                                                         }
                                                     ]
                                                 }
                                             },
                                             {
-                                                "Type": "o2::Button",
+                                                "Type": "o2::RigidBody",
                                                 "Data": {
-                                                    "Prototype": {
-                                                        "id": "67353ca246b326362ca03fac4cf56895",
-                                                        "path": "Editor UI styles/Button revert.proto"
-                                                    },
-                                                    "PrototypeLink": 5192787172356699666,
-                                                    "Id": 4227187779607448401,
+                                                    "mName": "Wall",
+                                                    "mBodyType": "Static",
+                                                    "Id": 16622346580520999022,
                                                     "Transform": {
-                                                        "anchorMax": {
-                                                            "x": 0.0,
+                                                        "position": {
+                                                            "x": 212.16075134277345,
+                                                            "y": 19.399871826171876
+                                                        },
+                                                        "size": {
+                                                            "x": 42.931453704833987,
+                                                            "y": 664.2172241210938
+                                                        },
+                                                        "scale": {
+                                                            "x": 1.0,
                                                             "y": 1.0
                                                         },
-                                                        "offsetMin": {
-                                                            "x": 197.0,
-                                                            "y": 0.0
-                                                        },
-                                                        "offsetMax": {
-                                                            "x": 197.0,
-                                                            "y": -0.0
-                                                        },
-                                                        "minSize": {
-                                                            "x": 0.0,
-                                                            "y": 0.0
-                                                        },
-                                                        "maxSize": {
-                                                            "x": 0.0,
-                                                            "y": 10000.0
+                                                        "pivot": {
+                                                            "x": 0.5,
+                                                            "y": 0.5
                                                         }
                                                     },
-                                                    "Layers": [
+                                                    "Components": [
                                                         {
-                                                            "mUID": 14292161678562130505,
-                                                            "PrototypeLink": 11521336675412275252,
-                                                            "Children": [
-                                                                {
-                                                                    "mUID": 6087990356356521163,
-                                                                    "PrototypeLink": 10894806618767233977,
-                                                                    "Children": [
-                                                                        {
-                                                                            "mDrawable": {
-                                                                                "Type": "o2::Sprite",
-                                                                                "Value": {
-                                                                                    "mImageAsset": {
-                                                                                        "id": "44402071050555a124c77e7344733da4",
-                                                                                        "path": "ui/UI4_revert.png"
-                                                                                    }
-                                                                                }
-                                                                            },
-                                                                            "mUID": 5825115352706619145,
-                                                                            "PrototypeLink": 12182930119543457057
-                                                                        },
-                                                                        {
-                                                                            "mDrawable": {
-                                                                                "Type": "o2::Sprite",
-                                                                                "Value": {
-                                                                                    "mColor": {
-                                                                                        "r": 255,
-                                                                                        "g": 255,
-                                                                                        "b": 255,
-                                                                                        "a": 0
-                                                                                    },
-                                                                                    "mImageAsset": {
-                                                                                        "id": "44402071050555a124c77e7344733da4",
-                                                                                        "path": "ui/UI4_revert.png"
-                                                                                    }
-                                                                                }
-                                                                            },
-                                                                            "mUID": 13366269154704222882,
-                                                                            "PrototypeLink": 877228993468580528
-                                                                        }
-                                                                    ]
-                                                                }
-                                                            ]
+                                                            "Type": "o2::BoxCollider",
+                                                            "Data": {
+                                                                "mSize": {
+                                                                    "x": 42.931453704833987,
+                                                                    "y": 664.2172241210938
+                                                                },
+                                                                "mId": 10177343177248091754
+                                                            }
                                                         }
-                                                    ],
-                                                    "States": [
-                                                        {
-                                                            "name": "hover"
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "Type": "o2::RigidBody",
+                                                "Data": {
+                                                    "mName": "Wall",
+                                                    "mBodyType": "Static",
+                                                    "Id": 9611215731538736883,
+                                                    "Transform": {
+                                                        "position": {
+                                                            "x": 18.8372802734375,
+                                                            "y": -301.8144226074219
                                                         },
-                                                        {
-                                                            "name": "pressed"
+                                                        "size": {
+                                                            "x": 42.931480407714847,
+                                                            "y": 664.2167358398438
                                                         },
+                                                        "scale": {
+                                                            "x": 1.0,
+                                                            "y": 1.0
+                                                        },
+                                                        "pivot": {
+                                                            "x": 0.5,
+                                                            "y": 0.5
+                                                        },
+                                                        "angle": 4.71238899230957,
+                                                        "shear": -6.242700010261615e-7
+                                                    },
+                                                    "Components": [
                                                         {
-                                                            "name": "visible",
-                                                            "mState": false
+                                                            "Type": "o2::BoxCollider",
+                                                            "Data": {
+                                                                "mSize": {
+                                                                    "x": 42.931480407714847,
+                                                                    "y": 664.2167358398438
+                                                                },
+                                                                "mId": 3302421285257681222
+                                                            }
+                                                        }
+                                                    ]
+                                                }
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "Type": "o2::Actor",
+                                    "Data": {
+                                        "mName": "Chips",
+                                        "Id": 8601337919096457948,
+                                        "Transform": {
+                                            "position": {
+                                                "x": -1.9755859375,
+                                                "y": -4.171905517578125
+                                            },
+                                            "size": {
+                                                "x": 382.5712890625,
+                                                "y": 562.6551513671875
+                                            },
+                                            "scale": {
+                                                "x": 1.0,
+                                                "y": 1.0
+                                            },
+                                            "pivot": {
+                                                "x": 0.5,
+                                                "y": 0.5
+                                            }
+                                        }
+                                    }
+                                },
+                                {
+                                    "Type": "o2::Actor",
+                                    "Data": {
+                                        "mName": "Spawners",
+                                        "Id": 7551618259709592273,
+                                        "Transform": {
+                                            "position": {
+                                                "x": 50.0,
+                                                "y": 50.0
+                                            },
+                                            "size": {
+                                                "x": 100.0,
+                                                "y": 100.0
+                                            },
+                                            "scale": {
+                                                "x": 1.0,
+                                                "y": 1.0
+                                            },
+                                            "pivot": {
+                                                "x": 0.5,
+                                                "y": 0.5
+                                            }
+                                        },
+                                        "Children": [
+                                            {
+                                                "Type": "o2::Actor",
+                                                "Data": {
+                                                    "mName": "SpawnZone",
+                                                    "Id": 16582846656772363783,
+                                                    "Transform": {
+                                                        "position": {
+                                                            "x": -54.66624450683594,
+                                                            "y": 246.9705810546875
+                                                        },
+                                                        "size": {
+                                                            "x": 370.8397521972656,
+                                                            "y": 38.93818283081055
+                                                        },
+                                                        "scale": {
+                                                            "x": 1.0,
+                                                            "y": 1.0
+                                                        },
+                                                        "pivot": {
+                                                            "x": 0.5,
+                                                            "y": 0.5
+                                                        }
+                                                    },
+                                                    "Components": [
+                                                        {
+                                                            "Type": "ChipsSpawnerComponent",
+                                                            "Data": {
+                                                                "mSpawnContainer": {
+                                                                    "ID": 8601337919096457948
+                                                                },
+                                                                "mSpawnZone": {
+                                                                    "ID": 16582846656772363783
+                                                                },
+                                                                "mChipProto": {
+                                                                    "id": "75e92b643b6960dd3c6528b80afa3741",
+                                                                    "path": "Prefabs/ChipBlue.proto"
+                                                                },
+                                                                "mId": 4763366963929572329
+                                                            }
+                                                        }
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "Type": "o2::Actor",
+                                                "Data": {
+                                                    "mName": "SpawnZone",
+                                                    "Id": 16620733573601072000,
+                                                    "Transform": {
+                                                        "position": {
+                                                            "x": -54.66624450683594,
+                                                            "y": 246.9705810546875
+                                                        },
+                                                        "size": {
+                                                            "x": 370.8397521972656,
+                                                            "y": 38.93818283081055
+                                                        },
+                                                        "scale": {
+                                                            "x": 1.0,
+                                                            "y": 1.0
+                                                        },
+                                                        "pivot": {
+                                                            "x": 0.5,
+                                                            "y": 0.5
+                                                        }
+                                                    },
+                                                    "Components": [
+                                                        {
+                                                            "Type": "ChipsSpawnerComponent",
+                                                            "Data": {
+                                                                "mSpawnContainer": {
+                                                                    "ID": 8601337919096457948
+                                                                },
+                                                                "mSpawnZone": {
+                                                                    "ID": 16620733573601072000
+                                                                },
+                                                                "mChipProto": {
+                                                                    "id": "60217b044d8c54e145d755384c8a0705",
+                                                                    "path": "Prefabs/ChipGreen.proto"
+                                                                },
+                                                                "mId": 8271220928658427071
+                                                            }
+                                                        }
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "Type": "o2::Actor",
+                                                "Data": {
+                                                    "mName": "SpawnZone",
+                                                    "Id": 13287602912272406342,
+                                                    "Transform": {
+                                                        "position": {
+                                                            "x": -54.66624450683594,
+                                                            "y": 246.9705810546875
+                                                        },
+                                                        "size": {
+                                                            "x": 370.8397521972656,
+                                                            "y": 38.93818283081055
+                                                        },
+                                                        "scale": {
+                                                            "x": 1.0,
+                                                            "y": 1.0
+                                                        },
+                                                        "pivot": {
+                                                            "x": 0.5,
+                                                            "y": 0.5
+                                                        }
+                                                    },
+                                                    "Components": [
+                                                        {
+                                                            "Type": "ChipsSpawnerComponent",
+                                                            "Data": {
+                                                                "mSpawnContainer": {
+                                                                    "ID": 8601337919096457948
+                                                                },
+                                                                "mSpawnZone": {
+                                                                    "ID": 13287602912272406342
+                                                                },
+                                                                "mChipProto": {
+                                                                    "id": "3519060334223eec0a3a549f18701de3",
+                                                                    "path": "Prefabs/ChipOrange.proto"
+                                                                },
+                                                                "mId": 15764924363114908480
+                                                            }
+                                                        }
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "Type": "o2::Actor",
+                                                "Data": {
+                                                    "mName": "SpawnZone",
+                                                    "Id": 8484136447379634269,
+                                                    "Transform": {
+                                                        "position": {
+                                                            "x": -54.66624450683594,
+                                                            "y": 246.9705810546875
+                                                        },
+                                                        "size": {
+                                                            "x": 370.8397521972656,
+                                                            "y": 38.93818283081055
+                                                        },
+                                                        "scale": {
+                                                            "x": 1.0,
+                                                            "y": 1.0
+                                                        },
+                                                        "pivot": {
+                                                            "x": 0.5,
+                                                            "y": 0.5
+                                                        }
+                                                    },
+                                                    "Components": [
+                                                        {
+                                                            "Type": "ChipsSpawnerComponent",
+                                                            "Data": {
+                                                                "mSpawnContainer": {
+                                                                    "ID": 8601337919096457948
+                                                                },
+                                                                "mSpawnZone": {
+                                                                    "ID": 8484136447379634269
+                                                                },
+                                                                "mChipProto": {
+                                                                    "id": "41294346388d70ad66ad27d600b81fbf",
+                                                                    "path": "Prefabs/ChipRed.proto"
+                                                                },
+                                                                "mId": 7471722396635506930
+                                                            }
+                                                        }
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "Type": "o2::Actor",
+                                                "Data": {
+                                                    "mName": "SpawnZone",
+                                                    "Id": 1116306580909781346,
+                                                    "Transform": {
+                                                        "position": {
+                                                            "x": -54.66624450683594,
+                                                            "y": 246.9705810546875
+                                                        },
+                                                        "size": {
+                                                            "x": 370.8397521972656,
+                                                            "y": 38.93818283081055
+                                                        },
+                                                        "scale": {
+                                                            "x": 1.0,
+                                                            "y": 1.0
+                                                        },
+                                                        "pivot": {
+                                                            "x": 0.5,
+                                                            "y": 0.5
+                                                        }
+                                                    },
+                                                    "Components": [
+                                                        {
+                                                            "Type": "ChipsSpawnerComponent",
+                                                            "Data": {
+                                                                "mSpawnContainer": {
+                                                                    "ID": 8601337919096457948
+                                                                },
+                                                                "mSpawnZone": {
+                                                                    "ID": 1116306580909781346
+                                                                },
+                                                                "mChipProto": {
+                                                                    "id": "662650ac7ab4522a392725883ef87da8",
+                                                                    "path": "Prefabs/ChipViolet.proto"
+                                                                },
+                                                                "mId": 10682263008790121191
+                                                            }
+                                                        }
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "Type": "o2::Actor",
+                                                "Data": {
+                                                    "mName": "SpawnZone",
+                                                    "Id": 8608904355219664009,
+                                                    "Transform": {
+                                                        "position": {
+                                                            "x": -54.66624450683594,
+                                                            "y": 246.9705810546875
+                                                        },
+                                                        "size": {
+                                                            "x": 370.8397521972656,
+                                                            "y": 38.93818283081055
+                                                        },
+                                                        "scale": {
+                                                            "x": 1.0,
+                                                            "y": 1.0
+                                                        },
+                                                        "pivot": {
+                                                            "x": 0.5,
+                                                            "y": 0.5
+                                                        }
+                                                    },
+                                                    "Components": [
+                                                        {
+                                                            "Type": "ChipsSpawnerComponent",
+                                                            "Data": {
+                                                                "mSpawnContainer": {
+                                                                    "ID": 8601337919096457948
+                                                                },
+                                                                "mSpawnZone": {
+                                                                    "ID": 8608904355219664009
+                                                                },
+                                                                "mChipProto": {
+                                                                    "id": "237453d25990147b60ea5a0879130d15",
+                                                                    "path": "Prefabs/ChipYellow.proto"
+                                                                },
+                                                                "mId": 15340746001383754409
+                                                            }
                                                         }
                                                     ]
                                                 }
@@ -460,77 +602,6 @@
                                     }
                                 }
                             ]
-                        }
-                    }
-                ],
-                "States": [
-                    {
-                        "name": "revert",
-                        "mState": true,
-                        "mAnimation": {
-                            "instance": {
-                                "Type": "o2::AnimationAsset",
-                                "Value": {
-                                    "animation": {
-                                        "Type": "o2::AnimationClip",
-                                        "Value": {
-                                            "mTracks": [
-                                                {
-                                                    "Type": "o2::AnimationTrack<float>",
-                                                    "Value": {
-                                                        "path": "child/container/child/layout/child/revert/layout/maxWidth",
-                                                        "curve": {
-                                                            "Type": "o2::Curve",
-                                                            "Value": {
-                                                                "mKeys": [
-                                                                    {
-                                                                        "uid": 10790514776889895428,
-                                                                        "rightSupportPosition": 0.06000000238418579,
-                                                                        "supportsType": "Broken"
-                                                                    },
-                                                                    {
-                                                                        "uid": 14347057066820381332,
-                                                                        "value": 20.0,
-                                                                        "position": 0.15000000596046449,
-                                                                        "leftSupportPosition": -0.15000000596046449,
-                                                                        "supportsType": "Broken"
-                                                                    }
-                                                                ]
-                                                            }
-                                                        }
-                                                    }
-                                                },
-                                                {
-                                                    "Type": "o2::AnimationTrack<bool>",
-                                                    "Value": {
-                                                        "path": "child/container/child/layout/child/revert/enabled",
-                                                        "mKeys": [
-                                                            {
-                                                                "uid": 6633013505253211171,
-                                                                "rightSupportPosition": 0.06000000238418579
-                                                            },
-                                                            {
-                                                                "uid": 3407722327063467163,
-                                                                "position": 0.02250000089406967,
-                                                                "value": true,
-                                                                "leftSupportValue": 1.0,
-                                                                "leftSupportPosition": 1.0
-                                                            }
-                                                        ]
-                                                    }
-                                                }
-                                            ],
-                                            "mDuration": 0.15000000596046449
-                                        }
-                                    }
-                                }
-                            },
-                            "meta": {
-                                "Type": "o2::DefaultAssetMeta<o2::AnimationAsset>",
-                                "Value": {
-                                    "mId": "0dda36f0726c7048134112e52a9a2986"
-                                }
-                            }
                         }
                     }
                 ]
