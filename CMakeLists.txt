@@ -10,6 +10,9 @@ if(MSVC AND O2_ASAN)
     add_compile_options(-fsanitize=address)
 endif()
 
+# o2 libraries
+add_subdirectory(o2)
+
 set(BIN_OUTPUTDIR "${CMAKE_CURRENT_SOURCE_DIR}/Bin/${O2_PLATFORM}")
 
 function(set_target_output_directories TARGET_NAME)
@@ -21,9 +24,6 @@ function(set_target_output_directories TARGET_NAME)
         RUNTIME_OUTPUT_DIRECTORY_RELWITHDEBINFO ${BIN_OUTPUTDIR}
     )
 endfunction()
-
-# o2 libraries
-add_subdirectory(o2)
 
 # Game library
 add_library(GameLib STATIC)
