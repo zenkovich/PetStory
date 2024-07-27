@@ -8,6 +8,10 @@
 #include "o2/Scripts/ScriptEngine.h"
 #include "o2/Utils/FileSystem/FileSystem.h"
 
+GameApplication::GameApplication(RefCounter* refCounter):
+	Application(refCounter)
+{}
+
 void GameApplication::OnStarted()
 {
 	o2Scene.Load(GetBuiltAssetsPath() + String("test.scn"));

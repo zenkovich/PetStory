@@ -6,6 +6,10 @@ using namespace o2;
 
 class GameApplication: public Application
 {
+public:
+	// Default constructor
+	GameApplication(RefCounter* refCounter);
+
 protected:
 	// Calls when application is starting
 	void OnStarted() override;

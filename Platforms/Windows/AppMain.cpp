@@ -8,9 +8,9 @@ int main()
 	InitializeTypesGameLib();
 	INITIALIZE_O2;
 
-	GameApplication app;
-	app.Initialize();
-	app.Launch();
+	auto app = mmake<GameApplication>();
+	app->Initialize();
+	app->Launch();
 
 	return 0;
 }
