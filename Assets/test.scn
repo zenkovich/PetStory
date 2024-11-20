@@ -14,8 +14,8 @@
                 "Id": 17799051847008967418,
                 "Transform": {
                     "size": {
-                        "x": 446.0,
-                        "y": 1044.0
+                        "x": 602.0,
+                        "y": 1284.0
                     },
                     "scale": {
                         "x": 1.0,
@@ -78,6 +78,64 @@
                                                 }
                                             }
                                         ],
+                                        "States": []
+                                    }
+                                },
+                                {
+                                    "Type": "o2::Widget",
+                                    "Data": {
+                                        "mName": "Top",
+                                        "Id": 18183063884375246050,
+                                        "Transform": {
+                                            "anchorMin": {
+                                                "x": 0.0,
+                                                "y": 1.000014305114746
+                                            },
+                                            "anchorMax": {
+                                                "x": 1.0,
+                                                "y": 1.000014305114746
+                                            },
+                                            "offsetMin": {
+                                                "x": 0.0,
+                                                "y": -147.6241455078125
+                                            },
+                                            "offsetMax": {
+                                                "x": 0.0,
+                                                "y": -0.018310546875
+                                            }
+                                        },
+                                        "Children": [
+                                            {
+                                                "Type": "o2::Button",
+                                                "Data": {
+                                                    "mName": "Options",
+                                                    "Id": 2056623885381639794,
+                                                    "Transform": {
+                                                        "anchorMin": {
+                                                            "x": 1.0000815391540528,
+                                                            "y": 1.0000923871994019
+                                                        },
+                                                        "anchorMax": {
+                                                            "x": 1.0000815391540528,
+                                                            "y": 1.0000923871994019
+                                                        },
+                                                        "offsetMin": {
+                                                            "x": -145.04953002929688,
+                                                            "y": -148.013671875
+                                                        },
+                                                        "offsetMax": {
+                                                            "x": -0.0439453125,
+                                                            "y": -0.013671875
+                                                        }
+                                                    },
+                                                    "InternalWidgets": [],
+                                                    "Layers": [],
+                                                    "States": []
+                                                }
+                                            }
+                                        ],
+                                        "InternalWidgets": [],
+                                        "Layers": [],
                                         "States": []
                                     }
                                 }
@@ -180,7 +238,7 @@
                                                     "Id": 17788688250922529220,
                                                     "Transform": {
                                                         "position": {
-                                                            "x": -213.7026824951172,
+                                                            "x": -213.70266723632813,
                                                             "y": 19.399871826171876
                                                         },
                                                         "size": {
@@ -218,7 +276,7 @@
                                                     "Id": 16622346580520999022,
                                                     "Transform": {
                                                         "position": {
-                                                            "x": 212.16075134277345,
+                                                            "x": 212.16073608398438,
                                                             "y": 19.399871826171876
                                                         },
                                                         "size": {
@@ -602,6 +660,318 @@
                                     }
                                 }
                             ]
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "Type": "o2::Actor",
+            "Value": {
+                "mName": "Empty",
+                "Id": 3575939768872164390,
+                "Transform": {
+                    "position": {
+                        "x": 50.0,
+                        "y": 50.0
+                    },
+                    "size": {
+                        "x": 100.0,
+                        "y": 100.0
+                    },
+                    "scale": {
+                        "x": 1.0,
+                        "y": 1.0
+                    },
+                    "pivot": {
+                        "x": 0.5,
+                        "y": 0.5
+                    }
+                },
+                "Components": [
+                    {
+                        "Type": "o2::EditorTestComponent",
+                        "Data": {
+                            "mSprite": {
+                                "Type": "o2::Sprite",
+                                "Value": {
+                                    "mScale": {
+                                        "x": 1.0,
+                                        "y": 1.0
+                                    },
+                                    "mPivot": {
+                                        "x": 0.5,
+                                        "y": 0.5
+                                    },
+                                    "mTextureSrcRect": {
+                                        "left": 0,
+                                        "bottom": 0,
+                                        "right": 0,
+                                        "top": 0
+                                    }
+                                }
+                            },
+                            "mCurve": {
+                                "Type": "o2::Curve",
+                                "Value": {
+                                    "mKeys": [
+                                        {
+                                            "uid": 2816189541532842164,
+                                            "rightSupportPosition": 0.4000000059604645,
+                                            "supportsType": "Broken"
+                                        },
+                                        {
+                                            "uid": 4718465781029373141,
+                                            "value": 1.0,
+                                            "position": 1.0,
+                                            "leftSupportPosition": -1.0,
+                                            "supportsType": "Broken"
+                                        }
+                                    ]
+                                }
+                            },
+                            "mGradient": {
+                                "Type": "o2::ColorGradient",
+                                "Value": {
+                                    "mKeys": [
+                                        {
+                                            "uid": 7224590040251433090,
+                                            "color": {
+                                                "r": 255,
+                                                "g": 0,
+                                                "b": 0,
+                                                "a": 255
+                                            }
+                                        },
+                                        {
+                                            "uid": 17793849501007859380,
+                                            "color": {
+                                                "r": 0,
+                                                "g": 255,
+                                                "b": 0,
+                                                "a": 255
+                                            },
+                                            "position": 1.0
+                                        },
+                                        {
+                                            "uid": 9581679427884388775,
+                                            "color": {
+                                                "r": 0,
+                                                "g": 255,
+                                                "b": 255,
+                                                "a": 127
+                                            },
+                                            "position": 3.0
+                                        }
+                                    ]
+                                }
+                            },
+                            "mTestInside": {},
+                            "mId": 8494701803934935936
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "Type": "o2::Actor",
+            "Value": {
+                "mName": "Particles",
+                "Id": 17047500870683347952,
+                "Transform": {
+                    "position": {
+                        "x": 50.0,
+                        "y": 50.0
+                    },
+                    "size": {
+                        "x": 100.0,
+                        "y": 100.0
+                    },
+                    "scale": {
+                        "x": 1.0,
+                        "y": 1.0
+                    },
+                    "pivot": {
+                        "x": 0.5,
+                        "y": 0.5
+                    }
+                },
+                "Components": [
+                    {
+                        "Type": "o2::ParticlesEmitterComponent",
+                        "Data": {
+                            "mPosition": {
+                                "x": 50.0,
+                                "y": 50.0
+                            },
+                            "mSize": {
+                                "x": 100.0,
+                                "y": 100.0
+                            },
+                            "mScale": {
+                                "x": 1.0,
+                                "y": 1.0
+                            },
+                            "mPivot": {
+                                "x": 0.5,
+                                "y": 0.5
+                            },
+                            "mBlendMode": "Add",
+                            "mDuration": 0.4336735010147095,
+                            "mEndTime": 0.4336735010147095,
+                            "mParticlesSource": {
+                                "Type": "o2::SingleSpriteParticleSource",
+                                "Value": {
+                                    "image": {
+                                        "id": "7323582b605f3b2f1bdf6045236e5a1e",
+                                        "path": "Particles/star01.png"
+                                    }
+                                }
+                            },
+                            "mShape": {
+                                "Type": "o2::CircleParticlesEmitterShape",
+                                "Value": {}
+                            },
+                            "mEffects": [
+                                {
+                                    "Type": "o2::ParticlesColorEffect",
+                                    "Value": {
+                                        "colorGradient": {
+                                            "Type": "o2::ColorGradient",
+                                            "Value": {
+                                                "mKeys": [
+                                                    {
+                                                        "uid": 7003187627475296113,
+                                                        "color": {
+                                                            "r": 255,
+                                                            "g": 255,
+                                                            "b": 255,
+                                                            "a": 0
+                                                        }
+                                                    },
+                                                    {
+                                                        "uid": 2705852624130035699,
+                                                        "color": {
+                                                            "r": 208,
+                                                            "g": 218,
+                                                            "b": 66,
+                                                            "a": 255
+                                                        },
+                                                        "position": 0.17021355032920838
+                                                    },
+                                                    {
+                                                        "uid": 13406038263063852152,
+                                                        "color": {
+                                                            "r": 229,
+                                                            "g": 235,
+                                                            "b": 96,
+                                                            "a": 255
+                                                        },
+                                                        "position": 0.8085116744041443
+                                                    },
+                                                    {
+                                                        "uid": 8376094084996939354,
+                                                        "color": {
+                                                            "r": 255,
+                                                            "g": 255,
+                                                            "b": 255,
+                                                            "a": 0
+                                                        },
+                                                        "position": 1.0
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    }
+                                },
+                                {
+                                    "Type": "o2::ParticlesGravityEffect",
+                                    "Value": {
+                                        "mGravity": {
+                                            "x": 0.0,
+                                            "y": -1000.0
+                                        }
+                                    }
+                                },
+                                {
+                                    "Type": "o2::ParticlesSizeEffect",
+                                    "Value": {
+                                        "curve": {
+                                            "Type": "o2::Curve",
+                                            "Value": {
+                                                "mKeys": [
+                                                    {
+                                                        "uid": 6863724815187751984,
+                                                        "supportsType": "Broken"
+                                                    },
+                                                    {
+                                                        "uid": 7826485763125342669,
+                                                        "value": 1.0,
+                                                        "position": 1.0,
+                                                        "leftSupportPosition": -1.0,
+                                                        "supportsType": "Broken"
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    }
+                                },
+                                {
+                                    "Type": "o2::ParticlesSplineEffect",
+                                    "Value": {
+                                        "timeCurve": {
+                                            "Type": "o2::Curve",
+                                            "Value": {
+                                                "mKeys": [
+                                                    {
+                                                        "uid": 16863769275519288389,
+                                                        "rightSupportPosition": 0.4000000059604645,
+                                                        "supportsType": "Broken"
+                                                    },
+                                                    {
+                                                        "uid": 5216245716067321421,
+                                                        "value": 1.0,
+                                                        "position": 1.0,
+                                                        "leftSupportPosition": -1.0,
+                                                        "supportsType": "Broken"
+                                                    }
+                                                ]
+                                            }
+                                        },
+                                        "spline": {
+                                            "Type": "o2::Spline",
+                                            "Value": {
+                                                "mKeys": [
+                                                    {
+                                                        "uid": 17543746562009622236,
+                                                        "nextSupport": {
+                                                            "x": 50.0,
+                                                            "y": 0.0
+                                                        }
+                                                    },
+                                                    {
+                                                        "uid": 12602231308128182502,
+                                                        "position": 100.0,
+                                                        "value": {
+                                                            "x": 100.0,
+                                                            "y": 0.0
+                                                        },
+                                                        "prevSupport": {
+                                                            "x": -50.0,
+                                                            "y": 0.0
+                                                        }
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    }
+                                }
+                            ],
+                            "mEmitParticlesPerSecond": 50.51020431518555,
+                            "mInitialSize": 0.4285714626312256,
+                            "mInitialSpeed": 216.7346954345703,
+                            "mInitialMoveDirectionRange": 102.85714721679688,
+                            "mId": 14348599055607936063
                         }
                     }
                 ]

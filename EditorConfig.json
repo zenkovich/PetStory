@@ -1,7 +1,7 @@
 {
     "mWindowSize": {
-        "x": 1936,
-        "y": 1168
+        "x": 2064,
+        "y": 1248
     },
     "mWindowPosition": {
         "x": -8,
@@ -20,14 +20,14 @@
                     "anchors": {
                         "left": 0.0,
                         "bottom": 0.0,
-                        "right": 0.800000011920929,
+                        "right": 0.7645511031150818,
                         "top": 1.0
                     },
                     "childs": [
                         {
                             "anchors": {
                                 "left": 0.0,
-                                "bottom": 0.34986117482185366,
+                                "bottom": 0.3477800190448761,
                                 "right": 1.0,
                                 "top": 1.0
                             },
@@ -61,20 +61,20 @@
                                 "left": 0.0,
                                 "bottom": 0.0,
                                 "right": 1.0,
-                                "top": 0.34986117482185366
+                                "top": 0.3477800190448761
                             },
                             "windows": [
                                 "log window",
                                 "animation window",
                                 "assets window"
                             ],
-                            "active": "assets window"
+                            "active": "animation window"
                         }
                     ]
                 },
                 {
                     "anchors": {
-                        "left": 0.800000011920929,
+                        "left": 0.7645511031150818,
                         "bottom": 0.0,
                         "right": 1.0,
                         "top": 1.0
@@ -83,7 +83,7 @@
                         "properties window",
                         "game window"
                     ],
-                    "active": "game window"
+                    "active": "properties window"
                 }
             ]
         }
