@@ -14,8 +14,8 @@
                 "Id": 17799051847008967418,
                 "Transform": {
                     "size": {
-                        "x": 602.0,
-                        "y": 1284.0
+                        "x": 482.0,
+                        "y": 1124.0
                     },
                     "scale": {
                         "x": 1.0,
@@ -796,6 +796,149 @@
                         "y": 0.5
                     }
                 },
+                "Children": [
+                    {
+                        "Type": "o2::Actor",
+                        "Data": {
+                            "mName": "Empty",
+                            "Id": 17546687503643551369,
+                            "Transform": {
+                                "position": {
+                                    "x": 38.093116760253909,
+                                    "y": -96.8169937133789
+                                },
+                                "size": {
+                                    "x": 100.0,
+                                    "y": 100.0
+                                },
+                                "scale": {
+                                    "x": 1.0,
+                                    "y": 1.0
+                                },
+                                "pivot": {
+                                    "x": 0.5,
+                                    "y": 0.5
+                                }
+                            },
+                            "Components": [
+                                {
+                                    "Type": "o2::AnimationComponent",
+                                    "Data": {
+                                        "mStates": [
+                                            {
+                                                "Type": "o2::AnimationState",
+                                                "Value": {
+                                                    "name": "hello",
+                                                    "mask": {},
+                                                    "mAnimation": {
+                                                        "instance": {
+                                                            "Type": "o2::AnimationAsset",
+                                                            "Value": {
+                                                                "animation": {
+                                                                    "Type": "o2::AnimationClip",
+                                                                    "Value": {
+                                                                        "mTracks": [
+                                                                            {
+                                                                                "Type": "o2::AnimationTrack<o2::Vec2F>",
+                                                                                "Value": {
+                                                                                    "path": "transform/position",
+                                                                                    "timeCurve": {
+                                                                                        "Type": "o2::Curve",
+                                                                                        "Value": {
+                                                                                            "mKeys": [
+                                                                                                {
+                                                                                                    "uid": 6050752113707347896,
+                                                                                                    "rightSupportValue": 0.5,
+                                                                                                    "rightSupportPosition": 0.2510245442390442
+                                                                                                },
+                                                                                                {
+                                                                                                    "uid": 9450184553179308793,
+                                                                                                    "value": 1.0,
+                                                                                                    "position": 0.5020490884780884,
+                                                                                                    "leftSupportValue": -0.5,
+                                                                                                    "leftSupportPosition": -0.2510245442390442
+                                                                                                }
+                                                                                            ]
+                                                                                        }
+                                                                                    },
+                                                                                    "spline": {
+                                                                                        "Type": "o2::Spline",
+                                                                                        "Value": {
+                                                                                            "mKeys": [
+                                                                                                {
+                                                                                                    "uid": 13727745201173589217,
+                                                                                                    "value": {
+                                                                                                        "x": 38.093116760253909,
+                                                                                                        "y": -96.8169937133789
+                                                                                                    },
+                                                                                                    "supportsType": "Broken"
+                                                                                                },
+                                                                                                {
+                                                                                                    "uid": 17144269862497595835,
+                                                                                                    "position": 347.38128662109377,
+                                                                                                    "value": {
+                                                                                                        "x": 382.09808349609377,
+                                                                                                        "y": -145.13229370117188
+                                                                                                    },
+                                                                                                    "supportsType": "Broken"
+                                                                                                },
+                                                                                                {
+                                                                                                    "uid": 2368561779079136242,
+                                                                                                    "position": 763.337646484375,
+                                                                                                    "value": {
+                                                                                                        "x": 610.1463623046875,
+                                                                                                        "y": 202.73788452148438
+                                                                                                    },
+                                                                                                    "supportsType": "Broken"
+                                                                                                },
+                                                                                                {
+                                                                                                    "uid": 4076491103093873405,
+                                                                                                    "position": 1123.555908203125,
+                                                                                                    "value": {
+                                                                                                        "x": 907.7686157226563,
+                                                                                                        "y": -0.1863861083984375
+                                                                                                    },
+                                                                                                    "supportsType": "Broken"
+                                                                                                }
+                                                                                            ]
+                                                                                        }
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                }
+                                                            }
+                                                        },
+                                                        "meta": {
+                                                            "Type": "o2::DefaultAssetMeta<o2::AnimationAsset>",
+                                                            "Value": {
+                                                                "mId": "38b94a2b69f80c421784661238ef219f"
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        ],
+                                        "mId": 10753453384133489678
+                                    }
+                                },
+                                {
+                                    "Type": "o2::ImageComponent",
+                                    "Data": {
+                                        "mId": 2251286526421688676,
+                                        "mTextureSrcRect": {
+                                            "left": 0,
+                                            "bottom": 0,
+                                            "right": 0,
+                                            "top": 0
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ],
                 "Components": [
                     {
                         "Type": "o2::ParticlesEmitterComponent",
@@ -817,8 +960,8 @@
                                 "y": 0.5
                             },
                             "mBlendMode": "Add",
-                            "mDuration": 0.4336735010147095,
-                            "mEndTime": 0.4336735010147095,
+                            "mDuration": 0.6000000238418579,
+                            "mEndTime": 0.6000000238418579,
                             "mParticlesSource": {
                                 "Type": "o2::SingleSpriteParticleSource",
                                 "Value": {
@@ -972,6 +1115,53 @@
                             "mInitialSpeed": 216.7346954345703,
                             "mInitialMoveDirectionRange": 102.85714721679688,
                             "mId": 14348599055607936063
+                        }
+                    },
+                    {
+                        "Type": "o2::AnimationComponent",
+                        "Data": {
+                            "mStates": [
+                                {
+                                    "Type": "o2::AnimationState",
+                                    "Value": {
+                                        "mask": {},
+                                        "mAnimation": {
+                                            "instance": {
+                                                "Type": "o2::AnimationAsset",
+                                                "Value": {
+                                                    "animation": {
+                                                        "Type": "o2::AnimationClip",
+                                                        "Value": {
+                                                            "mTracks": [
+                                                                {
+                                                                    "Type": "o2::AnimationSubTrack",
+                                                                    "Value": {
+                                                                        "path": "component/o2::ParticlesEmitterComponent"
+                                                                    }
+                                                                },
+                                                                {
+                                                                    "Type": "o2::AnimationSubTrack",
+                                                                    "Value": {
+                                                                        "path": "child/Empty/component/o2::AnimationComponent/state/hello/player"
+                                                                    }
+                                                                }
+                                                            ],
+                                                            "mDuration": 1.0
+                                                        }
+                                                    }
+                                                }
+                                            },
+                                            "meta": {
+                                                "Type": "o2::DefaultAssetMeta<o2::AnimationAsset>",
+                                                "Value": {
+                                                    "mId": "603a59e901af0e8d0670282e68ad421d"
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            ],
+                            "mId": 4096719563660902110
                         }
                     }
                 ]
