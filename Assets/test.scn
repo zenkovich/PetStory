@@ -14,7 +14,7 @@
                 "Id": 17799051847008967418,
                 "Transform": {
                     "size": {
-                        "x": 482.0,
+                        "x": 565.0,
                         "y": 1124.0
                     },
                     "scale": {
@@ -905,7 +905,8 @@
                                                                                     }
                                                                                 }
                                                                             }
-                                                                        ]
+                                                                        ],
+                                                                        "mDuration": 0.5020490884780884
                                                                     }
                                                                 }
                                                             }
@@ -913,7 +914,7 @@
                                                         "meta": {
                                                             "Type": "o2::DefaultAssetMeta<o2::AnimationAsset>",
                                                             "Value": {
-                                                                "mId": "38b94a2b69f80c421784661238ef219f"
+                                                                "mId": "553c5f7b72b1207a0d9c73e916a119a1"
                                                             }
                                                         }
                                                     }
@@ -1136,13 +1137,15 @@
                                                                 {
                                                                     "Type": "o2::AnimationSubTrack",
                                                                     "Value": {
-                                                                        "path": "component/o2::ParticlesEmitterComponent"
+                                                                        "path": "component/o2::ParticlesEmitterComponent",
+                                                                        "mSubTrackDuration": 0.6000000238418579
                                                                     }
                                                                 },
                                                                 {
                                                                     "Type": "o2::AnimationSubTrack",
                                                                     "Value": {
-                                                                        "path": "child/Empty/component/o2::AnimationComponent/state/hello/player"
+                                                                        "path": "child/Empty/component/o2::AnimationComponent/state/hello/player",
+                                                                        "mSubTrackDuration": 0.0
                                                                     }
                                                                 }
                                                             ],
@@ -1154,7 +1157,7 @@
                                             "meta": {
                                                 "Type": "o2::DefaultAssetMeta<o2::AnimationAsset>",
                                                 "Value": {
-                                                    "mId": "603a59e901af0e8d0670282e68ad421d"
+                                                    "mId": "41c6552469e8174d7be1483522f04258"
                                                 }
                                             }
                                         }
@@ -1165,6 +1168,35 @@
                         }
                     }
                 ]
+            }
+        },
+        {
+            "Type": "o2::SpineActor",
+            "Value": {
+                "mName": "Spine Actor",
+                "mSpineAsset": {
+                    "id": "5b9a412205246d7d774642ad595a61d2",
+                    "path": "SpineTest/spineboy.spine-json"
+                },
+                "Id": 4292359506175075795,
+                "Transform": {
+                    "position": {
+                        "x": 550.2068481445313,
+                        "y": -15.763694763183594
+                    },
+                    "size": {
+                        "x": 200.73609924316407,
+                        "y": 116.41764831542969
+                    },
+                    "scale": {
+                        "x": 1.0,
+                        "y": 1.0
+                    },
+                    "pivot": {
+                        "x": 0.5,
+                        "y": 0.5
+                    }
+                }
             }
         }
     ]
