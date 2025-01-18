@@ -40,7 +40,7 @@ void Chip::OnCursorReleased(const Input::Cursor& cursor)
 		{
 			for (auto& child : parent->GetChildren())
 			{
-				if (child == GetOwnerActor())
+				if (child == GetActor())
 					continue;
 
 				if (auto chip = child->GetComponent<Chip>())
@@ -51,7 +51,7 @@ void Chip::OnCursorReleased(const Input::Cursor& cursor)
 					if (group.Contains(chip))
 						continue;
 
-					float distance = (child->transform->worldPosition.Get() - groupChip->GetOwnerActor()->transform->worldPosition).Length();
+					float distance = (child->transform->worldPosition.Get() - groupChip->GetActor()->transform->worldPosition).Length();
 					if (distance > chip->mGroupingRadius + mGroupingRadius)
 						continue;
 						
@@ -65,7 +65,7 @@ void Chip::OnCursorReleased(const Input::Cursor& cursor)
  		return;
 
 	for (auto& chip : group)
-		o2Scene.DestroyActor(chip->GetOwnerActor());
+		o2Scene.DestroyActor(chip->GetActor());
 }
 
 DECLARE_TEMPLATE_CLASS(o2::LinkRef<Chip>);
