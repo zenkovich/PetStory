@@ -51,6 +51,27 @@
             });
     };
 
+    // Explicit, confirmed, and it takes the scratch space with it: the session
+    // goes back to the project as it ships.
+    var resetBtn = document.getElementById('btn-reset');
+    if (resetBtn) resetBtn.onclick = function () {
+        modal.confirm('Reset the session',
+                      'Throw away everything this session changed? Assets go back to the project\'s own, ' +
+                      'the Work folder is emptied, and the conversation with the agent starts fresh. ' +
+                      'This cannot be undone.', 'Reset')
+            .then(function (ok) {
+                if (!ok) return;
+                setStatus('Resetting the session…');
+                fetch(o2Base + '/api/session/reset', { method: 'POST' }).then(function (r) {
+                    if (!r.ok) throw new Error('HTTP ' + r.status);
+                    location.reload();
+                }).catch(function (e) {
+                    setStatus(null);
+                    modal.alert('Reset failed', e.message);
+                });
+            });
+    };
+
     document.getElementById('btn-reload').onclick = function () {
         // let the BuiltAssets mirror finish, or the server keeps a half-written build
         setStatus('Flushing changes…');

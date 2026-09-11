@@ -20,6 +20,17 @@ void GameApplication::OnStarted()
 	o2Scene.Load(o2Assets.GetBuiltAssetsPath() + String("Boot.scn"));
 }
 
+const String& GameApplication::GetScenePath() const
+{
+	return mScenePath;
+}
+
+void GameApplication::Restart()
+{
+	o2Scene.Clear();
+	OnStarted();
+}
+
 void GameApplication::OnUpdate(float dt)
 {
 	o2Application.windowCaption = String("PetStory") +

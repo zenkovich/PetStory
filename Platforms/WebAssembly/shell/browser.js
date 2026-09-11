@@ -1,8 +1,12 @@
-// Assets browser: folder tree, preview and text editing, file operations.
+// File browser: folder tree, preview and text editing, file operations.
+// Serves two trees of the session — the project's Assets and Work/, the
+// scratch space the agent generates into — through the same UI.
 
 // ---- file browser -------------------------------------------------
 (function () {
     var browser = document.getElementById('browser');
+    var rootKind = 'assets';        // which tree is open
+    function rootParam(sep) { return (sep || '&') + 'root=' + rootKind; }
     var treeEl = document.getElementById('tree');
     var pane = document.getElementById('pane');
     var paneView = document.getElementById('pane-view');
@@ -31,7 +35,7 @@
         if (!isDir && IMG_RE.test(name)) {
             var img = document.createElement('img');
             img.loading = 'lazy';
-            img.src = o2Base + '/api/assets/file?path=' + encodeURIComponent(path);
+            img.src = o2Base + '/api/assets/file?path=' + encodeURIComponent(path) + rootParam();
             img.onerror = function () { img.replaceWith(svgIcon('#i-f-generic', cls)); };
             return img;
         }
@@ -40,8 +44,9 @@
     function joinPath(a, b) { return a ? a + '/' + b : b; }
     function parentOf(p) { var i = p.lastIndexOf('/'); return i < 0 ? '' : p.slice(0, i); }
     function baseOf(p) { var i = p.lastIndexOf('/'); return i < 0 ? p : p.slice(i + 1); }
-    function api(list) { return fetch(o2Base + '/api/fs/list?dir=' + encodeURIComponent(list)).then(function (r) { return r.json(); }); }
+    function api(list) { return fetch(o2Base + '/api/fs/list?dir=' + encodeURIComponent(list) + rootParam()).then(function (r) { return r.json(); }); }
     function assetsOp(body) {
+        body = Object.assign({ root: rootKind }, body);
         return fetch(o2Base + '/api/assets/op', {
             method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body),
         }).then(function (r) {
@@ -141,7 +146,7 @@
     function buildTree() {
         treeEl.innerHTML = '';
         nodes = {};
-        rootNode = makeNode(treeEl, '', 'Assets', true, null, 0);
+        rootNode = makeNode(treeEl, '', rootKind === 'work' ? 'Work' : 'Assets', true, null, 0);
         nodes[''] = rootNode;
         return toggle(rootNode, true);
     }
@@ -220,7 +225,7 @@
         (function next() {
             var f = files.shift();
             if (!f) { afterChange([dir]); return; }
-            fetch(o2Base + '/api/assets/file?path=' + encodeURIComponent(joinPath(dir, f.name)), { method: 'PUT', body: f })
+            fetch(o2Base + '/api/assets/file?path=' + encodeURIComponent(joinPath(dir, f.name)) + rootParam(), { method: 'PUT', body: f })
                 .then(next);
         })();
     }
@@ -256,7 +261,7 @@
         if (!node.isDir) {
             ctx.appendChild(mi('#i-open', 'Open', function () { previewFile(node.path, node.kind); }));
             ctx.appendChild(mi('#i-down', 'Download', function () {
-                location.href = o2Base + '/api/assets/file?path=' + encodeURIComponent(node.path) + '&download=1';
+                location.href = o2Base + '/api/assets/file?path=' + encodeURIComponent(node.path) + rootParam() + '&download=1';
             }));
             ctx.appendChild(sep());
         }
@@ -333,10 +338,10 @@
 
         if (IMG_RE.test(path)) {
             paneView.innerHTML = '<div class="imgbox"><img alt=""></div>';
-            paneView.querySelector('img').src = o2Base + '/api/assets/file?path=' + encodeURIComponent(path) + '&t=' + Date.now();
+            paneView.querySelector('img').src = o2Base + '/api/assets/file?path=' + encodeURIComponent(path) + rootParam() + '&t=' + Date.now();
         } else if (kind === 'text') {
             paneView.innerHTML = '<div class="placeholder">Loading…</div>';
-            fetch(o2Base + '/api/assets/file?path=' + encodeURIComponent(path)).then(function (r) { return r.text(); })
+            fetch(o2Base + '/api/assets/file?path=' + encodeURIComponent(path) + rootParam()).then(function (r) { return r.text(); })
                 .then(function (text) {
                     if (openedPath !== path) return;
                     paneView.innerHTML = '<div id="monaco-holder"></div>';
@@ -369,7 +374,7 @@
         if (!editorApi || !openedPath) return;
         var path = openedPath;
         var content = editorApi.getValue();
-        fetch(o2Base + '/api/assets/file?path=' + encodeURIComponent(path), {
+        fetch(o2Base + '/api/assets/file?path=' + encodeURIComponent(path) + rootParam(), {
             method: 'PUT',
             body: content,
         }).then(function (r) {
@@ -392,7 +397,7 @@
     function newFile(dir) {
         modal.prompt('New file', 'File name:', 'new.txt').then(function (name) {
             if (!name) return;
-            fetch(o2Base + '/api/assets/file?path=' + encodeURIComponent(joinPath(dir, name)), { method: 'PUT', body: '' })
+            fetch(o2Base + '/api/assets/file?path=' + encodeURIComponent(joinPath(dir, name)) + rootParam(), { method: 'PUT', body: '' })
                 .then(function () { return afterChange([dir]); });
         });
     }
@@ -423,12 +428,19 @@
     }
     backdrop.onclick = closeBrowser;
     window.__o2CloseBrowser = closeBrowser;
-    document.getElementById('btn-browser').onclick = function () {
-        if (browser.classList.contains('open')) { closeBrowser(); return; }
+    function openBrowser(kind) {
+        if (browser.classList.contains('open') && rootKind === kind) { closeBrowser(); return; }
+        if (rootKind !== kind) { rootKind = kind; curDir = ''; selected = null; }
+        browser.classList.toggle('work', rootKind === 'work');
+        var title = document.querySelector('#browser-title span');
+        if (title) title.textContent = rootKind === 'work' ? 'Work — this session\'s scratch space' : 'Assets';
         browser.classList.add('open');
         backdrop.classList.add('open');
         buildTree().then(function () { return openDir(curDir, true); });
-    };
+    }
+    document.getElementById('btn-browser').onclick = function () { openBrowser('assets'); };
+    var workBtn = document.getElementById('btn-work');
+    if (workBtn) workBtn.onclick = function () { openBrowser('work'); };
     document.getElementById('b-close').onclick = closeBrowser;
 
     // hook for the wasm editor: double-clicking a script asset opens it

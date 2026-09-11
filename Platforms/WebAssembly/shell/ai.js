@@ -18,23 +18,26 @@
     var ICONS_CLOSE = '<svg viewBox="0 0 16 16"><path d="M4 4l8 8M12 4l-8 8"/></svg>';
     var ICONS_STOP = '<svg viewBox="0 0 16 16"><rect x="4.5" y="4.5" width="7" height="7" rx="1.5"/></svg>';
     var dlg = document.getElementById('ai');
-    var back = document.getElementById('ai-back');
     var canvas = document.getElementById('canvas');
 
-    // The window is built here rather than in editor.html: the shell page is
-    // baked into the wasm binary at link time, this file is not.
+    // Built here rather than in editor.html: the shell page is baked into the wasm
+    // binary at link time, this file is not. The header goes into the page's top
+    // bar, over the panel it belongs to, so the chrome reads as one bar.
+    var headerSlot = document.getElementById('ai-header-slot');
+    headerSlot.innerHTML =
+        '<button class="titlebtn icon-only" id="ai-toggle" title="Hide the agent panel">' +
+          '<svg class="icon" viewBox="0 0 16 16"><path d="M6 3.5 10.5 8 6 12.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>' +
+        '</button>' +
+        '<svg class="icon" viewBox="0 0 16 16"><use href="#i-ai"/></svg>' +
+        '<span class="name">Agent</span>' +
+        '<span id="ai-chip">ready</span>' +
+        '<span class="grow"></span>' +
+        '<span id="ai-history-slot"></span>' +
+        '<button class="titlebtn" id="ai-new" title="Start a new conversation">' + ICONS_PLUS + ' New</button>' +
+        '<button class="titlebtn icon-only" id="ai-gear" title="Key, model, self-review">' + ICONS_GEAR + '</button>' +
+        '<button class="titlebtn icon-only" id="ai-dev" title="Debug: steps, thinking, raw events">' + ICONS_CODE + '</button>';
+
     dlg.innerHTML =
-        '<div id="ai-title">' +
-          '<svg class="icon" viewBox="0 0 16 16"><use href="#i-ai"/></svg>' +
-          '<span class="name">Agent</span>' +
-          '<span id="ai-chip">ready</span>' +
-          '<span class="grow"></span>' +
-          '<span id="ai-history-slot"></span>' +
-          '<button class="titlebtn" id="ai-new" title="Start a new conversation">' + ICONS_PLUS + ' New</button>' +
-          '<button class="titlebtn icon-only" id="ai-gear" title="Key, model, self-review">' + ICONS_GEAR + '</button>' +
-          '<button class="titlebtn icon-only" id="ai-dev" title="Debug: steps, thinking, raw events">' + ICONS_CODE + '</button>' +
-          '<button class="titlebtn icon-only" id="ai-close" title="Close — the agent keeps working">' + ICONS_CLOSE + '</button>' +
-        '</div>' +
         '<div id="ai-chat"></div>' +
         '<div id="ai-files"><div class="fhead"><span id="ai-files-title"></span></div><div class="flist"></div></div>' +
         '<div id="ai-bar">' +
@@ -44,8 +47,13 @@
         '</div>' +
         '<div id="ai-inputrow">' +
           '<div id="ai-composer">' +
+            '<div id="ai-attach-list"></div>' +
             '<textarea id="ai-input" rows="1" placeholder="What should the agent do? For example: add a title label to the scene…"></textarea>' +
             '<div id="ai-controls">' +
+              '<button class="ai-pill" id="ai-attach" title="Attach files from your computer">' +
+                '<svg viewBox="0 0 16 16"><path d="M11.5 6.5 7 11a2.5 2.5 0 0 1-3.5-3.5l5-5a3.5 3.5 0 0 1 5 5l-5.2 5.2"/></svg>' +
+              '</button>' +
+              '<input id="ai-attach-input" type="file" multiple style="display:none">' +
               '<span id="ai-model-slot"></span>' +
               '<span id="ai-effort-slot"></span>' +
               '<span id="ai-mode-slot"></span>' +
@@ -70,6 +78,8 @@
               '<input id="ai-workspace" class="ai-input" type="text" placeholder="wrkspc_… — for keys scoped to all workspaces" spellcheck="false" autocomplete="off"></div>' +
             '<div class="row" id="row-sub"><span class="lbl">Subscription token</span>' +
               '<input id="ai-oauth" class="ai-input" type="password" placeholder="sk-ant-oat…" spellcheck="false" autocomplete="off"></div>' +
+            '<div class="row" id="row-gemini"><span class="lbl">Gemini key</span>' +
+              '<input id="ai-gemini" class="ai-input" type="password" placeholder="AIza… — for the image tools" spellcheck="false" autocomplete="off"></div>' +
             '<div class="row"><span class="lbl">Self-review</span>' +
               '<span id="ai-review-slot"></span><span class="grow"></span>' +
               '<button class="ai-btn" id="ai-log" title="The whole conversation and its events as JSON">Copy log</button></div>' +
@@ -78,6 +88,10 @@
             '<p class="hint" id="hint-sub">Run <code>claude setup-token</code> in a terminal where you are logged in to Claude Code, ' +
                'then paste the token it prints. Work then runs on your Claude subscription instead of API billing. ' +
                'The token is yours: this page never opens a claude.ai login.</p>' +
+            '<p class="hint">The Gemini key powers the project\'s image tools (the <code>imagegen</code> MCP server): ' +
+               'generating sprites and icons while prototyping, and editing them afterwards. Without it the agent works ' +
+               'as usual, only without generated art. Create one at ' +
+               '<a href="https://aistudio.google.com/apikey" target="_blank" rel="noopener">aistudio.google.com</a>.</p>' +
           '</div>' +
         '</div>';
 
@@ -107,6 +121,69 @@
         return '<svg viewBox="0 0 16 16">' + (ICON[name] || '') + '</svg>';
     }
 
+    // ---------- resizing ----------
+    // The panel is docked in both modes, so there is one handle: the splitter on
+    // its left edge. It writes a CSS variable, which is what the layout is built
+    // on, and the width outlives the session.
+    (function setupResize() {
+        var edgeL = document.createElement('div');
+        edgeL.className = 'ai-edge left';
+        edgeL.title = 'Drag to resize the panel';
+        dlg.appendChild(edgeL);
+
+        var DOCK_MIN = 300;
+        function setVar(name, px) { document.body.style.setProperty(name, Math.round(px) + 'px'); }
+
+        // The engine only learns about its canvas from window resizes, and folding
+        // or dragging the panel resizes it without one.
+        var notifyPending = false;
+        function notifyLayout() {
+            if (notifyPending) return;
+            notifyPending = true;
+            requestAnimationFrame(function () {
+                notifyPending = false;
+                window.dispatchEvent(new Event('resize'));
+            });
+        }
+        window.__o2LayoutChanged = notifyLayout;
+
+        function restore() {
+            try {
+                var d = localStorage.getItem('o2ai_dock');
+                if (d) setVar('--ai-dock', +d);
+            } catch (e) {}
+        }
+        restore();
+
+        function drag(el, onMove) {
+            el.addEventListener('mousedown', function (e) {
+                e.preventDefault();
+                e.stopPropagation();
+                if (e.button !== 0) return;
+                var box = dlg.getBoundingClientRect();
+                var start = { x: e.clientX, y: e.clientY, w: box.width, h: box.height };
+                document.body.classList.add('ai-resizing');
+                function move(ev) { onMove(ev, start); }
+                function up() {
+                    document.removeEventListener('mousemove', move);
+                    document.removeEventListener('mouseup', up);
+                    document.body.classList.remove('ai-resizing');
+                    try {
+                        localStorage.setItem('o2ai_dock', parseInt(document.body.style.getPropertyValue('--ai-dock'), 10) || '');
+                    } catch (e) {}
+                }
+                document.addEventListener('mousemove', move);
+                document.addEventListener('mouseup', up);
+            });
+        }
+
+        // the left edge is the splitter between the work area and the agent
+        drag(edgeL, function (ev) {
+            setVar('--ai-dock', Math.max(DOCK_MIN, Math.min(window.innerWidth - 260, window.innerWidth - ev.clientX)));
+            notifyLayout();
+        });
+    })();
+
     var chatEl = document.getElementById('ai-chat');
     var inputEl = document.getElementById('ai-input');
     var sendBtn = document.getElementById('ai-send');
@@ -115,6 +192,7 @@
     var keyStateEl = document.getElementById('ai-keystate');
     var workspaceEl = document.getElementById('ai-workspace');
     var oauthEl = document.getElementById('ai-oauth');
+    var geminiEl = document.getElementById('ai-gemini');
     var authSeg = document.getElementById('ai-auth');
     var modalEl = document.getElementById('ai-modal');
     var devBtn = document.getElementById('ai-dev');
@@ -257,6 +335,7 @@
     keyEl.value = getSetting('o2ai_claude_key');
     workspaceEl.value = getSetting('o2ai_workspace');
     oauthEl.value = getSetting('o2ai_oauth');
+    geminiEl.value = getSetting('o2ai_gemini');
     var authMode = getSetting('o2ai_auth') || (oauthEl.value ? 'sub' : 'key');
     var devMode = getSetting('o2ai_dev') === '1';
 
@@ -351,6 +430,8 @@
     keyEl.onchange = function () { setSetting('o2ai_claude_key', tidy(keyEl)); paintKeyState(); loadModels(); };
     workspaceEl.onchange = function () { setSetting('o2ai_workspace', tidy(workspaceEl)); loadModels(); };
     oauthEl.onchange = function () { setSetting('o2ai_oauth', tidy(oauthEl)); paintKeyState(); loadModels(); };
+    // the image tools are the project's own, so this key rides along with the run
+    geminiEl.onchange = function () { setSetting('o2ai_gemini', tidy(geminiEl)); };
 
     function openSettings() {
         modalEl.classList.add('open');
@@ -691,7 +772,39 @@
     };
     // ---------- editor-side tool implementations ----------
     // Claude's own tools do the file work on the server; these are the calls
-    // that only make sense inside the running editor.
+    // that only make sense inside the running engine.
+    //
+    // Which engine that is depends on the mode: the editor is this page's own
+    // Module, the game preview is the client in its frame. The tools below are
+    // written once and aimed through eng()/engCanvas(), so the agent works the
+    // same on either side — only play_mode/open_scene/save_scene are the
+    // editor's alone, and restart is the preview's answer to play mode.
+
+    function previewOn() {
+        return typeof o2Preview !== 'undefined' && o2Preview.isActive();
+    }
+    function engWin() {
+        if (!previewOn()) return window;
+        var w = o2Preview.frameWindow();
+        if (!w) throw new Error('the game client is not loaded — switch to the Game mode first');
+        return w;
+    }
+    function eng() {
+        var m = engWin().Module;
+        if (!m || !m.calledRun)
+            throw new Error(previewOn() ? 'the game client is still starting' : 'the editor is not running yet');
+        return m;
+    }
+    function engCanvas() {
+        var c = previewOn() ? o2Preview.canvas() : canvas;
+        if (!c) throw new Error('the game client is not loaded');
+        return c;
+    }
+    function editorOnly(what) {
+        if (previewOn())
+            throw new Error(what + ' belongs to the editor; the preview runs the game. ' +
+                            'Switch to the Editor mode for it, or use restart here.');
+    }
 
     function rmTree(FS, dir) {
         FS.readdir(dir).forEach(function (name) {
@@ -706,11 +819,12 @@
     function toolRebuild(a) {
         var forced = a && a.force;
         var fn = forced ? '_o2_web_rebuild_assets_forced' : '_o2_web_rebuild_assets';
-        if (!Module.calledRun || typeof Module[fn] !== 'function')
-            return Promise.reject(new Error('editor engine is not running'));
+        var M = eng();
+        if (typeof M[fn] !== 'function')
+            return Promise.reject(new Error('this engine cannot rebuild assets'));
         return new Promise(function (resolve) {
             setTimeout(function () {
-                Module[fn]();
+                M[fn]();
                 resolve();
             }, 50);
         }).then(function () {
@@ -723,16 +837,19 @@
         });
     }
 
-    // Waits until the BuiltAssets mirror queue has settled (nothing new for a moment)
+    // Waits until the BuiltAssets mirror queue has settled (nothing new for a moment).
+    // The queue is undefined until the engine writes something: comparing the
+    // fallback promise instead of the queue itself made every round look like new
+    // work and cost the full 60 rounds — a 24 s wait before a mode switch.
     function drainMirror() {
         var rounds = 0;
+        var w = (function () { try { return engWin(); } catch (e) { return window; } })();
         function settle() {
-            var q = window.__o2MirrorQueue || Promise.resolve();
-            return q.then(function () {
+            var q = w.__o2MirrorQueue;
+            return Promise.resolve(q).then(function () {
                 return sleep(400);
             }).then(function () {
-                var again = window.__o2MirrorQueue || Promise.resolve();
-                if (again !== q && rounds++ < 60) return settle();
+                if (w.__o2MirrorQueue !== q && rounds++ < 60) return settle();
             });
         }
         return settle();
@@ -741,11 +858,12 @@
     // Half size: the model reads it just as well, and the payload (and so the
     // round-trip) is a quarter. Coordinates below are still full-size CSS pixels.
     function toolScreenshot() {
-        var w = canvas.clientWidth, h = canvas.clientHeight;
+        var shot = engCanvas();
+        var w = shot.clientWidth, h = shot.clientHeight;
         var sw = Math.round(w / 2), sh = Math.round(h / 2);
         var t = document.createElement('canvas');
         t.width = sw; t.height = sh;
-        t.getContext('2d').drawImage(canvas, 0, 0, sw, sh);
+        t.getContext('2d').drawImage(shot, 0, 0, sw, sh);
         var b64 = t.toDataURL('image/jpeg', 0.85).split(',')[1];
         return Promise.resolve({
             result: { imageWidth: sw, imageHeight: sh, canvasWidth: w, canvasHeight: h,
@@ -755,17 +873,19 @@
     }
 
     function isPlaying() {
+        if (previewOn()) return o2Preview.isReady();
         try { return !!(Module._o2_web_is_playing && Module._o2_web_is_playing()); }
         catch (e) { return false; }
     }
 
     function callJson(fn, args, types) {
-        if (typeof Module.ccall !== 'function')
-            return Promise.reject(new Error('the editor is not running yet'));
-        var ptr = Module.ccall(fn, 'number', types || [], args || []);
+        var M = eng();
+        if (typeof M.ccall !== 'function')
+            return Promise.reject(new Error('the engine is not running yet'));
+        var ptr = M.ccall(fn, 'number', types || [], args || []);
         if (!ptr) return Promise.reject(new Error(fn + ' returned nothing'));
-        var text = Module.UTF8ToString(ptr);
-        try { Module._free(ptr); } catch (e) {}
+        var text = M.UTF8ToString(ptr);
+        try { M._free(ptr); } catch (e) {}
         var parsed;
         try { parsed = JSON.parse(text); }
         catch (e) { throw new Error('bad reply from ' + fn + ': ' + text.slice(0, 200)); }
@@ -780,6 +900,13 @@
 
     function toolViewInfo() {
         return callJson('o2_web_view_info', [], []).then(function (info) {
+            info.mode = previewOn() ? 'preview' : 'editor';
+            if (previewOn()) {
+                var d = o2Preview.device();
+                info.previewDevice = { preset: d.label, orientation: d.orientation, width: d.width, height: d.height };
+                info.note = 'the game client fills the canvas, so canvas pixels are the device pixels; ' +
+                            'there is no play mode here — use restart to start the game over.';
+            }
             // everything the model needs to aim a click, spelled out
             info.howToClick = 'A world point maps to a canvas pixel as: ' +
                 'canvasX = canvas.x/2 + worldX, canvasY = canvas.y/2 - worldY for screen-space widgets. ' +
@@ -844,6 +971,7 @@
     }
 
     function toolOpenScene(a) {
+        editorOnly('opening a scene');
         if (typeof Module.ccall !== 'function')
             return Promise.reject(new Error('the editor is not running yet'));
         if (!a.path) return Promise.reject(new Error('path is required, e.g. Boot.scn'));
@@ -879,6 +1007,7 @@
     }
 
     function toolSaveScene() {
+        editorOnly('saving a scene');
         if (typeof Module._o2_web_save_scene !== 'function')
             return Promise.reject(new Error('the editor is not running yet'));
         Module._o2_web_save_scene();
@@ -886,6 +1015,8 @@
     }
 
     function toolPlayMode(a) {
+        if (previewOn())
+            return toolRestart({ _from: 'play_mode' });
         if (typeof Module._o2_web_set_play !== 'function')
             return Promise.reject(new Error('the editor is not running yet'));
         var want = a.on === undefined ? true : !!a.on;
@@ -899,10 +1030,63 @@
         });
     }
 
+    // Either face of the session is the agent's to open: it edits in one and
+    // checks the result in the other.
+    function toolSetMode(a) {
+        if (typeof o2Preview === 'undefined')
+            return Promise.reject(new Error('this page has no game preview'));
+        var want = a && a.mode === 'preview' ? 'preview' : 'editor';
+        if (o2Preview.mode() === want)
+            return Promise.resolve({ ok: true, mode: want, note: 'already open' });
+        o2Preview.setMode(want);
+        if (want === 'editor')
+            return sleep(600).then(function () { return { ok: true, mode: 'editor' }; });
+        // the client streams the session and starts the game; wait for it
+        return (function waitReady(left) {
+            if (o2Preview.isReady()) return Promise.resolve({ ok: true, mode: 'preview' });
+            if (left <= 0)
+                return { ok: false, mode: 'preview',
+                         note: 'the game client is still loading; call view_info or wait and try again' };
+            return sleep(1000).then(function () { return waitReady(left - 1); });
+        })(60);
+    }
+
+    // In the preview the game is the whole world, so the only way to see a change
+    // from the top is to start it over — that is what the Restart button and this
+    // tool do. In the editor the same intent is a stop and start of play mode.
+    function toolRestart(a) {
+        if (previewOn()) {
+            return o2Preview.restart().then(function (r) {
+                return sleep(r && r.reloaded ? 2500 : 900).then(function () {
+                    return { ok: true, mode: 'preview', reloaded: !!(r && r.reloaded),
+                             note: (a && a._from === 'play_mode'
+                                    ? 'there is no play mode in the preview: the client was restarted instead. '
+                                    : '') +
+                                   (r && r.reloaded
+                                    ? 'the client is loading the session again; give it a few seconds before a screenshot'
+                                    : 'the game started over on the assets as they are built now') };
+                });
+            });
+        }
+        if (typeof Module._o2_web_set_play !== 'function')
+            return Promise.reject(new Error('the editor is not running yet'));
+        var wasPlaying = isPlaying();
+        Module._o2_web_set_play(0);
+        return sleep(500).then(function () {
+            Module._o2_web_set_play(1);
+            return sleep(700);
+        }).then(function () {
+            return { ok: true, mode: 'editor', playing: isPlaying(),
+                     note: wasPlaying ? 'play mode was restarted' : 'play mode started from the saved scene' };
+        });
+    }
+
     // Driving the editor chrome by synthetic clicks proved unreliable and
     // expensive, so input is allowed only while the game runs
     function requirePlay(what) {
         if (isPlaying()) return null;
+        if (previewOn())
+            return Promise.reject(new Error(what + ' needs the game client running: it is still loading, or it crashed.'));
         return Promise.reject(new Error(
             what + ' is only available in play mode, and only inside the Game window. ' +
             'Turn it on with play_mode({on:true}) - and note that editor windows (Assets, Tree, Properties, menus) ' +
@@ -910,15 +1094,21 @@
     }
 
     function focusCanvas() {
-        if (document.activeElement && document.activeElement !== canvas && document.activeElement.blur)
-            document.activeElement.blur();
-        canvas.focus();
+        var c = engCanvas();
+        var doc = c.ownerDocument;
+        if (doc.activeElement && doc.activeElement !== c && doc.activeElement.blur)
+            doc.activeElement.blur();
+        c.focus();
     }
     function fireMouse(type, cx, cy, extra) {
+        var c = engCanvas();
+        // the events must be built by the frame's own window, or the engine
+        // inside it sees objects from a foreign realm
+        var w = c.ownerDocument.defaultView;
         var isPointer = type.indexOf('pointer') === 0;
-        var Ctor = isPointer && window.PointerEvent ? PointerEvent : MouseEvent;
-        canvas.dispatchEvent(new Ctor(type, Object.assign({
-            bubbles: true, cancelable: true, view: window,
+        var Ctor = isPointer && w.PointerEvent ? w.PointerEvent : w.MouseEvent;
+        c.dispatchEvent(new Ctor(type, Object.assign({
+            bubbles: true, cancelable: true, view: w,
             clientX: cx, clientY: cy,
             pointerId: 1, pointerType: 'mouse', isPrimary: true,
         }, extra)));
@@ -927,7 +1117,10 @@
         var blocked = requirePlay('clicking');
         if (blocked) return blocked;
         return (async function () {
-            var r = canvas.getBoundingClientRect();
+            // coordinates are the canvas's own pixels; in the preview the frame
+            // has its own viewport, so they need no page offset at all
+            var c = engCanvas();
+            var r = previewOn() ? { left: 0, top: 0 } : c.getBoundingClientRect();
             var cx = r.left + Number(a.x), cy = r.top + Number(a.y);
             focusCanvas();
             fireMouse('pointermove', cx, cy, { buttons: 0 });
@@ -960,7 +1153,9 @@
         return CHAR_CODES[ch] || '';
     }
     function fireKey(type, key, code, mods) {
-        canvas.dispatchEvent(new KeyboardEvent(type, Object.assign({
+        var c = engCanvas();
+        var w = c.ownerDocument.defaultView;
+        c.dispatchEvent(new w.KeyboardEvent(type, Object.assign({
             bubbles: true, cancelable: true, key: key, code: code,
         }, mods || {})));
     }
@@ -1022,7 +1217,8 @@
         })();
     }
     function toolReadLog(a) {
-        var all = (window.engineLogLines || []);
+        var all = [];
+        try { all = engWin().engineLogLines || []; } catch (e) { all = window.engineLogLines || []; }
         var filtered = a.filter
             ? all.filter(function (l) { return l.indexOf(a.filter) >= 0; })
             : all;
@@ -1041,7 +1237,7 @@
 
 
     var EXEC = {
-        rebuild_assets: toolRebuild, screenshot: toolScreenshot,
+        rebuild_assets: toolRebuild, screenshot: toolScreenshot, restart: toolRestart, set_mode: toolSetMode,
         click: toolClick, type_text: toolTypeText, press_key: toolPressKey,
         read_log: toolReadLog, wait: toolWait, play_mode: toolPlayMode,
         open_scene: toolOpenScene, save_scene: toolSaveScene,
@@ -1054,15 +1250,28 @@
     // own MEMFS copy, so pull what changed under Assets into it
     function syncChangedFile(rel) {
         var m = rel.match(/^Assets\/(.+)$/);
-        if (!m || !Module || !Module.FS) return;
+        if (!m) return;
         var inner = m[1];
+        // both engines may be up (the editor keeps running behind the preview),
+        // and each has its own MEMFS copy of the session
+        var modules = [];
+        if (Module && Module.FS) modules.push(Module);
+        try {
+            // the game client keeps running behind the editor, so it needs the
+            // file too — otherwise a restart later would run on a stale copy
+            var w = typeof o2Preview !== 'undefined' && o2Preview.liveWindow();
+            if (w && w.Module && w.Module.FS) modules.push(w.Module);
+        } catch (e) {}
+        if (!modules.length) return;
         fetch(o2Base + '/api/assets/file?path=' + encodeURIComponent(inner)).then(function (r) {
             if (!r.ok) throw new Error('HTTP ' + r.status);
             return r.arrayBuffer();
         }).then(function (buf) {
             var full = '/project/Assets/' + inner;
-            Module.FS.mkdirTree(full.substring(0, full.lastIndexOf('/')));
-            Module.FS.writeFile(full, new Uint8Array(buf));
+            modules.forEach(function (M) {
+                M.FS.mkdirTree(full.substring(0, full.lastIndexOf('/')));
+                M.FS.writeFile(full, new Uint8Array(buf));
+            });
         }).catch(function (e) { console.warn('[ai] MEMFS sync failed for ' + rel, e); });
     }
 
@@ -1116,8 +1325,13 @@
 
     function removeDeletedFile(rel) {
         var m = rel.match(/^Assets\/(.+)$/);
-        if (!m || !Module || !Module.FS) return;
-        try { Module.FS.unlink('/project/Assets/' + m[1]); } catch (e) {}
+        if (!m) return;
+        var full = '/project/Assets/' + m[1];
+        if (Module && Module.FS) try { Module.FS.unlink(full); } catch (e) {}
+        try {
+            var w = typeof o2Preview !== 'undefined' && o2Preview.liveWindow();
+            if (w && w.Module && w.Module.FS) w.Module.FS.unlink(full);
+        } catch (e) {}
     }
 
     // ---------- conversations of this tab ----------
@@ -1389,7 +1603,7 @@
 
     function busy(on) {
         running = on;
-        document.getElementById('btn-ai').classList.toggle('busy', on);
+        document.getElementById('ai-toggle').classList.toggle('busy', on);
         barEl.classList.toggle('show', on);
         sendBtn.classList.toggle('queue', on);
         sendBtn.title = on ? 'Queued until the current turn ends' : 'Send (Enter)';
@@ -1443,9 +1657,12 @@
     }
 
     function credentials() {
-        return authMode === 'sub'
+        var c = authMode === 'sub'
             ? { oauthToken: cleanSecret(oauthEl.value) }
             : { apiKey: cleanSecret(keyEl.value), workspaceId: cleanSecret(workspaceEl.value) };
+        var gemini = cleanSecret(geminiEl.value);
+        if (gemini) c.geminiKey = gemini;
+        return c;
     }
 
     async function startRun(text, review) {
@@ -1463,6 +1680,103 @@
             setChip('error', 'err');
         }
     }
+
+    // ---------- attachments ----------
+    // A file the visitor drops in is written into their own session copy, where
+    // Claude's ordinary Read reaches it: an image it can look at, a log it can
+    // grep. The list travels with the message as plain paths.
+    var attachments = [];          // { name, path, size }
+    var attachListEl = document.getElementById('ai-attach-list');
+    var attachInput = document.getElementById('ai-attach-input');
+    var ATTACH_DIR = 'Work/uploads';
+    var ATTACH_MAX = 32 * 1024 * 1024;
+
+    function safeName(name) {
+        return String(name).replace(/[^\w.\- ]+/g, '_').replace(/\s+/g, '_').slice(-80) || 'file';
+    }
+    function humanSize(n) {
+        return n < 1024 ? n + ' B' : n < 1048576 ? (n / 1024).toFixed(0) + ' KB' : (n / 1048576).toFixed(1) + ' MB';
+    }
+    function renderAttachments() {
+        attachListEl.innerHTML = '';
+        attachListEl.classList.toggle('show', attachments.length > 0);
+        attachments.forEach(function (a, i) {
+            var chip = document.createElement('span');
+            chip.className = 'ai-attach-chip' + (a.pending ? ' pending' : '') + (a.error ? ' err' : '');
+            chip.title = a.error || a.path;
+            chip.appendChild(icon('file'));
+            var label = document.createElement('span');
+            label.textContent = a.name + (a.error ? ' — failed' : a.pending ? ' — uploading…' : ' · ' + humanSize(a.size));
+            chip.appendChild(label);
+            var x = document.createElement('button');
+            x.type = 'button';
+            x.title = 'Remove';
+            x.innerHTML = ICONS_CLOSE;
+            x.onclick = function () { attachments.splice(i, 1); renderAttachments(); };
+            chip.appendChild(x);
+            attachListEl.appendChild(chip);
+        });
+    }
+    function addFiles(files) {
+        Array.prototype.forEach.call(files, function (f) {
+            if (f.size > ATTACH_MAX) {
+                addError('"' + f.name + '" is ' + humanSize(f.size) + ' — the limit for an attachment is ' + humanSize(ATTACH_MAX) + '.',
+                         { head: 'File too large' });
+                return;
+            }
+            var stamp = new Date().toISOString().replace(/[-:T]/g, '').slice(0, 14);
+            var rec = { name: f.name, size: f.size, pending: true,
+                        path: ATTACH_DIR + '/' + stamp + '-' + safeName(f.name) };
+            attachments.push(rec);
+            renderAttachments();
+            f.arrayBuffer().then(function (buf) {
+                return fetch(o2Base + '/api/fs/write?path=' + encodeURIComponent('/project/' + rec.path), {
+                    method: 'POST', headers: { 'Content-Type': 'application/octet-stream' }, body: buf,
+                });
+            }).then(function (r) {
+                if (!r.ok) throw new Error('HTTP ' + r.status);
+                rec.pending = false;
+                renderAttachments();
+            }).catch(function (e) {
+                rec.pending = false;
+                rec.error = e.message;
+                renderAttachments();
+            });
+        });
+    }
+    document.getElementById('ai-attach').onclick = function () { attachInput.click(); };
+    attachInput.onchange = function () {
+        if (attachInput.files && attachInput.files.length) addFiles(attachInput.files);
+        attachInput.value = '';
+    };
+    // dropping onto the panel is the same thing
+    dlg.addEventListener('dragover', function (e) {
+        if (e.dataTransfer && Array.prototype.indexOf.call(e.dataTransfer.types || [], 'Files') >= 0) {
+            e.preventDefault();
+            dlg.classList.add('dropping');
+        }
+    });
+    dlg.addEventListener('dragleave', function (e) { if (e.target === dlg) dlg.classList.remove('dropping'); });
+    dlg.addEventListener('drop', function (e) {
+        if (!e.dataTransfer || !e.dataTransfer.files || !e.dataTransfer.files.length) return;
+        e.preventDefault();
+        dlg.classList.remove('dropping');
+        addFiles(e.dataTransfer.files);
+    });
+    inputEl.addEventListener('paste', function (e) {
+        var items = e.clipboardData && e.clipboardData.files;
+        if (items && items.length) { e.preventDefault(); addFiles(items); }
+    });
+
+    // What the agent is told about them: paths in its own working copy
+    function attachmentNote() {
+        var ready = attachments.filter(function (a) { return !a.pending && !a.error; });
+        if (!ready.length) return '';
+        return '\n\nAttached files (in this working copy, read them with Read):\n' +
+               ready.map(function (a) { return '- ' + a.path; }).join('\n');
+    }
+    function clearAttachments() { attachments = []; renderAttachments(); }
+    function attachmentsPending() { return attachments.some(function (a) { return a.pending; }); }
 
     function runAgent(userText, isRetry) {
         if (!credential() && !/localhost|127\.0\.0\.1/.test(location.hostname)) {
@@ -1515,22 +1829,40 @@
     ].join('\n');
 
     // ---------- UI wiring ----------
+    // The panel is part of the layout now: it slides out of the way instead of
+    // closing, and both faces of the session make room for it.
     function openDlg() {
-        if (window.__o2CloseBrowser) window.__o2CloseBrowser(); // it renders above the chat
         dlg.classList.add('open');
-        back.classList.add('open');
+        document.body.classList.remove('ai-hidden');
+        settle();
         inputEl.focus();
         ensureStream();
         showEmptyState();
         loadHistory();
         if (!modelsLoaded) loadModels();
     }
-    function closeDlg() { dlg.classList.remove('open'); back.classList.remove('open'); }
-    document.getElementById('btn-ai').onclick = function () {
-        if (dlg.classList.contains('open')) closeDlg(); else openDlg();
-    };
-    document.getElementById('ai-close').onclick = closeDlg;
-    back.onclick = closeDlg; // the agent keeps running in the background
+    function closeDlg() {
+        document.body.classList.add('ai-hidden');
+        settle();
+    }
+    // The panes grow into the freed space over a transition, and the engine only
+    // reads its canvas on a resize: nudge it on the way and when the slide ends.
+    function settle() {
+        if (window.__o2LayoutChanged) window.__o2LayoutChanged();
+        setTimeout(function () { window.dispatchEvent(new Event('resize')); }, 120);
+    }
+    ['canvas-wrap', 'preview'].forEach(function (id) {
+        var el = document.getElementById(id);
+        if (el) el.addEventListener('transitionend', function (e) {
+            if (e.propertyName === 'right') window.dispatchEvent(new Event('resize'));
+        });
+    });
+    function toggleDlg() {
+        if (document.body.classList.contains('ai-hidden')) openDlg(); else closeDlg();
+    }
+    window.__o2ToggleAgent = toggleDlg;
+
+    document.getElementById('ai-toggle').onclick = toggleDlg;
 
     // whole session as JSON: every event the server streamed
     document.getElementById('ai-log').onclick = function () {
@@ -1556,10 +1888,17 @@
     };
     function send() {
         var t = inputEl.value.trim();
-        if (!t) return;
+        var note = attachmentNote();
+        if (!t && !note) return;
+        if (attachmentsPending()) {
+            setAction('waiting for the attachments to upload…');
+            setTimeout(send, 300);
+            return;
+        }
         inputEl.value = '';
         inputEl.style.height = '';
-        runAgent(t);
+        clearAttachments();
+        runAgent((t || 'Take a look at the attached files.') + note);
     }
     sendBtn.onclick = send;
     var composerEl = document.getElementById('ai-composer');
@@ -1576,4 +1915,7 @@
     inputEl.addEventListener('keyup', function (e) { e.stopPropagation(); });
     applyDev();
     showEmptyState();
+
+    // The agent is part of the page: it starts open on the right, in either mode.
+    openDlg();
 })();

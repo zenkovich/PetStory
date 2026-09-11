@@ -24,7 +24,13 @@ html, body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     font-size: 12px;
 }
-#canvas-wrap { position: absolute; inset: 0 0 34px 0; }
+/* both faces of the session live between the bar and the agent panel */
+#canvas-wrap, #preview {
+    position: absolute;
+    top: 44px; bottom: 0; left: 0;
+    right: var(--ai-dock, 420px);
+    transition: right .2s cubic-bezier(.4, 0, .2, 1);
+}
 canvas#canvas {
     display: block;
     width: 100%;
@@ -60,26 +66,93 @@ button.tbtn svg { width: 13px; height: 13px; flex: none; }
 svg.icon { width: 14px; height: 14px; flex: none; display: block; }
 
 /* ---------- bottom bar ---------- */
-#bottombar {
+/* ---------- the shared top bar ----------
+   One row for the whole page: the session on the left, its controls in the
+   middle, the agent's header on the right — sized to the panel underneath it,
+   so the two read as one piece of chrome. */
+#topbar {
     position: absolute;
-    left: 0; right: 0; bottom: 0;
-    height: 34px;
+    left: 0; right: 0; top: 0;
+    height: 44px;
     display: flex;
     align-items: center;
-    gap: 6px;
-    padding: 0 8px;
+    gap: 8px;
+    padding: 0 0 0 10px;
     box-sizing: border-box;
-    background: var(--panel);
-    border-top: 1px solid var(--border);
-    z-index: 30;
+    background: linear-gradient(180deg, #2FA396 0%, #268578 100%);
+    color: #EAF5F3;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, .18), 0 4px 14px rgba(10, 30, 28, .18);
+    /* above the agent panel: the bar carries the history menu and the fold button */
+    z-index: 50;
+    user-select: none;
 }
-#bottombar .grow { flex: 1; }
-#assets-state { color: var(--muted); white-space: nowrap; display: inline-flex; align-items: center; gap: 6px; }
-#assets-state.dirty { color: #B26B1D; }
+#topbar .grow { flex: 1; }
+#topbar .tb-group { display: inline-flex; align-items: center; gap: 6px; }
+#topbar .tb-sep { width: 1px; height: 20px; background: rgba(255, 255, 255, .18); }
+#topbar .tb-brand {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-weight: 700; letter-spacing: .4px; opacity: .95; padding-right: 2px;
+}
+#topbar .tb-brand .icon { width: 15px; height: 15px; }
+
+/* the bar's own buttons: quiet glass pills on the teal */
+#topbar button.tbtn {
+    background: rgba(255, 255, 255, .10);
+    border: 1px solid rgba(255, 255, 255, .16);
+    color: #EAF5F3;
+    border-radius: 8px;
+    padding: 5px 10px;
+    height: 28px;
+    transition: background .12s ease, border-color .12s ease;
+}
+#topbar button.tbtn:hover { background: rgba(255, 255, 255, .2); border-color: rgba(255, 255, 255, .3); }
+#topbar button.tbtn:active { background: rgba(0, 0, 0, .12); }
+#topbar button.tbtn .icon { opacity: .9; }
+
+/* the two faces of the session, with the pill sliding between them */
+.modeswitch {
+    position: relative;
+    display: inline-flex;
+    background: rgba(0, 0, 0, .18);
+    border-radius: 9px;
+    padding: 3px;
+}
+.modeswitch .ms-thumb {
+    position: absolute;
+    top: 3px; bottom: 3px; left: 3px;
+    width: calc(50% - 3px);
+    border-radius: 7px;
+    background: #FAFCFC;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .25);
+    transition: transform .22s cubic-bezier(.4, 0, .2, 1);
+}
+.modeswitch.at-preview .ms-thumb { transform: translateX(100%); }
+.modeswitch button {
+    position: relative; z-index: 1;
+    display: inline-flex; align-items: center; justify-content: center; gap: 6px;
+    min-width: 92px; height: 24px;
+    border: none; background: none; color: rgba(255, 255, 255, .8);
+    font: inherit; font-size: 12px; font-weight: 600; cursor: pointer;
+    border-radius: 7px;
+    transition: color .18s ease;
+}
+.modeswitch button:hover { color: #fff; }
+.modeswitch button.on { color: var(--teal-darker); }
+.modeswitch button span { font-weight: 600; }
+.modeswitch .icon { width: 13px; height: 13px; }
+
+/* the game face's controls live in the same bar and only show with it */
+#topbar #pv-controls { display: none; }
+body.mode-preview #topbar #pv-controls { display: inline-flex; }
+body.mode-preview #topbar .tb-sep { display: inline-block; }
+#topbar .tb-sep { display: none; }
+
+#assets-state { color: rgba(255, 255, 255, .72); white-space: nowrap; display: inline-flex; align-items: center; gap: 6px; }
+#assets-state.dirty { color: #FFD98A; font-weight: 600; }
 #changes-log {
     position: absolute;
     left: 8px;
-    bottom: 40px;
+    top: 50px;
     width: 420px;
     max-height: 45vh;
     overflow: auto;
@@ -92,7 +165,7 @@ svg.icon { width: 14px; height: 14px; flex: none; display: block; }
     font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
     white-space: pre-wrap;
     display: none;
-    z-index: 31;
+    z-index: 46;
 }
 
 /* ---------- boot overlay ---------- */
@@ -137,7 +210,7 @@ svg.icon { width: 14px; height: 14px; flex: none; display: block; }
 #browser-back.open { display: block; }
 #browser {
     position: absolute;
-    inset: 4% 4% 44px 4%;
+    inset: 54px 4% 4% 4%;
     background: var(--panel2);
     border: 1px solid var(--border);
     border-radius: 5px;
@@ -258,18 +331,19 @@ svg.icon { width: 14px; height: 14px; flex: none; display: block; }
     inset: 0;
     background: rgba(20, 35, 33, .35);
     display: none;
-    z-index: 41;
+    /* over the agent panel, like the asset browser: it is a page-wide dialog */
+    z-index: 47;
 }
 #changes-back.open { display: block; }
 #changes {
     position: absolute;
-    inset: 6% 6% 44px 6%;
+    inset: 54px 6% 6% 6%;
     background: var(--panel2);
     border: 1px solid var(--border);
     border-radius: 5px;
     display: none;
     flex-direction: column;
-    z-index: 42;
+    z-index: 48;
     box-shadow: 0 14px 48px rgba(15,35,32,.45);
     overflow: hidden;
 }
@@ -432,17 +506,14 @@ svg.icon { width: 14px; height: 14px; flex: none; display: block; }
 }
 
 /* ---------- AI agent ---------- */
-#ai-back {
-    display: none; position: fixed; inset: 0;
-    background: rgba(16, 32, 30, .5); backdrop-filter: blur(1.5px); z-index: 43;
-}
-#ai-back.open { display: block; }
+/* The agent is a panel of the page, not a window: always on the right, under
+   the shared bar, and it slides away when the segment's toggle folds it. */
 #ai {
     display: none; position: fixed; z-index: 44;
-    left: 50%; top: 50%; transform: translate(-50%, -50%);
-    width: min(1020px, 94vw); height: min(760px, 90vh);
-    background: #F6F9F8; border: 1px solid #C6D3D1;
-    border-radius: 12px; box-shadow: 0 24px 60px rgba(10, 30, 28, .35);
+    top: 44px; right: 0; bottom: 0;
+    width: var(--ai-dock, 420px);
+    background: #F6F9F8; border-left: 1px solid #C6D3D1;
+    box-shadow: -8px 0 24px rgba(10, 30, 28, .18);
     flex-direction: column; overflow: hidden;
     --ai-accent: #2F9E93;
     --ai-user: #E7F1FB;
@@ -450,27 +521,7 @@ svg.icon { width: 14px; height: 14px; flex: none; display: block; }
 }
 #ai.open { display: flex; }
 
-/* ---- title bar ---- */
-#ai-title {
-    /* above the settings overlay, or its buttons stop responding */
-    position: relative; z-index: 6;
-    display: flex; align-items: center; gap: 9px;
-    background: linear-gradient(180deg, #2FA396 0%, #268578 100%);
-    color: #fff; padding: 9px 12px; user-select: none;
-    box-shadow: 0 1px 0 rgba(0,0,0,.12);
-}
-#ai-title .name { font-weight: 650; letter-spacing: .2px; }
-#ai-title .grow { flex: 1; }
-#ai-title .titlebtn {
-    background: rgba(255,255,255,.12); border: none; color: #fff; cursor: pointer;
-    padding: 5px 10px; border-radius: 6px; font: inherit; font-size: 12.5px; font-weight: 500;
-    display: inline-flex; align-items: center; gap: 5px; transition: background .12s ease;
-}
-#ai-title .titlebtn:hover { background: rgba(255,255,255,.24); }
-#ai-title .titlebtn.on { background: #fff; color: var(--teal-darker); }
-#ai-title .titlebtn.icon-only { padding: 6px; }
-#ai-title .titlebtn svg { width: 14px; height: 14px; fill: none; stroke: currentColor;
-                          stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+/* the panel opens straight into the conversation: its header is in the bar */
 #ai-bar .ai-btn svg, .ai-dd .val svg, #ai-files .fitem svg, #ai-empty .ex svg {
     width: 13px; height: 13px; flex: none; fill: none; stroke: currentColor;
     stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round;
@@ -478,24 +529,33 @@ svg.icon { width: 14px; height: 14px; flex: none; display: block; }
 .ai-dd .val svg { opacity: .7; }
 #ai-empty .ex svg { color: var(--ai-accent); width: 15px; height: 15px; }
 #ai-bar .ai-btn { display: inline-flex; align-items: center; gap: 6px; }
-#ai-chip {
-    font-size: 12px; font-weight: 500; padding: 3px 10px; border-radius: 11px;
-    background: rgba(255,255,255,.18); white-space: nowrap;
+
+/* the header's buttons, now sitting on the shared bar */
+.tb-agent .titlebtn {
+    background: rgba(255, 255, 255, .12); border: 1px solid rgba(255, 255, 255, .14);
+    color: #EAF5F3; cursor: pointer;
+    padding: 5px 9px; border-radius: 8px; font: inherit; font-size: 12px; font-weight: 500;
+    display: inline-flex; align-items: center; gap: 5px;
+    transition: background .12s ease, border-color .12s ease;
 }
-#ai-chip.busy { background: #FFD65A; color: #4A3800; }
-#ai-chip.err { background: #E4635F; color: #fff; }
-#ai-chip.ok { background: rgba(255,255,255,.28); }
+.tb-agent .titlebtn:hover { background: rgba(255, 255, 255, .24); border-color: rgba(255, 255, 255, .3); }
+.tb-agent .titlebtn.on { background: #FAFCFC; color: var(--teal-darker); border-color: #FAFCFC; }
+.tb-agent .titlebtn.icon-only { padding: 6px; }
+.tb-agent .titlebtn svg { width: 14px; height: 14px; fill: none; stroke: currentColor;
+                          stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+.tb-agent .titlebtn.busy { background: #F2C14E; color: #4A3708; border-color: #F2C14E; }
+.tb-agent .icon { width: 15px; height: 15px; }
 #ai-history {
-    max-width: 210px; background: rgba(255,255,255,.12); border: none; color: #fff;
-    border-radius: 6px; padding: 5px 8px; font-size: 12.5px; cursor: pointer;
+    max-width: 190px; background: rgba(255, 255, 255, .12); border: none; color: #fff;
+    border-radius: 7px; padding: 5px 8px; font-size: 12px; cursor: pointer;
 }
 #ai-history option { color: #23302E; }
 
-/* ---- settings: a modal sheet inside the window ---- */
+/* ---- settings: a sheet over the panel ---- */
 #ai-modal {
     display: none; position: absolute; inset: 0; z-index: 5;
-    padding-top: 44px; box-sizing: border-box;
-    background: rgba(18, 40, 38, .38); align-items: center; justify-content: center;
+    padding: 14px; box-sizing: border-box;
+    background: rgba(18, 40, 38, .38); align-items: flex-start; justify-content: center;
 }
 #ai-modal.open { display: flex; }
 #ai-settings {
@@ -515,6 +575,13 @@ svg.icon { width: 14px; height: 14px; flex: none; display: block; }
 }
 #ai-settings .row .lbl { width: 120px; color: #5F706E; font-size: 12.5px; flex: none; }
 #ai-settings .row .grow { flex: 1; }
+/* the panel is narrow now: a label beside its control leaves neither any room */
+@media (max-width: 560px) {
+    #ai-settings .row { flex-direction: column; align-items: stretch; gap: 6px; padding: 10px 14px; }
+    #ai-settings .row .lbl { width: auto; }
+    #ai-settings .sheet-head { padding: 12px 14px; }
+    #ai-settings .hint { padding: 10px 14px 4px; }
+}
 #ai-settings .hint {
     color: #778785; font-size: 11.5px; line-height: 1.55; margin: 0; padding: 10px 18px 4px;
     border-top: 1px solid #EDF2F1;
@@ -818,3 +885,212 @@ svg.icon { width: 14px; height: 14px; flex: none; display: block; }
     font-size: 11px; line-height: 1.45; white-space: pre-wrap; word-break: break-all;
 }
 .crash-row { display: flex; gap: 8px; margin-top: 8px; }
+
+/* ---------- game preview mode ----------
+   The second face of the session: the game on the left, the agent docked to the
+   right. The bottom bar is shared, so switching keeps the session in place. */
+/* Both faces stay in the layout and keep running; only one is on screen.
+   Unloading the client on every switch would restart the game, and the point
+   of two faces is to look at the same session from either side. */
+#preview {
+    display: flex;
+    visibility: hidden;
+    pointer-events: none;
+    background: #1B2422;
+    flex-direction: column;
+}
+body.mode-preview #preview { visibility: visible; pointer-events: auto; }
+body.mode-preview #canvas-wrap { visibility: hidden; pointer-events: none; }
+#preview-stage {
+    flex: 1; position: relative;
+    display: flex; align-items: center; justify-content: center;
+    overflow: hidden;
+    background:
+        linear-gradient(45deg, rgba(255,255,255,.02) 25%, transparent 25%, transparent 75%, rgba(255,255,255,.02) 75%) 0 0/24px 24px,
+        linear-gradient(45deg, rgba(255,255,255,.02) 25%, transparent 25%, transparent 75%, rgba(255,255,255,.02) 75%) 12px 12px/24px 24px,
+        #1B2422;
+}
+
+/* The emulated device: a body drawn around the screen, so a phone preset looks
+   like a phone rather than a rectangle with numbers next to it. */
+#preview-device {
+    position: relative;
+    transform-origin: center center;
+    padding: 0;
+    border-radius: 6px;
+    background: #0B0F10;
+    box-shadow: 0 18px 46px rgba(0, 0, 0, .45);
+}
+#preview-device.kind-phone, #preview-device.kind-tablet {
+    background: linear-gradient(160deg, #2B3536 0%, #171E1F 60%, #101616 100%);
+    box-shadow: 0 24px 60px rgba(0, 0, 0, .55), inset 0 0 0 1px rgba(255, 255, 255, .07);
+}
+#preview-device.kind-phone { padding: 13px 9px; border-radius: 30px; }
+#preview-device.kind-tablet { padding: 18px 16px 26px; border-radius: 20px; }
+#preview-device.kind-desktop {
+    padding: 12px 12px 14px;
+    border-radius: 10px 10px 4px 4px;
+    background: linear-gradient(180deg, #2A3334 0%, #1B2223 100%);
+    box-shadow: 0 24px 60px rgba(0, 0, 0, .5), inset 0 0 0 1px rgba(255, 255, 255, .06);
+}
+#preview-device.kind-fit { padding: 0; border-radius: 4px; }
+
+#preview-screen {
+    position: relative;
+    background: #0B0F10;
+    border-radius: 3px;
+    overflow: hidden;
+}
+#preview-device.kind-phone #preview-screen { border-radius: 20px; }
+#preview-device.kind-tablet #preview-screen { border-radius: 6px; }
+
+/* the details that make the body read as a device: notch, earpiece, home dot */
+.pv-bezel { position: absolute; inset: 0; pointer-events: none; }
+.pv-bezel > span { position: absolute; display: none; }
+#preview-device.has-notch.is-portrait .pv-notch {
+    display: block; top: 13px; left: 50%; transform: translateX(-50%);
+    width: 34%; height: 22px; background: #0B0F10; border-radius: 0 0 14px 14px;
+}
+#preview-device.has-punch.is-portrait .pv-notch {
+    display: block; top: 22px; left: 50%; transform: translateX(-50%);
+    width: 11px; height: 11px; background: #0B0F10; border-radius: 50%;
+}
+#preview-device.kind-phone .pv-speaker {
+    display: block; top: 6px; left: 50%; transform: translateX(-50%);
+    width: 46px; height: 3px; background: rgba(255,255,255,.14); border-radius: 2px;
+}
+#preview-device.kind-phone.is-landscape .pv-speaker {
+    top: 50%; left: 4px; transform: translateY(-50%); width: 3px; height: 46px;
+}
+#preview-device.kind-tablet .pv-home {
+    display: block; bottom: 8px; left: 50%; transform: translateX(-50%);
+    width: 9px; height: 9px; border-radius: 50%; border: 1px solid rgba(255,255,255,.2);
+}
+#preview-device.kind-desktop .pv-home {
+    display: block; bottom: 4px; left: 50%; transform: translateX(-50%);
+    width: 42px; height: 3px; border-radius: 2px; background: rgba(255,255,255,.14);
+}
+
+/* what the client reports while it loads */
+.pv-progress {
+    position: absolute; z-index: 4; left: 50%; bottom: calc(50% - 34px); transform: translateX(-50%);
+    width: 190px; height: 3px; border-radius: 2px; background: rgba(255,255,255,.14); overflow: hidden;
+}
+.pv-progress > span { display: block; height: 100%; width: 0; background: #2F9E93; transition: width .15s ease; }
+
+.pv-menu button { display: flex; align-items: center; gap: 9px; }
+.pv-shape { display: inline-flex; width: 15px; height: 15px; color: #6B8683; }
+.pv-shape svg { width: 15px; height: 15px; fill: none; stroke: #6B8683; stroke-width: 1.4; }
+#preview-screen iframe {
+    display: block; width: 100%; height: 100%; border: none; background: #0B0F10;
+}
+#preview-hint {
+    position: absolute; inset: 0; z-index: 3;
+    display: flex; align-items: center; justify-content: center;
+    color: #9FB4B1; font-size: 12.5px; text-align: center; padding: 16px;
+    background: #0B0F10;
+}
+
+/* device picker and orientation, in the preview bar's own key */
+.pv-dd { position: relative; display: inline-flex; }
+.pv-dd > button, .pv-seg button, #pv-restart {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: rgba(255,255,255,.08); color: #DCEAE8;
+    border: 1px solid rgba(255,255,255,.14); border-radius: 7px;
+    padding: 4px 9px; font: inherit; font-size: 12px; cursor: pointer;
+}
+.pv-dd > button:hover, .pv-seg button:hover, #pv-restart:hover { background: rgba(255,255,255,.15); }
+.pv-dd .chev { width: 11px; height: 11px; opacity: .7; }
+.pv-menu {
+    display: none; position: absolute; top: calc(100% + 9px); left: 0; z-index: 60;
+    background: #fff; color: #23302E; border: 1px solid #C6D3D1; border-radius: 9px;
+    box-shadow: 0 12px 28px rgba(10, 30, 28, .28); padding: 4px; min-width: 190px;
+}
+.pv-menu.open { display: block; }
+.pv-menu button {
+    display: block; width: 100%; text-align: left; border: none; background: none;
+    font: inherit; font-size: 12.5px; padding: 6px 9px; border-radius: 6px; cursor: pointer; color: inherit;
+}
+.pv-menu button:hover { background: #EAF3F1; }
+.pv-seg { display: inline-flex; gap: 3px; }
+.pv-seg button.on { background: #FAFCFC; border-color: #FAFCFC; color: var(--teal-darker); font-weight: 600; }
+
+/* ---------- resizing the agent panel ----------
+   A grip in the corner and two edges; docked, the left edge is the splitter
+   between the game and the agent. */
+/* the window clips its overflow, so the handles live just inside its border */
+.ai-edge, .ai-grip { position: absolute; z-index: 7; }
+.ai-edge.left { left: 0; top: 0; bottom: 0; width: 6px; cursor: ew-resize; }
+.ai-edge.left { width: 8px; }
+.ai-edge.left:hover { background: rgba(47, 158, 147, .3); }
+/* while dragging, the iframe must not swallow the pointer */
+body.ai-resizing { user-select: none; }
+body.ai-resizing #preview-frame { pointer-events: none; }
+
+
+/* ---------- the agent's segment of the bar ----------
+   Same width as the panel under it, so the header and the panel are one shape;
+   folded, it shrinks to the toggle alone. */
+.tb-agent {
+    display: inline-flex; align-items: center; gap: 7px;
+    width: var(--ai-dock, 420px);
+    height: 100%;
+    box-sizing: border-box;
+    padding: 0 8px 0 12px;
+    background: linear-gradient(180deg, rgba(255,255,255,.10) 0%, rgba(255,255,255,.03) 100%);
+    border-left: 1px solid rgba(255, 255, 255, .18);
+    transition: width .2s cubic-bezier(.4, 0, .2, 1);
+}
+.tb-agent .name { font-weight: 650; letter-spacing: .2px; }
+.tb-agent .grow { flex: 1; }
+.tb-agent #ai-chip {
+    font-size: 11px; padding: 2px 7px; border-radius: 999px;
+    background: rgba(255, 255, 255, .16); color: #EAF5F3;
+}
+.tb-agent #ai-chip.busy { background: #F2C14E; color: #4A3708; }
+.tb-agent #ai-chip.err { background: #C86A6A; color: #fff; }
+body.ai-hidden .tb-agent { width: 46px; padding-left: 6px; }
+body.ai-hidden .tb-agent > :not(#ai-toggle) { display: none; }
+body.ai-hidden #canvas-wrap, body.ai-hidden #preview { right: 0; }
+body.ai-hidden #ai { display: none; }
+
+/* the fold toggle: a chevron that turns with the state */
+#ai-toggle .icon { transition: transform .2s ease; }
+body.ai-hidden #ai-toggle .icon { transform: rotate(180deg); }
+
+/* ---------- attachments in the composer ---------- */
+#ai-attach-list { display: none; flex-wrap: wrap; gap: 6px; padding: 8px 10px 0; }
+#ai-attach-list.show { display: flex; }
+.ai-attach-chip {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: #E8F1EF; border: 1px solid #C6D8D4; color: #33413F;
+    border-radius: 999px; padding: 3px 4px 3px 9px; font-size: 12px; max-width: 100%;
+}
+.ai-attach-chip svg { width: 12px; height: 12px; flex: none; fill: none; stroke: #55706C;
+                      stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+.ai-attach-chip > span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.ai-attach-chip.pending { opacity: .65; }
+.ai-attach-chip.err { background: #FBECEC; border-color: #E3BDBD; color: #8C3B3B; }
+.ai-attach-chip button {
+    display: inline-flex; border: none; background: none; cursor: pointer; padding: 2px;
+    border-radius: 50%; color: #6C817E;
+}
+.ai-attach-chip button:hover { background: #D5E4E1; color: #33413F; }
+.ai-attach-chip button svg { width: 10px; height: 10px; stroke: currentColor; }
+
+/* the attach button wears the same pill as the model / effort controls */
+#ai-attach.ai-pill {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 28px; height: 28px; padding: 0;
+    background: #fff; border: 1px solid #C9D8D5; border-radius: 8px; cursor: pointer; color: #4A5F5C;
+}
+#ai-attach.ai-pill:hover { border-color: var(--ai-accent); color: var(--ai-accent); }
+#ai-attach svg { width: 14px; height: 14px; fill: none; stroke: currentColor;
+                 stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+
+/* dropping files anywhere on the panel */
+#ai.dropping { outline: 2px dashed var(--ai-accent); outline-offset: -6px; }
+
+/* the scratch space wears a different accent than the project's own assets */
+#browser.work #browser-title { background: linear-gradient(180deg, #7A6A9E 0%, #63548A 100%); }
+#topbar button.tbtn.danger:hover { background: rgba(200, 106, 106, .35); border-color: rgba(230, 150, 150, .5); }

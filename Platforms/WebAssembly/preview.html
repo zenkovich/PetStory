@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>o2 Game preview</title>
+    <link rel="stylesheet" href="shell/preview.css">
+</head>
+<body>
+    <!-- The game client of the web editor. It runs inside the editor page's
+         preview pane (an iframe), on the same session working copy: the parent
+         reaches in through window.Module for the agent's tools. -->
+    <canvas id="canvas" tabindex="0" oncontextmenu="event.preventDefault()"></canvas>
+
+    <div id="status"><div id="status-text">Loading…</div><div id="progress"><span></span></div></div>
+
+    <script src="shell/preview-boot.js"></script>
+    {{{ SCRIPT }}}
+</body>
+</html>

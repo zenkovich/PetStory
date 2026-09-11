@@ -357,7 +357,8 @@ if(O2_EDITOR)
     if (EMSCRIPTEN)
         target_sources(Editor PRIVATE
             "Platforms/WebAssembly/editorMain.cpp"
-            "Platforms/WebAssembly/editorAssetsBuild.cpp")
+            "Platforms/WebAssembly/editorAssetsBuild.cpp"
+            "Platforms/WebAssembly/webSceneBridge.cpp")
         # In-browser asset rebuilds: the builder library runs inside the editor
         target_link_libraries(Editor PUBLIC o2AssetsBuilder)
         set_target_properties(Editor PROPERTIES SUFFIX ".html")
@@ -418,6 +419,51 @@ if(O2_EDITOR)
       set_property(TARGET Editor PROPERTY VS_DEBUGGER_WORKING_DIRECTORY "$<TARGET_FILE_DIR:Editor>")
     endif()  
     
+    # ---------------------------------------------------------------- game preview
+    # The web editor's second face: the game client itself, built against the
+    # session's working copy instead of a packed .data, so it rebuilds assets and
+    # restarts with the changes. Only worth building where that page exists.
+    if (EMSCRIPTEN AND O2_WASM_EDITOR)
+        add_executable(GamePreview)
+        target_sources(GamePreview PRIVATE
+            "Platforms/WebAssembly/previewMain.cpp"
+            "Platforms/WebAssembly/previewBridge.cpp"
+            "Platforms/WebAssembly/webSceneBridge.cpp")
+        target_link_libraries(GamePreview PUBLIC PetStoryLib o2AssetsBuilder)
+        add_dependencies(GamePreview PetStoryLib)
+        set_target_properties(GamePreview PROPERTIES SUFFIX ".html")
+        target_link_options(GamePreview PRIVATE
+            "-sUSE_WEBGL2=1"
+            "-sMIN_WEBGL_VERSION=2"
+            "-sMAX_WEBGL_VERSION=2"
+            "-sFULL_ES3=1"
+            "-sALLOW_MEMORY_GROWTH=1"
+            "-sINITIAL_MEMORY=256MB"
+            "-sMAXIMUM_MEMORY=4GB"
+            "-sSTACK_SIZE=5MB"
+            # The project tree is streamed from the server into MEMFS at startup
+            # (no --preload-file), so the JS FS API must survive DCE.
+            "-sFORCE_FILESYSTEM=1"
+            "-sEXPORTED_RUNTIME_METHODS=[ccall,cwrap,UTF8ToString,FS]"
+            "-sASSERTIONS=0"
+            "-sENVIRONMENT=web"
+            "-sTEXTDECODER=2"
+            "-sABORTING_MALLOC=0"
+            "--emit-symbol-map"
+            "--shell-file=${CMAKE_CURRENT_SOURCE_DIR}/Platforms/WebAssembly/preview.html")
+        set_property(TARGET GamePreview APPEND PROPERTY LINK_DEPENDS
+            "${CMAKE_CURRENT_SOURCE_DIR}/Platforms/WebAssembly/preview.html")
+        set_target_output_directories(GamePreview)
+        # Its page loads shell/preview-boot.js and shell/preview.css from next to
+        # itself, the same folder the editor shell is copied into
+        add_custom_command(TARGET GamePreview POST_BUILD
+            COMMAND ${CMAKE_COMMAND} -E copy_directory
+                    "${CMAKE_CURRENT_SOURCE_DIR}/Platforms/WebAssembly/shell"
+                    "${BIN_OUTPUTDIR}/shell"
+            COMMENT "Copying editor shell assets")
+        set_target_properties(GamePreview PROPERTIES FOLDER Apps)
+    endif()
+
     set_target_properties(EditorLib PROPERTIES FOLDER PetStory)
     set_target_properties(Editor PROPERTIES FOLDER Apps)
 endif() 
