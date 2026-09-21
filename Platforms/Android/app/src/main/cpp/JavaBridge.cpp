@@ -21,6 +21,13 @@
 #include "o2/Application/Input.h"
 #include "o2/Application/Android/AndroidPlatform.h"
 
+#if __has_include("o2libs/o2libs.h")
+#include "o2libs/o2libs.h"
+#else
+#define O2LIBS_INITIALIZE_TYPES
+#define O2LIBS_START
+#endif
+
 extern void InitializeTypesGameLib();
 extern void InitializeTypesPetStoryLib();
 
@@ -81,9 +88,11 @@ Java_com_petstory_game_NativeBridge_init(JNIEnv* env,
     INITIALIZE_O2;
     InitializeTypesGameLib();
     InitializeTypesPetStoryLib();
+    O2LIBS_INITIALIZE_TYPES;
 
     gApp = mmake<GameApplication>();
     gApp->Initialize();
+    O2LIBS_START;
     gApp->Launch();
 }
 

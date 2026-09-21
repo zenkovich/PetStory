@@ -6,6 +6,13 @@
 
 #include <unistd.h>
 
+#if __has_include("o2libs/o2libs.h")
+#include "o2libs/o2libs.h"
+#else
+#define O2LIBS_INITIALIZE_TYPES
+#define O2LIBS_START
+#endif
+
 using namespace o2;
 
 extern void InitializeTypesGameLib();
@@ -27,10 +34,12 @@ int main()
     INITIALIZE_O2;
     InitializeTypesGameLib();
     InitializeTypesPetStoryLib();
+    O2LIBS_INITIALIZE_TYPES;
     InitializeTypesAssetsBuildTool();
 
     auto app = mmake<GameApplication>();
     app->Initialize();
+    O2LIBS_START;
     app->Launch();
 
     return 0;

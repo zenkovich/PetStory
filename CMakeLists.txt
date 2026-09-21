@@ -59,6 +59,12 @@ endif()
 # o2 libraries
 add_subdirectory(o2)
 
+# o2libs: optional modules on top of o2 (remote configs, ...), a submodule next to o2. Turn a module on with
+# its option, e.g. -DO2LIBS_REMOTE_CONFIG=ON; without the submodule the project builds as before
+if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/o2libs/CMakeLists.txt")
+    add_subdirectory(o2libs)
+endif()
+
 set(BIN_OUTPUTDIR "${CMAKE_CURRENT_SOURCE_DIR}/Bin/${O2_PLATFORM}")
 
 function(set_target_output_directories TARGET_NAME)
@@ -129,7 +135,7 @@ if(NOT CMAKE_SYSTEM_NAME STREQUAL "iOS" AND NOT EMSCRIPTEN AND NOT ANDROID)
                       COMMAND ${CMAKE_CURRENT_SOURCE_DIR}/o2/CodeTool/Bin/o2CodeTool
                               -project GameLib
                               -sources "${CMAKE_CURRENT_SOURCE_DIR}/Sources/GameLib"
-                              -parent_projects "${CMAKE_CURRENT_SOURCE_DIR}/o2/Framework/Sources/o2/CodeToolCache.xml"
+                              -parent_projects "${CMAKE_CURRENT_SOURCE_DIR}/o2/Framework/Sources/o2/CodeToolCache.xml ${O2LIBS_CODEGEN_CACHES}"
                       COMMENT "Run CodeTool: -project GameLib -sources \"${CMAKE_CURRENT_SOURCE_DIR}/Sources/GameLib\""
     )
     add_dependencies(GameLibCodegen o2CodeTool o2FrameworkCodegen)
@@ -147,6 +153,10 @@ if(NOT CMAKE_SYSTEM_NAME STREQUAL "iOS" AND NOT EMSCRIPTEN AND NOT ANDROID)
 else()
     add_dependencies(GameLib o2Framework)
     add_dependencies(PetStoryLib o2Framework)
+endif()
+
+if(COMMAND o2libs_link)
+    o2libs_link(GameLib GameLibCodegen)
 endif()
 
 # Assets builder (not built for iOS / WebAssembly / Android - use pre-built host tools)

@@ -8,6 +8,13 @@
 
 #include <unistd.h>
 
+#if __has_include("o2libs/o2libs.h")
+#include "o2libs/o2libs.h"
+#else
+#define O2LIBS_INITIALIZE_TYPES
+#define O2LIBS_START
+#endif
+
 using namespace o2;
 
 DECLARE_SINGLETON(Editor::WindowsManager);
@@ -33,12 +40,14 @@ int main()
     INITIALIZE_O2;
     InitializeTypesGameLib();
     InitializeTypesPetStoryLib();
+    O2LIBS_INITIALIZE_TYPES;
     InitializeTypeso2Editor();
     InitializeTypesEditorLib();
     InitializeTypesAssetsBuildTool();
 
     auto app = mmake<Editor::EditorApplication>();
     app->Initialize();
+    O2LIBS_START;
     app->Launch();
 
     return 0;
